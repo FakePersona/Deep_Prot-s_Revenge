@@ -1,0 +1,605 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{nyt}{nyt}
+    \entry{DBLP:journals/corr/ChoMGBSB14}{article}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=3da7501a79d9346572c7fd6e41b615df}{Cho}{C\bibinitperiod}{Kyunghyun}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d27fe3f9898ba01eeca28e3bd205f9ea}{Merrienboer}{M\bibinitperiod}{Bart}{B\bibinitperiod}{van}{v\bibinitperiod}{}{}}%
+        {{uniquename=0,hash=23bc43e1663cf51073e07f4ba4940635}{Gülçehre}{G\bibinitperiod}{Çaglar}{Ç\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6deedc795e51da1bc7fd6289ab321a48}{Bougares}{B\bibinitperiod}{Fethi}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=449689e8c1ced50f608244e3a96fe6d3}{Schwenk}{S\bibinitperiod}{Holger}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=40a8e4774982146adc2688546f54efb2}{Bengio}{B\bibinitperiod}{Yoshua}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9b1920db887fe0d658725c1e606b61f4}
+      \strng{fullhash}{ab67beaf866adf6627d1e94acd3f7edd}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{CoRR}
+      \field{title}{Learning Phrase Representations using {RNN} Encoder-Decoder for Statistical Machine Translation}
+      \field{volume}{abs/1406.1078}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://arxiv.org/abs/1406.1078
+      \endverb
+    \endentry
+    \entry{chollet2015keras}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=14134a39113404b1f80969c9ccc1f71e}{Chollet}{C\bibinitperiod}{François}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{14134a39113404b1f80969c9ccc1f71e}
+      \strng{fullhash}{14134a39113404b1f80969c9ccc1f71e}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/fchollet/keras}}
+      \field{title}{Keras}
+      \field{year}{2015}
+    \endentry
+    \entry{Cock01062009}{article}{}
+      \name{author}{11}{}{%
+        {{uniquename=0,hash=a9b9ea59ad138e5bdfd186fe2bfb812f}{Cock}{C\bibinitperiod}{Peter\bibnamedelimb J.\bibnamedelimi A.}{P\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7fb7b4aad373590939ef53fafa9100ee}{Antao}{A\bibinitperiod}{Tiago}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5714c446b89f51e1714474a674d3b04b}{Chang}{C\bibinitperiod}{Jeffrey\bibnamedelima T.}{J\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b65cbaff69bc9265b718ab55cf8f0f8b}{Chapman}{C\bibinitperiod}{Brad\bibnamedelima A.}{B\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b10f32aea29376a828d942e8af4227fe}{Cox}{C\bibinitperiod}{Cymon\bibnamedelima J.}{C\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a7a4d6701ae045cc8da0d5693bbe5196}{Dalke}{D\bibinitperiod}{Andrew}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f00ae52babd12dc169b622d4986f7d8e}{Friedberg}{F\bibinitperiod}{Iddo}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ff236dbcdc91c0630e8b9eadbf91c436}{Hamelryck}{H\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=67d980cd1b782e5d0ff6c62e731799f1}{Kauff}{K\bibinitperiod}{Frank}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=79ff578649a7b5870e9c3c070af226b2}{Wilczynski}{W\bibinitperiod}{Bartek}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b8232cbef175c5a788679347d32cec10}{Hoon}{H\bibinitperiod}{Michiel\bibnamedelimb J.\bibnamedelimi L.}{M\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim L\bibinitperiod}{de}{d\bibinitperiod}{}{}}%
+      }
+      \strng{namehash}{56fa7393e945f340635bdc1f04299fab}
+      \strng{fullhash}{9a046b2c0b73a4d9706bc38a9c75d635}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelyear}{2009}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary: The Biopython project is a mature open source international collaboration of volunteer developers, providing Python libraries for a wide range of bioinformatics problems. Biopython includes modules for reading and writing different sequence file formats and multiple sequence alignments, dealing with 3D macro molecular structures, interacting with common tools such as BLAST, ClustalW and EMBOSS, accessing key online databases, as well as providing numerical methods for statistical learning.Availability: Biopython is freely available, with documentation and source code at www.biopython.org under the Biopython license.Contact: All queries should be directed to the Biopython mailing lists, see www.biopython.org/wiki/_Mailing_listspeter.cock@scri.ac.uk.}
+      \field{journaltitle}{Bioinformatics}
+      \field{number}{11}
+      \field{title}{Biopython: freely available Python tools for computational molecular biology and bioinformatics}
+      \field{volume}{25}
+      \field{year}{2009}
+      \field{pages}{1422\bibrangedash 1423}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btp163
+      \endverb
+      \verb{eprint}
+      \verb http://bioinformatics.oxfordjournals.org/content/25/11/1422.full.pdf+html
+      \endverb
+      \verb{url}
+      \verb http://bioinformatics.oxfordjournals.org/content/25/11/1422.abstract
+      \endverb
+    \endentry
+    \entry{fox2014scope}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=1f20f2605518954320b0dad5aebf0312}{Fox}{F\bibinitperiod}{Naomi\bibnamedelima K}{N\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6188655d205522ea756d8629994ddd60}{Brenner}{B\bibinitperiod}{Steven\bibnamedelima E}{S\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f132c5827ca91d7f0ab11257ac7086d6}{Chandonia}{C\bibinitperiod}{John-Marc}{J\bibinithyphendelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford Univ Press}%
+      }
+      \strng{namehash}{0c19ece6d7f571b282d8a8c316d3fa64}
+      \strng{fullhash}{0c19ece6d7f571b282d8a8c316d3fa64}
+      \field{sortinit}{F}
+      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nucleic acids research}
+      \field{number}{D1}
+      \field{title}{SCOPe: Structural Classification of Proteins—extended, integrating SCOP and ASTRAL data and classification of new structures}
+      \field{volume}{42}
+      \field{year}{2014}
+      \field{pages}{D304\bibrangedash D309}
+      \range{pages}{-1}
+    \endentry
+    \entry{gal2015theoretically}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=d4f394bd4030e20e7b1399e0abe7dc6a}{Gal}{G\bibinitperiod}{Yarin}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{d4f394bd4030e20e7b1399e0abe7dc6a}
+      \strng{fullhash}{d4f394bd4030e20e7b1399e0abe7dc6a}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1512.05287}
+      \field{title}{A theoretically grounded application of dropout in recurrent neural networks}
+      \field{year}{2015}
+    \endentry
+    \entry{Gupta031906}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=343602aabf9839aca0f134c63cb8a98a}{Gupta}{G\bibinitperiod}{Aman}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=aef9f9a30b7bbf77d2bcb23de14493cb}{Wang}{W\bibinitperiod}{Haohan}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8331ae8ec683a3b33f57ea0c88dcf3af}{Ganapathiraju}{G\bibinitperiod}{Madhavi}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Cold Spring Harbor Labs Journals}%
+      }
+      \strng{namehash}{caea11d77167b702e88e336254aa597c}
+      \strng{fullhash}{caea11d77167b702e88e336254aa597c}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Genes play a central role in all biological processes. DNA microarray technology has made it possible to study the expression behavior of thousands of genes in one go. Often, gene expression data is used to generate features for supervised and unsupervised learning tasks. At the same time, advances in the field of deep learning have made available a plethora of architectures. In this paper, we use deep architectures pre-trained in an unsupervised manner using denoising autoencoders as a preprocessing step for a popular unsupervised learning task. Denoising autoencoders (DA) can be used to learn a compact representation of input, and have been used to generate features for further supervised learning tasks. We propose that our deep architectures can be treated as empirical versions of Deep Belief Networks (DBNs). We use our deep architectures to regenerate gene expression time series data for two different data sets. We test our hypothesis on two popular datasets for the unsupervised learning task of clustering and find promising improvements in performance.}
+      \field{journaltitle}{bioRxiv}
+      \field{title}{Learning structure in gene expression data using deep architectures, with an application to gene clustering}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1101/031906
+      \endverb
+      \verb{eprint}
+      \verb http://biorxiv.org/content/early/2015/11/16/031906.full.pdf
+      \endverb
+      \verb{url}
+      \verb http://biorxiv.org/content/early/2015/11/16/031906
+      \endverb
+    \endentry
+    \entry{hochreiter1997long}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=41b31e29fb2bdbf9f5c9c1b0d5b3e815}{Hochreiter}{H\bibinitperiod}{Sepp}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=288bdbcfe1b91ad7484d7a24f74f99ed}{Schmidhuber}{S\bibinitperiod}{Jürgen}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{fullhash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelyear}{1997}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural computation}
+      \field{number}{8}
+      \field{title}{Long short-term memory}
+      \field{volume}{9}
+      \field{year}{1997}
+      \field{pages}{1735\bibrangedash 1780}
+      \range{pages}{46}
+    \endentry
+    \entry{jian2013predicting}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=3b1e01dd050363c1124326b6d7f31aa9}{Jian-wei}{J\bibinithyphendelim w\bibinitperiod}{Liu}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0ddd0dc00daf1d00a901b7a6cf439d70}{Guang-hui}{G\bibinithyphendelim h\bibinitperiod}{Chi}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f13c62007077caebc4b5f1b1f9d9ea98}{Ze-yu}{Z\bibinithyphendelim y\bibinitperiod}{Liu}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=26557486adfbec19378a3e06ce971132}{Yuan}{Y\bibinitperiod}{Liu}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fc7ee58ccc930667ca54fd30fe2feff4}{Hai-en}{H\bibinithyphendelim e\bibinitperiod}{Li}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=19c0cee7d45059d526ba1dd16669fc7b}{Xiong-Lin}{X\bibinithyphendelim L\bibinitperiod}{Luo}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{5d1780897eae91dafd15422ef49ea7bf}
+      \strng{fullhash}{94b6cdf0448b98502869310c9b6a94ae}
+      \field{sortinit}{J}
+      \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Control and Decision Conference (CCDC), 2013 25th Chinese}
+      \field{title}{Predicting protein structural classes with autoencoder neural networks}
+      \field{year}{2013}
+      \field{pages}{1894\bibrangedash 1899}
+      \range{pages}{6}
+    \endentry
+    \entry{lecun1998gradient}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=6a1aa6b7eab12b931ca7c7e3f927231d}{LeCun}{L\bibinitperiod}{Yann}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ac762f2592005edf6bad58f566967c6c}{Bottou}{B\bibinitperiod}{Léon}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=40a8e4774982146adc2688546f54efb2}{Bengio}{B\bibinitperiod}{Yoshua}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=844e183692f08a63f99285330fcf90cc}{Haffner}{H\bibinitperiod}{Patrick}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{fullhash}{c397b2e6efe8e5c6ca906410fc9e0ff9}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelyear}{1998}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the IEEE}
+      \field{number}{11}
+      \field{title}{Gradient-based learning applied to document recognition}
+      \field{volume}{86}
+      \field{year}{1998}
+      \field{pages}{2278\bibrangedash 2324}
+      \range{pages}{47}
+    \endentry
+    \entry{tensorflow2015-whitepaper}{article}{}
+      \name{author}{40}{}{%
+        {{uniquename=0,hash=4cf936a5e30fe32583f48a5547ec09ea}{Martin\bibnamedelima Abadi}{M\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=6484757a54ad32eee1fb6f23a852feed}{Ashish\bibnamedelima Agarwal}{A\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=363d0bd454a0acf5e160018cc47679cb}{Paul\bibnamedelima Barham}{P\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=36935e9e96522c790fcef64db648b74b}{Eugene\bibnamedelima Brevdo}{E\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=8c2edbc42572974d8f58b80f1b7a82b8}{Zhifeng\bibnamedelima Chen}{Z\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=d64184d5c7ebf0bff2da33def2c1daea}{Craig\bibnamedelima Citro}{C\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=3e5c2a3e735a28413c9345dce8945382}{Greg\bibnamedelima S.\bibnamedelimi Corrado}{C\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=19cd724592ffc2c23adc3a351ae04818}{Andy\bibnamedelima Davis}{A\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=1b1db793dba9fd87f2888084b31dad29}{Jeffrey\bibnamedelima Dean}{J\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=a4beec028e32d2bc29fe1513c1402bb3}{Matthieu\bibnamedelima Devin}{M\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=9c4b47d3e11d9b90aae441127f97dd79}{Sanjay\bibnamedelima Ghemawat}{S\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=4f74a122133d7b67dcf443cdb4d3ba00}{Ian\bibnamedelima Goodfellow}{I\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=9d272867c5ab5024df5fc861485ad56f}{Andrew\bibnamedelima Harp}{A\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=d9984de031c203c48c5de1f785220cbf}{Geoffrey\bibnamedelima Irving}{G\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=ec17cfcde99ebed9a72ff7ee449da430}{Michael\bibnamedelima Isard}{M\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=9fce03efe6b3331a1b93ed2e7c0da9d5}{Jia}{J\bibinitperiod}{Yangqing}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2d62ba69437cf1242ab96585123e8090}{Rafal\bibnamedelima Jozefowicz}{R\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=2da41a2c3b85a2a33fc96a033e19e854}{Lukasz\bibnamedelima Kaiser}{L\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=e949a308d49174d45e8466d134158cb6}{Manjunath\bibnamedelima Kudlur}{M\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=7746c6a7e11b8d8783c883ebe4f05811}{Josh\bibnamedelima Levenberg}{J\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=5e62b3575984464e9b1525c9eb771f9c}{Dan\bibnamedelima Mane}{D\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=2f1cb989adad55ce8fe49ce1cd21e476}{Rajat\bibnamedelima Monga}{R\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=932c35b6750d308bab42b7be41a1e97f}{Sherry\bibnamedelima Moore}{S\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=5601ebe22742e92a96eb4dc5f1420472}{Derek\bibnamedelima Murray}{D\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=370cf3ba4b3dab98e9fe17565bcc9d13}{Chris\bibnamedelima Olah}{C\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=a94f76acdb582d668dd64419448eceac}{Mike\bibnamedelima Schuster}{M\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=ee4af4a6ef4e45adb464e4649b58727b}{Jonathon\bibnamedelima Shlens}{J\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=5d2cfee8a5cc20953c5ab3b3093e5802}{Benoit\bibnamedelima Steiner}{B\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=a5aa3398f4db70fce5f95429b615d485}{Ilya\bibnamedelima Sutskever}{I\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=343da771330de282efb35b66924e931a}{Kunal\bibnamedelima Talwar}{K\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=177c6dbcde719e364244ce3d3af70f42}{Paul\bibnamedelima Tucker}{P\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=e7d07939b62ca40bce7edf20e91353ad}{Vincent\bibnamedelima Vanhoucke}{V\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=76f098771e37211632499de837596d67}{Vijay\bibnamedelima Vasudevan}{V\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=ce6f3964fea0378107322597db73f39a}{Fernanda\bibnamedelima Viegas}{F\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=9a7adc5a0686b3b2510e47c23805274d}{Oriol\bibnamedelima Vinyals}{O\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=12a8c841e3a2329ff94f16039686cf05}{Pete\bibnamedelima Warden}{P\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=d5737f0c4be2ecc08c660a0b2ba965c9}{Martin\bibnamedelima Wattenberg}{M\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=c1b76aa7f4c970a9da35e801f917e8cf}{Martin\bibnamedelima Wicke}{M\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=d71c4759bc9cdb6d9ecab502aedf85e7}{Yuan\bibnamedelima Yu}{Y\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=d84a11a3b9072f97eb2e3cb1b163b5a2}{Xiaoqiang\bibnamedelima Zheng}{X\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{feef507df67b249ce0b1279e195c35c1}
+      \strng{fullhash}{a496e71055a78f2228c8b7078b5c20aa}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Software available from tensorflow.org}
+      \field{title}{{TensorFlow}: Large-Scale Machine Learning on Heterogeneous Systems}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://tensorflow.org/
+      \endverb
+    \endentry
+    \entry{2016arXiv160502688full}{article}{}
+      \name{author}{112}{}{%
+        {{uniquename=0,hash=6fdea7728f40679d54135ffed015aec3}{Al-Rfou}{A\bibinithyphendelim R\bibinitperiod}{Rami}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e48e52d25dee82d30cb07f7e834ff061}{Alain}{A\bibinitperiod}{Guillaume}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=18b5c5fc5f9f3bbb5d989b59eae0318a}{Almahairi}{A\bibinitperiod}{Amjad}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=476bd421cd7fafcdfcc9342336dc3dba}{Angermueller}{A\bibinitperiod}{Christof}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6d80adec79a13a33e73215c5f46f1605}{Bahdanau}{B\bibinitperiod}{Dzmitry}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=088c8a878ffb450444f0e6a8aa932e4b}{Ballas}{B\bibinitperiod}{Nicolas}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f61be8fab0250e452fe62dba3ff1c9bb}{Bastien}{B\bibinitperiod}{Frédéric}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=925938044926d5e29860f897042677c3}{Bayer}{B\bibinitperiod}{Justin}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=43fc9f67110463d00ccf874b78187aed}{Belikov}{B\bibinitperiod}{Anatoly}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1df3b571ad844ee1868bd5f6b4035dc1}{Belopolsky}{B\bibinitperiod}{Alexander}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=40a8e4774982146adc2688546f54efb2}{Bengio}{B\bibinitperiod}{Yoshua}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3312dda0a3e33f0b235cd218dfdd6c6f}{Bergeron}{B\bibinitperiod}{Arnaud}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0bc66fe902c838c216bd3175dfeb045b}{Bergstra}{B\bibinitperiod}{James}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f770236c004cc4f2fb69b77daded67ad}{Bisson}{B\bibinitperiod}{Valentin}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9c6c91f1c656b5aa6c475c93e1ea5401}{{Bleecher\bibnamedelimb Snyder}}{B\bibinitperiod}{Josh}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=648162257b6075d867e6d63b60531856}{Bouchard}{B\bibinitperiod}{Nicolas}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a7723f3260ddbd5e0b5c47c5fe2c913a}{Boulanger-Lewandowski}{B\bibinithyphendelim L\bibinitperiod}{Nicolas}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=076aa55db09da89f22951e76275f5a3a}{Bouthillier}{B\bibinitperiod}{Xavier}{X\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a5639147fd9d0da9ac7bf6f2bc81f8b4}{Brébisson}{B\bibinitperiod}{Alexandre}{A\bibinitperiod}{de}{d\bibinitperiod}{}{}}%
+        {{uniquename=0,hash=72028364c7689c47a2fe22642fed9b23}{Breuleux}{B\bibinitperiod}{Olivier}{O\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ed3093ca2067edee4f9f8c32ad0dfb00}{Carrier}{C\bibinitperiod}{Pierre-Luc}{P\bibinithyphendelim L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3da7501a79d9346572c7fd6e41b615df}{Cho}{C\bibinitperiod}{Kyunghyun}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0d1fa4d7989a76e3dda3df8d393c94b0}{Chorowski}{C\bibinitperiod}{Jan}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cffdbdf7d0beb981d8bb8ea28506a4b2}{Christiano}{C\bibinitperiod}{Paul}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=36bbf7c92ef15c3fda3256c5543cb1f1}{Cooijmans}{C\bibinitperiod}{Tim}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=90f75a481318c6e2f4d938116479e00f}{Côté}{C\bibinitperiod}{Marc-Alexandre}{M\bibinithyphendelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2af720cddabdaa47bdf9fb2b6f2dac8b}{Côté}{C\bibinitperiod}{Myriam}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ccec1ccd2e1aa86960eb2e872c6b7020}{Courville}{C\bibinitperiod}{Aaron}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6329b0c228667298e7c98c9c41de9fe3}{Dauphin}{D\bibinitperiod}{Yann\bibnamedelima N.}{Y\bibinitperiod\bibinitdelim N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=902c914cb42f1c479d21169ad3009d66}{Delalleau}{D\bibinitperiod}{Olivier}{O\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8a8077790e3986dd3ef57f6cc3c169ec}{Demouth}{D\bibinitperiod}{Julien}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d422b1bf74c0632ee012bc51e397622d}{Desjardins}{D\bibinitperiod}{Guillaume}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a133b469b21b870786119a47b1b691eb}{Dieleman}{D\bibinitperiod}{Sander}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0976c27ff012c9556f4206afd4b48c1f}{Dinh}{D\bibinitperiod}{Laurent}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=24e10abd8c876143a26279f4687261cf}{Ducoffe}{D\bibinitperiod}{Mélanie}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1328d3ceef6add8461994fc364c664df}{Dumoulin}{D\bibinitperiod}{Vincent}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=14e233ed75214b33a03b1cc5a3b4e54b}{{Ebrahimi\bibnamedelimb Kahou}}{E\bibinitperiod}{Samira}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8bbc4c5d96f205bada839e74e0202146}{Erhan}{E\bibinitperiod}{Dumitru}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7985e4636cfb23100f120e9eac6f6293}{Fan}{F\bibinitperiod}{Ziye}{Z\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=199f475d073184300c78ea1ea7d001e1}{Firat}{F\bibinitperiod}{Orhan}{O\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1f2cbf4857e67b0c6b6f57ae4332864f}{Germain}{G\bibinitperiod}{Mathieu}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0b3943c3bfdbb5867b3760f7c7d488c2}{Glorot}{G\bibinitperiod}{Xavier}{X\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5d2585c11210cf1d4512e6e0a03ec315}{Goodfellow}{G\bibinitperiod}{Ian}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7a3517488db2eb8c7d9fa19c6e34729c}{Graham}{G\bibinitperiod}{Matt}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2adc0c92c308f233c731321d55efe58f}{Gulcehre}{G\bibinitperiod}{Caglar}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dba11c89254b0908c0259f2700397ecc}{Hamel}{H\bibinitperiod}{Philippe}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a5764e844ef4a7dcfd9e037a4f3f84a9}{Harlouchet}{H\bibinitperiod}{Iban}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=63a77bd517924aab898035c490f2a282}{Heng}{H\bibinitperiod}{Jean-Philippe}{J\bibinithyphendelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d4112ec4c80058ecfac126d297274575}{Hidasi}{H\bibinitperiod}{Balázs}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=232db00d9ed76b8da3aa8e225911722a}{Honari}{H\bibinitperiod}{Sina}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2a2e532f1a06f63c26b28ffb1bcfbd78}{Jain}{J\bibinitperiod}{Arjun}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e7900fa084457b02b06b51ac925a4e78}{Jean}{J\bibinitperiod}{Sébastien}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b2070ec475387da65b2b49586846855a}{Jia}{J\bibinitperiod}{Kai}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=02359c940fd96a86c95589c624d9ce06}{Korobov}{K\bibinitperiod}{Mikhail}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=52f483a4b11f9e4e53d760a20239fcfd}{Kulkarni}{K\bibinitperiod}{Vivek}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ef69d4db3429fa2ccff2c8ab6d0ff113}{Lamb}{L\bibinitperiod}{Alex}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f982a903aea0f11eb0fd5f208d25810e}{Lamblin}{L\bibinitperiod}{Pascal}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=47f32c70db2a6d050e7f619c1e804f56}{Larsen}{L\bibinitperiod}{Eric}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=eebcca4198064bbc4d237d58b91190ff}{Laurent}{L\bibinitperiod}{César}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4bc0586d3049d8be593efc7d57bb2bb2}{Lee}{L\bibinitperiod}{Sean}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d007202536f614c6a3cc10d169eeb6e4}{Lefrancois}{L\bibinitperiod}{Simon}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d09f59c3b593c89db58968b82750f274}{Lemieux}{L\bibinitperiod}{Simon}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=db4067da5f1d8e231e32151651e87e2a}{Léonard}{L\bibinitperiod}{Nicholas}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d242f3c85bf78ecc0d2232ac43b33dcb}{Lin}{L\bibinitperiod}{Zhouhan}{Z\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cd80812b0afeb2ad69b50824d96209a9}{Livezey}{L\bibinitperiod}{Jesse\bibnamedelima A.}{J\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a7ef83e0e2a70758db0602cb73ebc534}{Lorenz}{L\bibinitperiod}{Cory}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3b74be5bcc1b00887297f211e9777d54}{Lowin}{L\bibinitperiod}{Jeremiah}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b57469e515001f2ff1832a82c3867958}{Ma}{M\bibinitperiod}{Qianli}{Q\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7ba1a9455f15a2898752cabc022e1887}{Manzagol}{M\bibinitperiod}{Pierre-Antoine}{P\bibinithyphendelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8596f752c299ae15dba778dbbcfc00f2}{Mastropietro}{M\bibinitperiod}{Olivier}{O\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e23d3a9694f5c1edb3ef968f2dc7c2bd}{McGibbon}{M\bibinitperiod}{Robert\bibnamedelima T.}{R\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=af42e70923af46b7688226711da549d7}{Memisevic}{M\bibinitperiod}{Roland}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f0f9993391f26a73b94828bfc6fb784f}{Merriënboer}{M\bibinitperiod}{Bart}{B\bibinitperiod}{van}{v\bibinitperiod}{}{}}%
+        {{uniquename=0,hash=ced1b1012187a89d9506463ab279a4a7}{Michalski}{M\bibinitperiod}{Vincent}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9e80f4779b032f68a6106e1424345450}{Mirza}{M\bibinitperiod}{Mehdi}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ab9b1de22d930448ca9177c7c36c3dee}{Orlandi}{O\bibinitperiod}{Alberto}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ac7fb32a9c89f3239e579fa3ff2e1765}{Pal}{P\bibinitperiod}{Christopher}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7045b009b04d57bd2e19b5dfa0864d4f}{Pascanu}{P\bibinitperiod}{Razvan}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=06bf1ba7ee874c67e589f4307bd4162c}{Pezeshki}{P\bibinitperiod}{Mohammad}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=81a5a94e2388c149a73a86381db45e07}{Raffel}{R\bibinitperiod}{Colin}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6cef4dfc8fdacaa314d89922020b822e}{Renshaw}{R\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a0c55cd891828ec1d8975f972d9d3139}{Rocklin}{R\bibinitperiod}{Matthew}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8e0f06556535de7b7d9d04d390dc4ac3}{Romero}{R\bibinitperiod}{Adriana}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=198b5fd4139b1a1b3683e793e14b339c}{Roth}{R\bibinitperiod}{Markus}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=542e0ab509cb810ee857a384b90f7fb5}{Sadowski}{S\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=05c761e203cc6c586605836fa4676d10}{Salvatier}{S\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=776a45d5e0b05d6b07ce52b7f9ddc023}{Savard}{S\bibinitperiod}{François}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9f118d3582197497a9715d900638f1bc}{Schlüter}{S\bibinitperiod}{Jan}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3e09bd2a25d237ebdaed560a07c0451e}{Schulman}{S\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2a55360b07101e40fad16b7ed657cf92}{Schwartz}{S\bibinitperiod}{Gabriel}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=267cf1f6856fbdaf8b0d5149337a07b0}{Serban}{S\bibinitperiod}{Iulian\bibnamedelima Vlad}{I\bibinitperiod\bibinitdelim V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9c9067bfada4eb146f17a3b70537c094}{Serdyuk}{S\bibinitperiod}{Dmitriy}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e57c9841a1e956b68cd03a6eb90ac4aa}{Shabanian}{S\bibinitperiod}{Samira}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1ffdb7b303583b5d9d53b0e025c9103e}{Simon}{S\bibinitperiod}{Étienne}{É\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=790ad8a2fd6fa582aa16a9fc7f6fa9b5}{Spieckermann}{S\bibinitperiod}{Sigurd}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=bd2db06e3bfdec347e299c125db669f3}{Subramanyam}{S\bibinitperiod}{S.\bibnamedelimi Ramana}{S\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4be4ac76e9e23ea2cd6b0f80b9a800b4}{Sygnowski}{S\bibinitperiod}{Jakub}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8a4e92d52e8ae6fdea6088d4d85585d6}{Tanguay}{T\bibinitperiod}{Jérémie}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b14ec8204cbe507867d067c349093b71}{Tulder}{T\bibinitperiod}{Gijs}{G\bibinitperiod}{van}{v\bibinitperiod}{}{}}%
+        {{uniquename=0,hash=c24b335710b7bee2470322cfa5f31c25}{Turian}{T\bibinitperiod}{Joseph}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=172f07c4f8cdbfd0276944f9d6c0d80a}{Urban}{U\bibinitperiod}{Sebastian}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=da21e966c02c3cfd33d74369c7435c1a}{Vincent}{V\bibinitperiod}{Pascal}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6b5929470a8840e4c6f9b8836bd55286}{Visin}{V\bibinitperiod}{Francesco}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=742551419d9c216e1ae7e6bf61ee348c}{Vries}{V\bibinitperiod}{Harm}{H\bibinitperiod}{de}{d\bibinitperiod}{}{}}%
+        {{uniquename=0,hash=e8151f1b8f85a048cacb34f374ec922b}{Warde-Farley}{W\bibinithyphendelim F\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=14c877234a2db7a2f1d9cb5b26f13320}{Webb}{W\bibinitperiod}{Dustin\bibnamedelima J.}{D\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=42d2fec26cb0bf53d710afb65898039d}{Willson}{W\bibinitperiod}{Matthew}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dc2232b001fa318a37c38c2de1bd6b09}{Xu}{X\bibinitperiod}{Kelvin}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8552e372f41af54d4f49bdefce1d411d}{Xue}{X\bibinitperiod}{Lijun}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0c7219926b788f0561a5b75b8f724d73}{Yao}{Y\bibinitperiod}{Li}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5ddb374f636f20980ee704d638a01465}{Zhang}{Z\bibinitperiod}{Saizheng}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f5acec98b29ee91fa6b08b85a6a0adad}{Zhang}{Z\bibinitperiod}{Ying}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{33e6a66c057bd9efe031fcc035fad019}
+      \strng{fullhash}{c9f50a5e6b89a5abac39750205b74c0d}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelyear}{2016}
+      \field{labelmonth}{05}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.SC}
+      \field{journaltitle}{arXiv e-prints}
+      \field{month}{05}
+      \field{title}{{Theano: A {Python} framework for fast computation of mathematical expressions}}
+      \field{volume}{abs/1605.02688}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://arxiv.org/abs/1605.02688
+      \endverb
+      \keyw{Computer Science - Symbolic Computation,Computer Science - Learning,Computer Science - Mathematical Software}
+    \endentry
+    \entry{socher2011semi}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,hash=d5670b2600fea169724521e252d9d09d}{Socher}{S\bibinitperiod}{Richard}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ab47b497d1b0cdaddd8594e4bd501ee5}{Pennington}{P\bibinitperiod}{Jeffrey}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f501ea909066ea3159ac2588fa051e8a}{Huang}{H\bibinitperiod}{Eric\bibnamedelima H}{E\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=799b172b8d02b7acdf21d0cc48934fca}{Ng}{N\bibinitperiod}{Andrew\bibnamedelima Y}{A\bibinitperiod\bibinitdelim Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1261894eaefc186bfeabf336e05e6294}{Manning}{M\bibinitperiod}{Christopher\bibnamedelima D}{C\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{e7c60479e674fc5df9f60993d72cca39}
+      \strng{fullhash}{74317df2c0e49e9ed9f58c514d2bdbff}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelyear}{2011}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Conference on Empirical Methods in Natural Language Processing}
+      \field{title}{Semi-supervised recursive autoencoders for predicting sentiment distributions}
+      \field{year}{2011}
+      \field{pages}{151\bibrangedash 161}
+      \range{pages}{11}
+    \endentry
+    \entry{Spencer:2015:DLN:2817095.2817106}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=f1db42e2d47eb023023a680d34bffd56}{Spencer}{S\bibinitperiod}{Matt}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6d302f5c1c509e7e9c460c09d9866748}{Eickholt}{E\bibinitperiod}{Jesse}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fd43749e3745ea8dbf421d10a0062425}{Cheng}{C\bibinitperiod}{Jianlin}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Los Alamitos, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {IEEE Computer Society Press}%
+      }
+      \strng{namehash}{0866efca2a4cf16cefebe11c9e63c53e}
+      \strng{fullhash}{0866efca2a4cf16cefebe11c9e63c53e}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelyear}{2015}
+      \field{labelmonth}{01}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1545-5963}
+      \field{journaltitle}{IEEE/ACM Trans. Comput. Biol. Bioinformatics}
+      \field{month}{01}
+      \field{number}{1}
+      \field{title}{A Deep Learning Network Approach to Ab Initio Protein Secondary Structure Prediction}
+      \field{volume}{12}
+      \field{year}{2015}
+      \field{pages}{103\bibrangedash 112}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/TCBB.2014.2343960
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1109/TCBB.2014.2343960
+      \endverb
+      \keyw{deep learning,machine learning,neural nets,protein structure prediction}
+    \endentry
+    \entry{srivastava2014dropout}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,hash=6a147afa4569ce6cf23c0436e65d8486}{Srivastava}{S\bibinitperiod}{Nitish}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5aeb1de9b6c6f00a078230c628e6f41c}{Hinton}{H\bibinitperiod}{Geoffrey\bibnamedelima E}{G\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c5e3a676e2ac1164b3afcd539c131fc9}{Krizhevsky}{K\bibinitperiod}{Alex}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8d569d1d5b8b5a7836017a98b430f959}{Sutskever}{S\bibinitperiod}{Ilya}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=bd2be300d445e9f6db7808f9533e66cb}{Salakhutdinov}{S\bibinitperiod}{Ruslan}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{4d6dba595c04c09619c7c1c0038d5b6b}
+      \strng{fullhash}{fe1696500a11c4d4788bda75b9929c5b}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{1}
+      \field{title}{Dropout: a simple way to prevent neural networks from overfitting.}
+      \field{volume}{15}
+      \field{year}{2014}
+      \field{pages}{1929\bibrangedash 1958}
+      \range{pages}{30}
+    \endentry
+    \entry{NIPS2014_5346}{incollection}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=8d569d1d5b8b5a7836017a98b430f959}{Sutskever}{S\bibinitperiod}{Ilya}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=494b568c5dc85ba8f3f409635f9c5f25}{Vinyals}{V\bibinitperiod}{Oriol}{O\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9fd2dcec218c0c88f5cf6dcdefdbadbb}{Le}{L\bibinitperiod}{Quoc\bibnamedelima V}{Q\bibinitperiod\bibinitdelim V\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{5}{}{%
+        {{hash=b45872831548714dccc49dcfa20306a1}{Ghahramani}{G\bibinitperiod}{Z.}{Z\bibinitperiod}{}{}{}{}}%
+        {{hash=8b7fe0e4c2b0f504bdf6a5d895d39ee1}{Welling}{W\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=7ace0f703f75865b2add1cb4c55909ea}{Cortes}{C\bibinitperiod}{C.}{C\bibinitperiod}{}{}{}{}}%
+        {{hash=8f87e28885fa1a253eaadafeeb73e581}{Lawrence}{L\bibinitperiod}{N.\bibnamedelimi D.}{N\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{hash=2cffb24bf1e4e0056d694659663c471c}{Weinberger}{W\bibinitperiod}{K.\bibnamedelimi Q.}{K\bibinitperiod\bibinitdelim Q\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{829cd667900cd37d08e0aa7e5adbd06f}
+      \strng{fullhash}{829cd667900cd37d08e0aa7e5adbd06f}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems 27}
+      \field{title}{Sequence to Sequence Learning with Neural Networks}
+      \field{year}{2014}
+      \field{pages}{3104\bibrangedash 3112}
+      \range{pages}{9}
+      \verb{url}
+      \verb http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf
+      \endverb
+    \endentry
+    \entry{Vincent:2008:ECR:1390156.1390294}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=da21e966c02c3cfd33d74369c7435c1a}{Vincent}{V\bibinitperiod}{Pascal}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=42a970b0a0f1ed24b23064370cc9392f}{Larochelle}{L\bibinitperiod}{Hugo}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=40a8e4774982146adc2688546f54efb2}{Bengio}{B\bibinitperiod}{Yoshua}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7ba1a9455f15a2898752cabc022e1887}{Manzagol}{M\bibinitperiod}{Pierre-Antoine}{P\bibinithyphendelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Helsinki, Finland}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{17d6344b63d3d08616d701213bf1af6a}
+      \strng{fullhash}{5cc31505a450b4f9e42201d7bdc2794b}
+      \field{sortinit}{V}
+      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 25th International Conference on Machine Learning}
+      \field{isbn}{9781605582054}
+      \field{series}{ICML '08}
+      \field{title}{Extracting and Composing Robust Features with Denoising Autoencoders}
+      \field{year}{2008}
+      \field{pages}{1096\bibrangedash 1103}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/1390156.1390294
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/1390156.1390294
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
