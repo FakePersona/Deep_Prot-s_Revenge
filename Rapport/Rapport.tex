@@ -504,6 +504,13 @@ caractéres tirés aléatoirement.
 
 \subsubsection{Classificateurs}
 
+Nous avons étudié deux architectures de classificateurs, qui correspondent principalement à l'encodeur des autoencodeurs précédents auxquels un neurone final est ajouté pour prendre la décision finale de classification.
+
+La classification fonctionne bien dans les deux cas. De manière assez intéressante, cela veut dire que les réseaux convolutionnels sont bien capables de reconnaitre les ``points caractéristiques'' de chaînes de caractères, mais le décodeur récurrent n'est pas capable de reconstituer la chaîne à l'aide de l'information contenu dans la représentation latente.
+
+\subsection{Modèles entraînés sur les protéines}
+
+Les chaînes protéiques étudiées sont longues (jusqu'à 300 caractères). Les auto-encodeurs sont entraînés non pas sur les chaîne protéiques mais sur des fragments de chaîne peptidique de taille 11, ce qui facilite les calculs et correspond à une fenêtre permettant d'observer quelques structures secondaires. De plus, cela présente l'avantage significatif d'augmenter très significativement le nombre d'exmples d'entraînement disponibles, ce qui est très important en apprentissage profond. Pour le classificateur, nous avons utiliser l'encodeur de l'autoencodeur précédent comme ``fenêtre glissante'' avant de décider avec un neurone final. L'idée est que pour chaque facteur de taille 11 d'une chaîne peptidique, on applique l'encodeur de l'auto-encodeur entraîné de manière non supervisée.
 
 \subsection{Clustering de protéines}
 

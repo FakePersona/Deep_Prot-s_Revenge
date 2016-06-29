@@ -62,7 +62,7 @@ dataNames = []
 
 occurences = []
 
-record = SeqIO.parse("bigFile.fa", "fasta")
+record = SeqIO.parse("../../../data/smallData.fa", "fasta")
 
 # Parsing file
 
@@ -108,8 +108,9 @@ print("Creating model...")
 model = Sequential()
 
 #Recurrent encoder
-model.add(recurrent.LSTM(encoding_dim, input_shape=(11, ACIDS), dropout_W=0.1, dropout_U=0.1))
-#model.add(recurrent.LSTM(encoding_dim, dropout_W=0.1, dropout_U=0.1))
+model.add(recurrent.LSTM(encoding_dim, input_shape=(11, ACIDS), return_sequences=True, dropout_W=0.1, dropout_U=0.1))
+model.add(recurrent.LSTM(encoding_dim, return_sequences=True, dropout_W=0.1, dropout_U=0.1))
+model.add(recurrent.LSTM(encoding_dim, dropout_W=0.1, dropout_U=0.1))
 
 model.add(RepeatVector(11))
 
@@ -124,7 +125,7 @@ model.load_weights("RecOne.h5")
 
 model.compile(optimizer='rmsprop', loss='binary_crossentropy')
 
-get_summary = K.function([model.layers[0].input, K.learning_phase()], [model.layers[0].output])
+get_summary = K.function([model.layers[0].input, K.learning_phase()], [model.layers[2].output])
 
 print("Let's go!")
 
@@ -139,7 +140,7 @@ for i in range(len(X)):
     intermediate = get_summary([row, 0])[0][0]
     Embed[i] = intermediate
 
-Alg = cluster.KMeans(n_clusters=4)
+Alg = cluster.KMeans(n_clusters=8)
 
 Alg.fit(Embed)
 Cluster_ind = Alg.predict(Embed)
@@ -161,7 +162,7 @@ Representation = [nameInd[n] for n in Cluster[0]]
 
 print("starting to plot")
     
-plt.hist(Representation)
+plt.hist(Representation, len(UniqNames))
 plt.title("Gaussian Histogram")
 plt.xlabel("Value")
 plt.ylabel("Frequency")
