@@ -68,7 +68,7 @@ chars = 'rndeqkstchmavgilfpwybzuxXo'
 ctable = AcidEmbedding(11)
 
 ACIDS = 4
-encoding_dim = 30
+encoding_dim = 50
 
 np.set_printoptions(threshold=np.nan)
 
