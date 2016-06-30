@@ -2255,7 +2255,8 @@
     <bcf:citekey order="14">tensorflow2015-whitepaper</bcf:citekey>
     <bcf:citekey order="15">fox2014scope</bcf:citekey>
     <bcf:citekey order="16">Cock01062009</bcf:citekey>
-    <bcf:citekey order="17">jian2013predicting</bcf:citekey>
+    <bcf:citekey order="17">vincent2010stacked</bcf:citekey>
+    <bcf:citekey order="18">jian2013predicting</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
   <bcf:sorting>

@@ -565,7 +565,7 @@
       \endverb
     \endentry
     \entry{Vincent:2008:ECR:1390156.1390294}{inproceedings}{}
-      \name{author}{4}{}{%
+      \name{author}{4}{uniquelist=3}{%
         {{uniquename=0,hash=da21e966c02c3cfd33d74369c7435c1a}{Vincent}{V\bibinitperiod}{Pascal}{P\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=42a970b0a0f1ed24b23064370cc9392f}{Larochelle}{L\bibinitperiod}{Hugo}{H\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=40a8e4774982146adc2688546f54efb2}{Bengio}{B\bibinitperiod}{Yoshua}{Y\bibinitperiod}{}{}{}{}}%
@@ -577,7 +577,7 @@
       \list{publisher}{1}{%
         {ACM}%
       }
-      \strng{namehash}{17d6344b63d3d08616d701213bf1af6a}
+      \strng{namehash}{de82398441e1506cee5467216dc67f87}
       \strng{fullhash}{5cc31505a450b4f9e42201d7bdc2794b}
       \field{sortinit}{V}
       \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
@@ -598,6 +598,30 @@
       \verb{url}
       \verb http://doi.acm.org/10.1145/1390156.1390294
       \endverb
+    \endentry
+    \entry{vincent2010stacked}{article}{}
+      \name{author}{5}{uniquelist=3}{%
+        {{uniquename=0,hash=da21e966c02c3cfd33d74369c7435c1a}{Vincent}{V\bibinitperiod}{Pascal}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=42a970b0a0f1ed24b23064370cc9392f}{Larochelle}{L\bibinitperiod}{Hugo}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e134185cda8d18743c3369211c575f9b}{Lajoie}{L\bibinitperiod}{Isabelle}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=40a8e4774982146adc2688546f54efb2}{Bengio}{B\bibinitperiod}{Yoshua}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7ba1a9455f15a2898752cabc022e1887}{Manzagol}{M\bibinitperiod}{Pierre-Antoine}{P\bibinithyphendelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{2e76a536e11f033fcd1ae1efb9703db0}
+      \strng{fullhash}{24b92e28cf0f78853e5b3b8eef3cdb11}
+      \field{sortinit}{V}
+      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
+      \field{labelyear}{2010}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{Dec}
+      \field{title}{Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion}
+      \field{volume}{11}
+      \field{year}{2010}
+      \field{pages}{3371\bibrangedash 3408}
+      \range{pages}{38}
     \endentry
   \endsortlist
 \endrefsection
