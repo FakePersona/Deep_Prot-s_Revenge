@@ -73,13 +73,13 @@ class AcidEmbedding(object):
     def get_charge(self, C):
         charge = 0
         for c in C:
-            charge += self.embed[char_indices[c]][1]
+            charge += self.embed[self.char_indices[c]][1]
         return charge
 
     def get_hydro(self, C):
         hydro = 0
         for c in C:
-            hydro += self.embed[char_indices[c]][0]
+            hydro += self.embed[self.char_indices[c]][0]
         return hydro
 
     def decode(self, X):
@@ -131,7 +131,7 @@ test = []
 
 dataNames = []
 
-occurences = []
+
 
 # Parsing fasta file
 
@@ -151,6 +151,8 @@ print(len(UniqNames))
 record = SeqIO.parse("../../../data/smallData.fa", "fasta")
 
 # parsing PDB files
+
+print("parsing PDB")
 
 PDB_list = glob.glob("../../../../PDBMining/*/*.ent")
 
@@ -179,13 +181,21 @@ for f in PDB_list:
         Valid[nameInd[name]] = False
     a_keys = list(dssp.keys())
     sec = [dssp[a][2] for a in a_keys]
+    try:
+        if len(sec) != len(proteins[nameInd[name]]):
+            Valid[nameInd[name]] = False
+    except KeyError:
+        pass
     secondaryStruct.append(sec)
+
+print(len(secondaryStruct))
+print(len(PDBNames))
 
 PDBInd = dict((c, i) for i, c in enumerate(PDBNames))
 
-occurence = [-1 for _ in proteins]
-
 dataSecond = []
+
+print("parsing sequences")
 
 ind = -1
 for rec in record:
@@ -194,7 +204,6 @@ for rec in record:
         break
     if not Valid[nameInd[rec.name]]:
         continue
-    occurences[nameInd[rec.name]] = len(data)
     for k in range(len(rec.seq) // 3 - 4):
         data.append([rec.seq[3 * k + i] for i in range(11)])
         dataSecond.append([secondaryStruct[PDBInd[rec.name]][3 * k + i] for i in range(11)])
@@ -278,7 +287,7 @@ for i in range(len(Properties)):
             Properties[i][27] += 1
     # Secondary Structure
     s = 0
-    for c in data[i]:
+    for c in dataSecond[i]:
         if c == 'H':
             s += 1
         if c == 'B':
@@ -289,5 +298,5 @@ for i in range(len(Properties)):
         Properties[i][29] = 1
 
 f = open("Single.txt", 'w')
-json.dump(Properties, f)
+json.dump(Properties.tolist(), f)
 f.close()

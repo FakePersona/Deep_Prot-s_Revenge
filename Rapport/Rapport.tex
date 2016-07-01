@@ -482,6 +482,9 @@ réseaux convolutionnels offrent un moyen alternatif de repérer ces mots: si un
   map} sera capable de repérer (après entraînement) un mot (caractéristique) de
 longueur inférieure ou égale à 7.
 
+En outre, l'idée de pouvoir utiliser une \og fenêtre glissante\fg pour étudier
+des fragments d'une chaîne plus longue a été préservée.
+
 \subsection{Etude préliminaire sur séquences artificielles}
 
 Nous avons généré aléatoirement plusieurs jeux de données pour comparer les
@@ -578,7 +581,13 @@ des points remarquables dans la structure de protéines qui pourront être
 ré-utilisés de manière indépendante de l'apprentissage profond plus tard.
 
 Un simple algorithme de K-means permet de faire le découpage en parties de
-l'ensemble d'apprentissage.
+l'ensemble d'apprentissage. Pour étudier les différentes parties de l'espace
+latent ainsi découpées, on procéde à une analyse de la fréquence d'apparition de
+fragments d'un domaine donnée (c'est-à-dire le rapport entre le nombre
+d'apparitions dans le groupe et le nombre de fragments totaux du domaine, afin
+d'éviter d'introduire un biais favorisant les domaines longs) et à une étude du
+nombre fragments comprenant uniquement des acides faisant partie d'une
+hélice-$\alpha$ ou d'une feuille-$\beta$
 
 \subsection{Etude de la corrélation de paramètres}
 
@@ -597,7 +606,7 @@ d'un couple de fragments.
 Pour ce qui est des caractéristiques propres à un fragment, nous avons étudié
 son hydropathie moyenne, sa charge moyenne, la présence d'acides aminés dans la
 chaîne peptidique (regroupés en 5 catégories: Aliphatic, Aromatic, Neutral,
-Acidic, ) et le fait que la chaîne est uniquement composé d'acides apprtenant à
+Acidic, ) et le fait que la chaîne est uniquement composée d'acides apprtenant à
 une hélice-$\alpha$ ou à une feuille-$\beta$. Ce dernier point a été fait à
 l'aide l'outil DSSP introduit au début de cette section.
 
@@ -609,7 +618,26 @@ aux $carbones-\alpha$).
 
 \section{Vérification}
 
+\subsection{Autoencodeurs}
+
+L'entraînement de l'autoencodeur récurrent a rapidement donné des résultats très
+satisfaisant en termes de reconstitution des fragments  avec une représentation
+latente de dimensions raisonnablement faible (20 dimensions). L'entraînement des
+autres auto-encodeurs a par contre nécessité plus d'efforts, dont une
+initialisation aléatoire pertinente du réseau.
+
+\subsubsection{Clustering}
+
+Les résultats ne semblent pas montrer une quelconque corrélation entre le type
+de la protéine d'origine du fragment et sa représentation dans un groupe.
+
+\subsubsection{Corrélations}
+
+Les résultats suivants ont été obtenus
+
 \section{Contribution}
+
+
 
 \section*{Conclusion}
 

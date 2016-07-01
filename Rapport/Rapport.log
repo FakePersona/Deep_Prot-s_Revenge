@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.4.26)  1 JUL 2016 11:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.4.26)  1 JUL 2016 17:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1122,7 +1122,7 @@ Underfull \hbox (badness 3872) in paragraph at lines 538--553
 [][]\T1/ppl/m/n/11 Les chaînes pro-téiques étu-diées sont
  []
 
-[9 <./Figures/Class.png>] [10] [11] (./Rapport.aux)
+[9 <./Figures/Class.png>] [10] [11] [12] (./Rapport.aux)
 Package logreq Info: Writing requests to 'Rapport.run.xml'.
 \openout1 = `Rapport.run.xml'.
 
@@ -1130,7 +1130,7 @@ Package logreq Info: Writing requests to 'Rapport.run.xml'.
 Here is how much of TeX's memory you used:
  13348 strings out of 493054
  215208 string characters out of 6140586
- 651141 words of memory out of 5000000
+ 652141 words of memory out of 5000000
  16629 multiletter control sequences out of 15000+600000
  118559 words of font info for 139 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1142,10 +1142,10 @@ ri.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/te
 xmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texmf-dist/fonts/type1
 /urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a
 .pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Rapport.pdf (11 pages, 533366 bytes).
+Output written on Rapport.pdf (12 pages, 534383 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 91 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
