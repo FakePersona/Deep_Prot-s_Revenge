@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper, journal, 11pt, onecolumn]{IEEEtran}
 \usepackage{a4wide}%
 
 \usepackage{tabularx}
@@ -414,7 +414,9 @@ grand classique \texttt{Theano} (\cite{2016arXiv160502688full}) et le plus réce
 
 Pour ce qui est de la manipulation de séquence peptidiques à proprement parlé,
 nous avons utilisé des données de la base de donnée \texttt{SCOPe}
-(\cite{fox2014scope}) et la librairie python Biopython (\cite{Cock01062009})
+(\cite{fox2014scope}) et la librairie python Biopython (\cite{Cock01062009},
+\cite{hamelryck2003pdb}). L'outil DSSP (\cite{kabsch1983dictionary}) a aussi été
+utilisé pour établir la structure secondaire des protéines étudiées ?
 
 \subsection{Représentation des chaînes peptidiques}
 
@@ -577,6 +579,33 @@ ré-utilisés de manière indépendante de l'apprentissage profond plus tard.
 
 Un simple algorithme de K-means permet de faire le découpage en parties de
 l'ensemble d'apprentissage.
+
+\subsection{Etude de la corrélation de paramètres}
+
+Une autre façon de relever des caractéristiques sur la représentation
+intermédiaire acquises est d'en étudier les corrélations existant entre ses
+caractéristiques et des paramètres liés au fragment de protéine étudié. Nous
+avons décidé d'étudier les paramètres de la représentation intermédiaire
+suivants: sa norme, ses coordonnées dans l'espace latent et la distance entre la
+représentation latente de deux fragments. De fait, il a fallu distinguer deux
+types de données pour effectuer l'étude des corrélations puisqu'il a fallut
+étudier des caractéristiques propres à un fragment, et des caractéristiques
+d'un couple de fragments.
+
+\paragraph{Paramètres d'un unique fragment}
+
+Pour ce qui est des caractéristiques propres à un fragment, nous avons étudié
+son hydropathie moyenne, sa charge moyenne, la présence d'acides aminés dans la
+chaîne peptidique (regroupés en 5 catégories: Aliphatic, Aromatic, Neutral,
+Acidic, ) et le fait que la chaîne est uniquement composé d'acides apprtenant à
+une hélice-$\alpha$ ou à une feuille-$\beta$. Ce dernier point a été fait à
+l'aide l'outil DSSP introduit au début de cette section.
+
+\paragraph{Paramètres d'un couple de fragments}
+
+Nous avons fait l'étude, en outre de la distance entre les représentation
+latentes, du score d'alignement entre les fragments (global et local) et du score de superimposition structurale (relativement
+aux $carbones-\alpha$).
 
 \section{Vérification}
 

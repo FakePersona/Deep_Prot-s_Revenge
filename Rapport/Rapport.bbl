@@ -175,6 +175,30 @@
       \verb http://biorxiv.org/content/early/2015/11/16/031906
       \endverb
     \endentry
+    \entry{hamelryck2003pdb}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=ff236dbcdc91c0630e8b9eadbf91c436}{Hamelryck}{H\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e9cf4adcad40050281aaa34bfa3ca936}{Manderick}{M\bibinitperiod}{Bernard}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford Univ Press}%
+      }
+      \strng{namehash}{1f3520e90d504f8ee988c12d9cf448b6}
+      \strng{fullhash}{1f3520e90d504f8ee988c12d9cf448b6}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelyear}{2003}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioinformatics}
+      \field{number}{17}
+      \field{title}{PDB file parser and structure class implemented in Python}
+      \field{volume}{19}
+      \field{year}{2003}
+      \field{pages}{2308\bibrangedash 2310}
+      \range{pages}{3}
+    \endentry
     \entry{hochreiter1997long}{article}{}
       \name{author}{2}{}{%
         {{uniquename=0,hash=41b31e29fb2bdbf9f5c9c1b0d5b3e815}{Hochreiter}{H\bibinitperiod}{Sepp}{S\bibinitperiod}{}{}{}{}}%
@@ -224,6 +248,30 @@
       \field{year}{2013}
       \field{pages}{1894\bibrangedash 1899}
       \range{pages}{6}
+    \endentry
+    \entry{kabsch1983dictionary}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=7f410e758870d5022f40f18e19d55197}{Kabsch}{K\bibinitperiod}{Wolfgang}{W\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fe52d1a32f8a4d5b93db74a3f31bdb50}{Sander}{S\bibinitperiod}{Christian}{C\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{5ce8be718914c8a388f5d1b1455152fc}
+      \strng{fullhash}{5ce8be718914c8a388f5d1b1455152fc}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelyear}{1983}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biopolymers}
+      \field{number}{12}
+      \field{title}{Dictionary of protein secondary structure: pattern recognition of hydrogen-bonded and geometrical features}
+      \field{volume}{22}
+      \field{year}{1983}
+      \field{pages}{2577\bibrangedash 2637}
+      \range{pages}{61}
     \endentry
     \entry{lecun1998gradient}{article}{}
       \name{author}{4}{}{%

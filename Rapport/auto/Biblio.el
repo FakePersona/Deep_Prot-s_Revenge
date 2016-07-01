@@ -2,6 +2,8 @@
  "Biblio"
  (lambda ()
    (LaTeX-add-bibitems
+    "kabsch1983dictionary"
+    "hamelryck2003pdb"
     "vincent2010stacked"
     "DBLP:journals/corr/ChoMGBSB14"
     "srivastava2014dropout"

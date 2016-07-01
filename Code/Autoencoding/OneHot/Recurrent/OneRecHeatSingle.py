@@ -3,7 +3,7 @@ from __future__ import print_function
 import matplotlib.pyplot as plt
 import numpy as np
 
-import plotly.plotly as py
+#import plotly.plotly as py
 
 from keras import backend as K
 
@@ -163,10 +163,6 @@ for f in PDB_list:
     PDBNames.append(name)
     struct = p.get_structure(name,f)
     res_list = Selection.unfold_entities(struct, 'R')
-    dssp = DSSP(struct[0], f)
-    a_keys = list(dssp.keys())
-    sec = [dssp[a][2] for a in a_keys]
-    secondaryStruct.append(sec)
     try:
         seq = [three_to_one(a.get_resname()).lower() for a in res_list]
     except (KeyError):
@@ -176,6 +172,14 @@ for f in PDB_list:
             Valid[nameInd[name]] = True
     except KeyError:
         pass
+    struct_dssp = p.get_structure(name,f)
+    try:
+        dssp = DSSP(struct_dssp[0], f)
+    except Exception:
+        Valid[nameInd[name]] = False
+    a_keys = list(dssp.keys())
+    sec = [dssp[a][2] for a in a_keys]
+    secondaryStruct.append(sec)
 
 PDBInd = dict((c, i) for i, c in enumerate(PDBNames))
 
@@ -190,11 +194,11 @@ for rec in record:
         break
     if not Valid[nameInd[rec.name]]:
         continue
+    occurences[nameInd[rec.name]] = len(data)
     for k in range(len(rec.seq) // 3 - 4):
         data.append([rec.seq[3 * k + i] for i in range(11)])
         dataSecond.append([secondaryStruct[PDBInd[rec.name]][3 * k + i] for i in range(11)])
         dataNames.append(rec.name)
-    occurences[nameInd[rec.name]] = ind
 
 
 # Encoding data
@@ -284,3 +288,6 @@ for i in range(len(Properties)):
     if s == -11:
         Properties[i][29] = 1
 
+f = open("Single.txt", 'w')
+json.dump(Properties, f)
+f.close()
