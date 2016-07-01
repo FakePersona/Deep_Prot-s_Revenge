@@ -136,8 +136,6 @@ test = []
 
 dataNames = []
 
-occurences = []
-
 # Parsing fasta file
 
 record = SeqIO.parse("../../../data/smallData.fa", "fasta")
@@ -146,7 +144,7 @@ proteins = []
 UniqNames = []
 
 for rec in record:
-    proteins.append(rec.seq)
+    proteins.append([a for a in rec.seq])
     UniqNames.append(rec.name)
 
 nameInd = dict((c, i) for i, c in enumerate(UniqNames))
@@ -173,14 +171,14 @@ for f in PDB_list:
     except (KeyError):
         seq = []
     try:
-        if seq == [a for a in proteins[nameInd[name]]]:
+        if seq == proteins[nameInd[name]]:
             Valid[nameInd[name]] = True
     except KeyError:
         pass
 
 PDBInd = dict((c, i) for i, c in enumerate(PDBNames))
 
-occurence = [-1 for _ in proteins]
+occurences = [-1 for _ in proteins]
 
 ind = -1
 for rec in record:
@@ -189,11 +187,15 @@ for rec in record:
         break
     if not Valid[nameInd[rec.name]]:
         continue
+    if not (ind % 200 == 0):
+        continue
+    occurences[nameInd[rec.name]] = len(data)
     for k in range(len(rec.seq) // 3 - 4):
         data.append([rec.seq[3 * k + i] for i in range(11)])
         dataNames.append(rec.name)
-    occurences[nameInd[rec.name]] = ind
 
+print(len(data))
+    
 # Encoding data
 
 X = np.zeros((len(data), 11, len(chars)), dtype=np.bool)
@@ -238,10 +240,12 @@ for i in range(len(X)):
 
 # Preparing data for correlating
 
-Properties = np.zeros(((len(data)**2  - len(data))//2, 7)) 
+Properties = np.zeros(((len(data)**2  - len(data))//2, 5)) 
 k = 0
 
 matrix = matlist.blosum62
+
+data = [[c.upper() for c in l] for l in data]   
 
 for i in range(len(data)):
     for j in range(i+1, len(data)):
@@ -250,22 +254,20 @@ for i in range(len(data)):
         # Alignment scores
         Properties[k][1] = pairwise2.align.globalxx(data[i],data[j], score_only=1)
         Properties[k][2] = pairwise2.align.localxx(data[i],data[j], score_only=1)
-        Properties[k][3] = pairwise2.align.globalmx(data[i],data[j], score_only=1)
-        Properties[k][4] = pairwise2.align.globalms(data[i],data[j], score_only=1)
-        Properties[k][5] = pairwise2.align.globaldx(data[i],data[j], matrix, score_only=1) #BLOSUM!
+        Properties[k][3] = pairwise2.align.globaldx(data[i],data[j], matrix, score_only=1) #BLOSUM!
         # Structural score
-        off1 = i - occurrences[nameInd[dataNames[i]]]
-        off2 = j - occurrences[nameInd[dataNames[j]]]
+        off1 = i - occurences[nameInd[dataNames[i]]]
+        off2 = j - occurences[nameInd[dataNames[j]]]
         use1 = [False for _ in proteins[nameInd[dataNames[i]]]]
         for l in range(11):
-            use1[3 *off1 + l] = True
+            use1[3 * off1 + l] = True
         use2 = [False for _ in proteins[nameInd[dataNames[j]]]]
         for l in range(11):
-            use2[3 *off2 + l] = True
+            use2[3 * off2 + l] = True
         file1 = PDB_list[PDBInd[dataNames[i]]]
         file2 = PDB_list[PDBInd[dataNames[j]]]
-        struct1 = Bio.PDB.PDBParser().get_structure("1", file1)[0]
-        struct2 = Bio.PDB.PDBParser().get_structure("2", file2)[0]
+        struct1 = PDBParser().get_structure("1", file1)[0]
+        struct2 = PDBParser().get_structure("2", file2)[0]
         ref_atoms = []
         alt_atoms = []
         res_list1 = Selection.unfold_entities(struct1, 'R')
@@ -278,9 +280,9 @@ for i in range(len(data)):
             if allow:
                 #CA = alpha carbon
                 alt_atoms.append(alt_res['CA'])
-        super_imposer = Bio.PDB.Superimposer()
+        super_imposer = Superimposer()
         super_imposer.set_atoms(ref_atoms, alt_atoms)
-        Properties[k][6] = super_imposer.rms
+        Properties[k][4] = super_imposer.rms
         k += 1
 
 f = open("pairs.txt", 'w')
