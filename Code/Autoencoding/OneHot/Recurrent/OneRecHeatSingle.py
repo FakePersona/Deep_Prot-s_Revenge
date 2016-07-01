@@ -3,14 +3,19 @@ from __future__ import print_function
 import matplotlib.pyplot as plt
 import numpy as np
 
-import plotly.plotly as py
+#import plotly.plotly as py
 
 from keras import backend as K
 
-from sklearn import cluster
-
+import glob
+import os
+from os.path import basename
+from Bio.PDB import *
+from Bio.PDB.Polypeptide import three_to_one
 from Bio import SeqIO
 
+import json
+from sklearn import cluster
 from keras.models import Sequential
 from keras.layers import recurrent, RepeatVector, Activation, TimeDistributed, Dense, Dropout
 
@@ -128,35 +133,73 @@ dataNames = []
 
 occurences = []
 
+# Parsing fasta file
+
 record = SeqIO.parse("../../../data/smallData.fa", "fasta")
 
-# Parsing file
+proteins = []
+UniqNames = []
 
-ind = 0
 for rec in record:
-    ind +=1
-    if len(test) > 229999:
-        break
-    if ind > 25502:
-        break
-    if ((len(data) + len(test)) % 6) == 5:
-        for k in range(len(rec.seq)//3 - 10):
-            test.append([rec.seq[3 * k + i] for i in range(11)])
-    else:
-        for k in range(len(rec.seq)//3 - 10):
-            data.append([rec.seq[3 * k + i] for i in range(11)] )
-            dataNames.append(rec.name)
-        occurences.append(len(rec.seq)//3 - 10)
-
-# Indexing domain names
-
-UniqNames = [dataNames[0]]
-
-for i in range(1,len(dataNames)):
-    if dataNames[i] != dataNames[i-1]:
-        UniqNames.append(dataNames[i])
+    proteins.append(rec.seq)
+    UniqNames.append(rec.name)
 
 nameInd = dict((c, i) for i, c in enumerate(UniqNames))
+
+print(len(UniqNames))
+
+record = SeqIO.parse("../../../data/smallData.fa", "fasta")
+
+# parsing PDB files
+
+PDB_list = glob.glob("../../../../PDBMining/*/*.ent")
+
+p = PDBParser()
+secondaryStruct = []
+Valid = [False for _ in proteins]
+PDBNames = []
+for f in PDB_list:
+    name = os.path.splitext(basename(f))[0]
+    PDBNames.append(name)
+    struct = p.get_structure(name,f)
+    res_list = Selection.unfold_entities(struct, 'R')
+    try:
+        seq = [three_to_one(a.get_resname()).lower() for a in res_list]
+    except (KeyError):
+        seq = []
+    try:
+        if seq == [a for a in proteins[nameInd[name]]]:
+            Valid[nameInd[name]] = True
+    except KeyError:
+        pass
+    struct_dssp = p.get_structure(name,f)
+    try:
+        dssp = DSSP(struct_dssp[0], f)
+    except Exception:
+        Valid[nameInd[name]] = False
+    a_keys = list(dssp.keys())
+    sec = [dssp[a][2] for a in a_keys]
+    secondaryStruct.append(sec)
+
+PDBInd = dict((c, i) for i, c in enumerate(PDBNames))
+
+occurence = [-1 for _ in proteins]
+
+dataSecond = []
+
+ind = -1
+for rec in record:
+    ind +=1
+    if ind > 13000:
+        break
+    if not Valid[nameInd[rec.name]]:
+        continue
+    occurences[nameInd[rec.name]] = len(data)
+    for k in range(len(rec.seq) // 3 - 4):
+        data.append([rec.seq[3 * k + i] for i in range(11)])
+        dataSecond.append([secondaryStruct[PDBInd[rec.name]][3 * k + i] for i in range(11)])
+        dataNames.append(rec.name)
+
 
 # Encoding data
 
@@ -202,7 +245,7 @@ for i in range(len(X)):
 
 # Preparing data for correlating
 
-Properties = np.zeros((len(data), 32))
+Properties = np.zeros((len(data), 30))
 
 for i in range(len(Properties)):
     #Norm
@@ -232,6 +275,19 @@ for i in range(len(Properties)):
     # Acidic
     for c in data[i]:
         if c in 'rhk':
-            Properties[i][27] += 1    
-    
-    
+            Properties[i][27] += 1
+    # Secondary Structure
+    s = 0
+    for c in data[i]:
+        if c == 'H':
+            s += 1
+        if c == 'B':
+            s -= 1
+    if s == 11:
+        Properties[i][28] = 1
+    if s == -11:
+        Properties[i][29] = 1
+
+f = open("Single.txt", 'w')
+json.dump(Properties, f)
+f.close()

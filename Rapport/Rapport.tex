@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper, journal, 11pt, onecolumn]{IEEEtran}
 \usepackage{a4wide}%
 
 \usepackage{tabularx}
@@ -198,6 +198,11 @@ Une partie de notre travail s'est focalisée sur l'étude de ces représentation
 intermédiaires et sur ce qu'elles nous apprennent sur les familles de protéines
 ayant servi à l'entraînement de l'auto-encodeur.
 
+\begin{wrapfigure}{R}{0.5\textwidth}
+  \includegraphics[width=0.45\textwidth]{Autoencoder}
+  \caption{Auto-encodeur classique}
+\end{wrapfigure}
+
 \subsection{Réseaux convolutifs}
 
 \paragraph{Il y a un motif caractéristique (feature) dans les images d'oiseaux}
@@ -364,7 +369,7 @@ Hinton a montré qu'il est plus judicieux d'utiliser une fonction de seuillage
 
 \paragraph{Eviter le sur-apprentissage}
   
-On peut léatoirement désactiver certains neurones, ce qui force le système à
+On peut aléatoirement désactiver certains neurones, ce qui force le système à
  éviter de spécialiser le réseau sur l'ensemble d'entraînement et non sur
 le domaine où on veut l'appliquer (\cite{srivastava2014dropout}). Il est raisonnable qu'un réseau
 entrainé sur des familles de protéines gére mal les chaînes purement
@@ -393,7 +398,8 @@ résultats similaires à la technique précédente pour des réseaux classiques.
 
 \subsection{Matériel}
 
-Nous avons effectué l'ensemble de nos travaux à l'aide librairies python.
+Nous avons effectué l'ensemble de nos travaux à l'aide librairies du langage de
+programmation Python (http://www.python.org).
 
 Pour ce qui est de l'aspect apprentissage profond, nous avons principalement
 utilisé \texttt{keras} (\cite{chollet2015keras}) qui est une libraire haut niveau
@@ -408,7 +414,9 @@ grand classique \texttt{Theano} (\cite{2016arXiv160502688full}) et le plus réce
 
 Pour ce qui est de la manipulation de séquence peptidiques à proprement parlé,
 nous avons utilisé des données de la base de donnée \texttt{SCOPe}
-(\cite{fox2014scope}) et la librairie python Biopython (\cite{Cock01062009})
+(\cite{fox2014scope}) et la librairie python Biopython (\cite{Cock01062009},
+\cite{hamelryck2003pdb}). L'outil DSSP (\cite{kabsch1983dictionary}) a aussi été
+utilisé pour établir la structure secondaire des protéines étudiées ?
 
 \subsection{Représentation des chaînes peptidiques}
 
@@ -504,13 +512,51 @@ caractéres tirés aléatoirement.
 
 \subsubsection{Classificateurs}
 
-Nous avons étudié deux architectures de classificateurs, qui correspondent principalement à l'encodeur des autoencodeurs précédents auxquels un neurone final est ajouté pour prendre la décision finale de classification.
+Nous avons étudié deux architectures de classificateurs, qui correspondent
+principalement à l'encodeur des autoencodeurs précédents auxquels un neurone
+final est ajouté pour prendre la décision finale de classification. Le jeu de
+donnée fourni correspondait à ue moitiée de chaîne suivant une règle spécifique
+premières lettres fixes ou copie), et d'une moitiée de chaînes purement aléatoires.
 
-La classification fonctionne bien dans les deux cas. De manière assez intéressante, cela veut dire que les réseaux convolutionnels sont bien capables de reconnaitre les ``points caractéristiques'' de chaînes de caractères, mais le décodeur récurrent n'est pas capable de reconstituer la chaîne à l'aide de l'information contenu dans la représentation latente.
+La classification fonctionne bien dans les deux cas. De manière assez
+intéressante, cela veut dire que les réseaux convolutionnels sont bien capables
+de reconnaitre les ``points caractéristiques'' de chaînes de caractères, mais le
+décodeur récurrent n'est pas capable de reconstituer la chaîne à l'aide de
+l'information contenu dans la représentation latente. Il est à noter cependant
+que les minimums locaux ont présenté un problème avec une initialisation
+aléatoire uniforme simple, puisque le classificateur avait tendance à toujours
+répondre la même chose 'on constatait donc un point de selle de la fonction à
+minimiser par le réseau.
 
 \subsection{Modèles entraînés sur les protéines}
 
-Les chaînes protéiques étudiées sont longues (jusqu'à 300 caractères). Les auto-encodeurs sont entraînés non pas sur les chaîne protéiques mais sur des fragments de chaîne peptidique de taille 11, ce qui facilite les calculs et correspond à une fenêtre permettant d'observer quelques structures secondaires. De plus, cela présente l'avantage significatif d'augmenter très significativement le nombre d'exmples d'entraînement disponibles, ce qui est très important en apprentissage profond. Pour le classificateur, nous avons utiliser l'encodeur de l'autoencodeur précédent comme ``fenêtre glissante'' avant de décider avec un neurone final. L'idée est que pour chaque facteur de taille 11 d'une chaîne peptidique, on applique l'encodeur de l'auto-encodeur entraîné de manière non supervisée.
+\begin{wrapfigure}{R}{0.5\textwidth}
+  \includegraphics[width=0.45\textwidth]{Class}
+  \caption{Classificateur employé}
+\end{wrapfigure}
+
+Les chaînes protéiques étudiées sont longues (jusqu'à 300 caractères). Les
+auto-encodeurs sont entraînés non pas sur les chaîne protéiques mais sur des
+fragments de chaîne peptidique de taille 11, ce qui facilite les calculs et
+correspond à une fenêtre permettant d'observer quelques structures secondaires.
+De plus, cela présente l'avantage significatif d'augmenter très
+significativement le nombre d'exemples d'entraînement disponibles, ce qui est
+très important en apprentissage profond. Les autoencodeurs décrits dans l'étude
+préliminaire sont ceux qui ont été employés à nouveau dans cette étude des
+fragments. Il peut paraître surprenant d'utiliser l'autoencodeur convolutionael
+ici alors qu'il n'avait pas réussit à accomplir sa tâche désigné. Néanmoins,
+cela ne veut pas dire qu'il n'a pas pu apprendre de représentation intermédiaire
+intéressante. Ainsi, nous avons tout de même entrainé un autoencodeur
+convolutionel dans l'espoir de pouvoir en faire une étude par la suite. Deux
+représentation ont été employées pour les acides aminés: celle basées sur les
+caractères physicochimiques décrite plus haut, et une représentation One-Hot
+
+Pour le classificateur, nous avons
+utilisé l'encodeur de l'autoencodeur précédent comme ``fenêtre glissante''
+avant de décider avec un neurone final. L'idée est que pour chaque facteur de
+taille 11 d'une chaîne peptidique, on applique l'encodeur de l'auto-encodeur
+entraîné de manière non supervisée. De cette manière, nous espérons éviter
+autant que possible une mauvaise initialisation du réseau comme décrit dans \cite{vincent2010stacked}
 
 \subsection{Clustering de protéines}
 
@@ -533,6 +579,33 @@ ré-utilisés de manière indépendante de l'apprentissage profond plus tard.
 
 Un simple algorithme de K-means permet de faire le découpage en parties de
 l'ensemble d'apprentissage.
+
+\subsection{Etude de la corrélation de paramètres}
+
+Une autre façon de relever des caractéristiques sur la représentation
+intermédiaire acquises est d'en étudier les corrélations existant entre ses
+caractéristiques et des paramètres liés au fragment de protéine étudié. Nous
+avons décidé d'étudier les paramètres de la représentation intermédiaire
+suivants: sa norme, ses coordonnées dans l'espace latent et la distance entre la
+représentation latente de deux fragments. De fait, il a fallu distinguer deux
+types de données pour effectuer l'étude des corrélations puisqu'il a fallut
+étudier des caractéristiques propres à un fragment, et des caractéristiques
+d'un couple de fragments.
+
+\paragraph{Paramètres d'un unique fragment}
+
+Pour ce qui est des caractéristiques propres à un fragment, nous avons étudié
+son hydropathie moyenne, sa charge moyenne, la présence d'acides aminés dans la
+chaîne peptidique (regroupés en 5 catégories: Aliphatic, Aromatic, Neutral,
+Acidic, ) et le fait que la chaîne est uniquement composé d'acides apprtenant à
+une hélice-$\alpha$ ou à une feuille-$\beta$. Ce dernier point a été fait à
+l'aide l'outil DSSP introduit au début de cette section.
+
+\paragraph{Paramètres d'un couple de fragments}
+
+Nous avons fait l'étude, en outre de la distance entre les représentation
+latentes, du score d'alignement entre les fragments (global et local) et du score de superimposition structurale (relativement
+aux $carbones-\alpha$).
 
 \section{Vérification}
 

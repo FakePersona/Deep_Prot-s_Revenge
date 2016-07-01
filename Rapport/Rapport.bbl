@@ -175,6 +175,30 @@
       \verb http://biorxiv.org/content/early/2015/11/16/031906
       \endverb
     \endentry
+    \entry{hamelryck2003pdb}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=ff236dbcdc91c0630e8b9eadbf91c436}{Hamelryck}{H\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e9cf4adcad40050281aaa34bfa3ca936}{Manderick}{M\bibinitperiod}{Bernard}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford Univ Press}%
+      }
+      \strng{namehash}{1f3520e90d504f8ee988c12d9cf448b6}
+      \strng{fullhash}{1f3520e90d504f8ee988c12d9cf448b6}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelyear}{2003}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioinformatics}
+      \field{number}{17}
+      \field{title}{PDB file parser and structure class implemented in Python}
+      \field{volume}{19}
+      \field{year}{2003}
+      \field{pages}{2308\bibrangedash 2310}
+      \range{pages}{3}
+    \endentry
     \entry{hochreiter1997long}{article}{}
       \name{author}{2}{}{%
         {{uniquename=0,hash=41b31e29fb2bdbf9f5c9c1b0d5b3e815}{Hochreiter}{H\bibinitperiod}{Sepp}{S\bibinitperiod}{}{}{}{}}%
@@ -224,6 +248,30 @@
       \field{year}{2013}
       \field{pages}{1894\bibrangedash 1899}
       \range{pages}{6}
+    \endentry
+    \entry{kabsch1983dictionary}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=7f410e758870d5022f40f18e19d55197}{Kabsch}{K\bibinitperiod}{Wolfgang}{W\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fe52d1a32f8a4d5b93db74a3f31bdb50}{Sander}{S\bibinitperiod}{Christian}{C\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{5ce8be718914c8a388f5d1b1455152fc}
+      \strng{fullhash}{5ce8be718914c8a388f5d1b1455152fc}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelyear}{1983}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biopolymers}
+      \field{number}{12}
+      \field{title}{Dictionary of protein secondary structure: pattern recognition of hydrogen-bonded and geometrical features}
+      \field{volume}{22}
+      \field{year}{1983}
+      \field{pages}{2577\bibrangedash 2637}
+      \range{pages}{61}
     \endentry
     \entry{lecun1998gradient}{article}{}
       \name{author}{4}{}{%
@@ -565,7 +613,7 @@
       \endverb
     \endentry
     \entry{Vincent:2008:ECR:1390156.1390294}{inproceedings}{}
-      \name{author}{4}{}{%
+      \name{author}{4}{uniquelist=3}{%
         {{uniquename=0,hash=da21e966c02c3cfd33d74369c7435c1a}{Vincent}{V\bibinitperiod}{Pascal}{P\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=42a970b0a0f1ed24b23064370cc9392f}{Larochelle}{L\bibinitperiod}{Hugo}{H\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=40a8e4774982146adc2688546f54efb2}{Bengio}{B\bibinitperiod}{Yoshua}{Y\bibinitperiod}{}{}{}{}}%
@@ -577,7 +625,7 @@
       \list{publisher}{1}{%
         {ACM}%
       }
-      \strng{namehash}{17d6344b63d3d08616d701213bf1af6a}
+      \strng{namehash}{de82398441e1506cee5467216dc67f87}
       \strng{fullhash}{5cc31505a450b4f9e42201d7bdc2794b}
       \field{sortinit}{V}
       \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
@@ -598,6 +646,30 @@
       \verb{url}
       \verb http://doi.acm.org/10.1145/1390156.1390294
       \endverb
+    \endentry
+    \entry{vincent2010stacked}{article}{}
+      \name{author}{5}{uniquelist=3}{%
+        {{uniquename=0,hash=da21e966c02c3cfd33d74369c7435c1a}{Vincent}{V\bibinitperiod}{Pascal}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=42a970b0a0f1ed24b23064370cc9392f}{Larochelle}{L\bibinitperiod}{Hugo}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e134185cda8d18743c3369211c575f9b}{Lajoie}{L\bibinitperiod}{Isabelle}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=40a8e4774982146adc2688546f54efb2}{Bengio}{B\bibinitperiod}{Yoshua}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7ba1a9455f15a2898752cabc022e1887}{Manzagol}{M\bibinitperiod}{Pierre-Antoine}{P\bibinithyphendelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{2e76a536e11f033fcd1ae1efb9703db0}
+      \strng{fullhash}{24b92e28cf0f78853e5b3b8eef3cdb11}
+      \field{sortinit}{V}
+      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
+      \field{labelyear}{2010}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{Dec}
+      \field{title}{Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion}
+      \field{volume}{11}
+      \field{year}{2010}
+      \field{pages}{3371\bibrangedash 3408}
+      \range{pages}{38}
     \endentry
   \endsortlist
 \endrefsection
