@@ -69,18 +69,10 @@ record = SeqIO.parse("../../../data/smallData.fa", "fasta")
 ind = 0
 for rec in record:
     ind +=1
-    if len(test) > 229999:
-        break
-    if ind > 25502:
-        break
-    if ((len(data) + len(test)) % 6) == 5:
-        for k in range(len(rec.seq)//3 - 10):
-            test.append([rec.seq[3 * k + i] for i in range(11)])
-    else:
-        for k in range(len(rec.seq)//3 - 10):
-            data.append([rec.seq[3 * k + i] for i in range(11)] )
-            dataNames.append(rec.name)
-        occurences.append(len(rec.seq)//3 - 10)
+    for k in range(len(rec.seq)//3 - 10):
+        data.append([rec.seq[3 * k + i] for i in range(11)] )
+        dataNames.append(rec.name)
+    occurences.append(len(rec.seq)//3 - 10)
 
 # Indexing domain names
 

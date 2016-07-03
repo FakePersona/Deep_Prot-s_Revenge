@@ -286,6 +286,6 @@ for i in range(len(data)):
         k += 1
 
 f = open("pairs.txt", 'w')
-json.dump(Properties, f)
+json.dump(Properties.tolist(), f)
 f.close()
                 

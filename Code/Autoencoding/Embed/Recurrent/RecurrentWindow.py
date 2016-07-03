@@ -68,7 +68,7 @@ chars = 'rndeqkstchmavgilfpwybzuxXo'
 ctable = AcidEmbedding(11)
 
 ACIDS = 4
-encoding_dim = 20
+encoding_dim = 50
 
 np.set_printoptions(threshold=np.nan)
 
@@ -107,9 +107,9 @@ print("Creating model...")
 model = Sequential()
 
 #Recurrent encoder
-model.add(recurrent.LSTM(encoding_dim, input_shape=(11, ACIDS), return_sequences=True, dropout_W=0.1, dropout_U=0.1))
-model.add(recurrent.LSTM(encoding_dim, return_sequences=True, dropout_W=0.1, dropout_U=0.1))
-model.add(recurrent.LSTM(encoding_dim, dropout_W=0.1, dropout_U=0.1))
+model.add(recurrent.LSTM(encoding_dim, init='he_uniform', input_shape=(11, ACIDS), return_sequences=True, dropout_W=0.1, dropout_U=0.1))
+model.add(recurrent.LSTM(encoding_dim, init='he_uniform', return_sequences=True, dropout_W=0.1, dropout_U=0.1))
+model.add(recurrent.LSTM(encoding_dim, init='he_uniform', dropout_W=0.1, dropout_U=0.1))
 
 model.add(RepeatVector(11))
 
@@ -118,15 +118,13 @@ model.add(recurrent.LSTM(ACIDS, return_sequences=True))
 
 model.add(TimeDistributed(Dense(ACIDS)))
 
-model.add(Activation('softmax'))
-
 #model.load_weights("RecWind.h5")
 
 model.compile(optimizer='rmsprop', loss='mse')
 
 print("Let's go!")
 # Train the model each generation and show predictions against the validation dataset
-for iteration in range(1, 100):
+for iteration in range(1, 30):
     print()
     print('-' * 50)
     print('Iteration', iteration)
