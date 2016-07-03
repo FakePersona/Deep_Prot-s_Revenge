@@ -633,7 +633,48 @@ de la protéine d'origine du fragment et sa représentation dans un groupe.
 
 \subsubsection{Corrélations}
 
-Les résultats suivants ont été obtenus
+\paragraph{Etude de fragments individuels}
+
+Une étude des corrélations entre les paramètres propres à la représentation
+latente obtenue par l'encodeur et les caractèristiques physico-chimiques des
+fragments considérés suggère plusieurs choses:
+\begin{itemize}
+\item Les représentation latentes (dans un espace de dimension 20) sont
+  principalement réparties dans un espace bidimensionnel. En effet, la norme ne
+  semble corrélée qu'à 4 dimensions, et il y a parmi ces 4 dimensions 2 paires
+  de dimensions fortement corrélées. Cela suggère donc la mise en évidence d'un
+  manifold repéré par l'autoencodeur qui à partir d'un espace de dimensions
+  $26\times 11= 286$ injecté dans un espace de dimension 20 crée une
+  représentation concentrée dans un espace bidimensionnel.
+  
+\item On semble remarquer une certaine corrélation entre la norme, un dimension
+  de la représentation latente, et l'hydropathie moyenne du fragment. Cela
+  suggère que l'hydropathie moyenne du fragment est un facteur discriminant
+  permettant de bien différencier les fragments (en tant que chaînes
+  peptidiques) entre eux.
+\item On observe un phénomène similaire pour la charge moyenne du fragment, bien
+  que cette fois la corrélation ne se fait qu'avec un dimension de la
+  représentation latente, et non pas avec la norme elle-même.
+\end{itemize}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{SingleOneRecHeat}
+  \caption{Carte de corrélation sur les fragments individuels}
+\end{figure}
+
+\paragraph{Etude de paires de fragments}
+
+L'étude de couples de fragments ne s'est par contre pas avérée mettre en lumière
+une quelconque corrélation, si ce n'est que l'alignement structural entre deux
+fragments est légèrement décorrélé de leur distance que leur score d'alignement
+séquentiel.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{PairOneRecHeat}
+  \caption{Carte de corrélation sur les fragments individuels}
+\end{figure}
 
 \section{Contribution}
 
