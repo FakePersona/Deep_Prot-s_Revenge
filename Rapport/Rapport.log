@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.4.26)  1 JUL 2016 17:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.7.4)  4 JUL 2016 00:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1115,23 +1115,38 @@ Package pdftex.def Info: Figures/LSTM.png used on input line 286.
 <Figures/Class.png, id=48, 747.79375pt x 1056.94875pt>
 File: Figures/Class.png Graphic file (type png)
  <use Figures/Class.png>
-Package pdftex.def Info: Figures/Class.png used on input line 534.
+Package pdftex.def Info: Figures/Class.png used on input line 537.
 (pdftex.def)             Requested size: 203.83417pt x 288.10556pt.
 
-Underfull \hbox (badness 3872) in paragraph at lines 538--553
+Underfull \hbox (badness 3872) in paragraph at lines 541--556
 [][]\T1/ppl/m/n/11 Les chaînes pro-téiques étu-diées sont
  []
 
-[9 <./Figures/Class.png>] [10] [11] [12] (./Rapport.aux)
+[9 <./Figures/Class.png>] [10]
+<Figures/SingleOneRecHeat.png, id=57, 1170.774pt x 503.7219pt>
+File: Figures/SingleOneRecHeat.png Graphic file (type png)
+
+<use Figures/SingleOneRecHeat.png>
+Package pdftex.def Info: Figures/SingleOneRecHeat.png used on input line 662.
+(pdftex.def)             Requested size: 351.23491pt x 151.11772pt.
+
+<Figures/PairOneRecHeat.png, id=58, 1170.774pt x 503.7219pt>
+File: Figures/PairOneRecHeat.png Graphic file (type png)
+
+<use Figures/PairOneRecHeat.png>
+Package pdftex.def Info: Figures/PairOneRecHeat.png used on input line 675.
+(pdftex.def)             Requested size: 351.23491pt x 151.11772pt.
+ [11 <./Figures/SingleOneRecHeat.png>] [12 <./Figures/PairOneRecHeat.png>] [13]
+ (./Rapport.aux)
 Package logreq Info: Writing requests to 'Rapport.run.xml'.
 \openout1 = `Rapport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13348 strings out of 493054
- 215208 string characters out of 6140586
- 652141 words of memory out of 5000000
- 16629 multiletter control sequences out of 15000+600000
+ 13358 strings out of 493054
+ 215500 string characters out of 6140587
+ 650141 words of memory out of 5000000
+ 16637 multiletter control sequences out of 15000+600000
  118559 words of font info for 139 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,8n,98p,1151b,1514s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1142,10 +1157,10 @@ ri.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/te
 xmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texmf-dist/fonts/type1
 /urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a
 .pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Rapport.pdf (12 pages, 534383 bytes).
+Output written on Rapport.pdf (13 pages, 804697 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 99 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
