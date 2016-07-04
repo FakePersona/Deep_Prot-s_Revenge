@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {french}
+\beamer@sectionintoc {1}{Apprentissage profond?}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Pourquoi l'apprentissage profond?}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Previous Work}{18}{0}{1}
+\beamer@sectionintoc {2}{Our Results/Contribution}{21}{0}{2}
+\beamer@subsectionintoc {2}{1}{Main Results}{21}{0}{2}
+\beamer@subsectionintoc {2}{2}{Basic Ideas for Proofs/Implementation}{25}{0}{2}

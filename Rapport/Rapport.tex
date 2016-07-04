@@ -1,4 +1,4 @@
-\documentclass[a4paper, journal, 11pt, onecolumn]{IEEEtran}
+\documentclass[a4paper, 11pt, onecolumn]{article}
 \usepackage{a4wide}%
 
 \usepackage{tabularx}
@@ -153,14 +153,17 @@ comprendre pourquoi cette façon de procéder est intéressantes: nous comprenon
 des choses simples avant de comprendre les choses plus complexes à partir de ce
 qui a déjà été appris
 
-\subsection{Entrainement non supervisé}
+\subsection{Entraînement non supervisé}
 
-\paragraph{Autoencodeur}
+\paragraph{Quel objectif poursuivre?}
 
 Une grande problèmatique de l'apprentissage profond est le besoin d'accéder à de
-grandes bases de données pour pouvoir entrainer les réseaux. Si cette difficulté
+grandes bases de données pour pouvoir entraîner les réseaux. Si cette difficulté
 n'est plus d'actualité dans nombreux domaines, elle est indissociable de notre
-étude des protéines. Comment faire pour demander à une machine de s'entrainer par elle même sans
+étude des protéines. En effet, le nombre de protéines appartenant à une famille,
+une superfamille ou une catégorie est limité. De fait, il n'est pas réaliste
+d'éspérer avoir assez de données pour exploiter les techniques d'apprentissage
+purement supervisées. Comment faire pour demander à une machine de s'entrainer par elle même sans
 qu'on lui dise quelle conclusion tirer à partir de son résultat? Une façon de
 faire consiste à lui demander de retrouver son entrée. Ainsi, on ``encode''
 l'information dans un premier temps, puis on la décode: c'est l'auto-encodeur.
@@ -230,7 +233,7 @@ seront ensuite traités par une couche supérieure.
 
 Si on veut rajouter une couche convolutionnelle au dessus, elle opérera non
 seulement une opération sur un carré de chaque \texttt{feature map}, mais elle
-effectura une opérations sur les résultats de cette opération sur chaque feature
+effectura une opération sur les résultats de cette opération sur chaque feature
 map.
 
 \paragraph{Réduire la charge de calcul}
@@ -249,7 +252,7 @@ quoi que ce soit à l'image obtenue après transformation.
 
 Une architecture typique se constitue donc d'un enchaînement de couches de
 convolution et de pooling, avec une ou plusieurs couches \og classiques\fg
-permettant de tirer une conclusion sur les information récupérées. Une telle
+permettant de tirer une conclusion sur les informations récupérées. Une telle
 architecture est proposée dans \cite{lecun1998gradient} sous la forme du réseau LeNet5
 
 \subsection{Réseaux récurrents}
@@ -272,7 +275,7 @@ question qui reste à traiter est le fonctionnement exact de la couche cachée.
 
 Il est possible de faire fonctionner cette couche cachée comme un réseau neuronal
 complétement relié classique avec une sortie et entrée supplémentaire
-représentant l'état caché, mais cela pose d'est problème d'évanouissement du
+représentant l'état caché, mais cela pose des problèmes d'évanouissement du
 gradient lors de la rétropropagation.
 
 \begin{figure}[!tbp]
@@ -323,6 +326,10 @@ auto-encodeur récurrent en récupérant cette fois chaque sortie (qu'on encode
 ensuite en une lettre avec un réseau dense et un \texttt{softmax}). Dans
 l'article original, la sortie du décodeur au temps $t$ lui est aussi donné en
 entrée au temps $t+1$, mais ce n'est pas le cas dans notre étude.
+
+\subsection{Domaine d'étude: Protéines}
+
+
 
 \subsection{Initialisation et optimisation des réseaux d'apprentissage profond}
 
@@ -426,7 +433,7 @@ différents paramètres. Ces paramètres vont de notions simplistes comme le nom
 d'occurence de chaque acide aminé dans la chaîne à des considérations beaucoup
 plus complexes comme l'étude des fonctions de la protéine.
 
-Notre travail s'est principalement basé sur l'étude de proteines en tant que
+Notre travail s'est principalement basé sur l'étude de protéines en tant que
 chaîne d'acides aminés représentés par des lettres. En quelque sorte, nous traitons donc des suites de \og
 mots\fg. De fait, il est nécessaire de déterminer une façon de représenter ces
 différents mots. Il est facile de voir pourquoi la première idée de simplement

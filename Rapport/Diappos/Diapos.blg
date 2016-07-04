@@ -1,0 +1,5 @@
+[0] Config.pm:327> INFO - This is Biber 2.2
+[0] Config.pm:330> INFO - Logfile is 'Diapos.blg'
+[62] biber:286> INFO - === Mon Jul  4, 2016, 18:26:57
+[123] Utils.pm:163> ERROR - Cannot find control file 'Diapos.bcf'! - did you pass the "backend=biber" option to BibLaTeX?
+[124] Biber.pm:111> INFO - ERRORS: 1
