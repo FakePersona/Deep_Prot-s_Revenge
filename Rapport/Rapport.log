@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.4.26)  4 JUL 2016 18:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.7.4)  5 JUL 2016 00:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -929,50 +929,46 @@ Package pdftex.def Info: Figures/LSTM.png used on input line 289.
 
 [4 <./Figures/mylenet.png> <./Figures/Autoencoder.png>] [5 <./Figures/Recurrent
 .png> <./Figures/LSTM.png>] [6] [7] [8]
-<Figures/Class.png, id=50, 747.79375pt x 1056.94875pt>
+<Figures/Class.png, id=51, 747.79375pt x 1056.94875pt>
 File: Figures/Class.png Graphic file (type png)
  <use Figures/Class.png>
-Package pdftex.def Info: Figures/Class.png used on input line 544.
+Package pdftex.def Info: Figures/Class.png used on input line 568.
 (pdftex.def)             Requested size: 203.83417pt x 288.10556pt.
 
-Underfull \hbox (badness 4595) in paragraph at lines 548--563
-[][]\T1/ppl/m/n/10.95 Les chaînes pro-téiques étu-diées sont
+[9]
+Underfull \hbox (badness 1430) in paragraph at lines 588--594
+[][]\T1/ppl/m/n/10.95 Pour le clas-si-fi-ca-teur, nous avons uti-
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 548--563
-\T1/ppl/m/n/10.95 per-met-tant d'ob-ser-ver quelques struc-tures
+Underfull \hbox (badness 3291) in paragraph at lines 597--604
+\T1/ppl/m/n/10.95 sen-ta-tion in-ter-mé-diaire dans un pre-mier
  []
 
-
-Underfull \hbox (badness 1038) in paragraph at lines 548--563
-\T1/ppl/m/n/10.95 ap-pren-tis-sage pro-fond. Les au-toen-co-deurs
- []
-
-[9 <./Figures/Class.png>] [10]
-<Figures/SingleOneRecHeat.png, id=59, 1170.774pt x 503.7219pt>
+[10 <./Figures/Class.png>] [11]
+<Figures/SingleOneRecHeat.png, id=62, 1170.774pt x 503.7219pt>
 File: Figures/SingleOneRecHeat.png Graphic file (type png)
 
 <use Figures/SingleOneRecHeat.png>
-Package pdftex.def Info: Figures/SingleOneRecHeat.png used on input line 669.
+Package pdftex.def Info: Figures/SingleOneRecHeat.png used on input line 693.
 (pdftex.def)             Requested size: 351.23491pt x 151.11772pt.
- [11 <./Figures/SingleOneRecHeat.png>]
-<Figures/PairOneRecHeat.png, id=64, 1170.774pt x 503.7219pt>
+
+<Figures/PairOneRecHeat.png, id=63, 1170.774pt x 503.7219pt>
 File: Figures/PairOneRecHeat.png Graphic file (type png)
 
 <use Figures/PairOneRecHeat.png>
-Package pdftex.def Info: Figures/PairOneRecHeat.png used on input line 694.
+Package pdftex.def Info: Figures/PairOneRecHeat.png used on input line 718.
 (pdftex.def)             Requested size: 351.23491pt x 151.11772pt.
- [12 <./Figures/PairOneRecHeat.png>] [13]
-[14] (./Rapport.aux)
+ [12 <./Figures/SingleOneRecHeat.png> <./Figures/PairOneRecHeat.png>] [13] [14]
+ (./Rapport.aux)
 Package logreq Info: Writing requests to 'Rapport.run.xml'.
 \openout1 = `Rapport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  12419 strings out of 493054
- 197924 string characters out of 6140586
- 632863 words of memory out of 5000000
+ 197924 string characters out of 6140587
+ 630864 words of memory out of 5000000
  15707 multiletter control sequences out of 15000+600000
  35349 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -988,7 +984,7 @@ sx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></us
 r/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-d
 ist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/
 palatino/uplri8a.pfb>
-Output written on Rapport.pdf (14 pages, 904393 bytes).
+Output written on Rapport.pdf (14 pages, 902314 bytes).
 PDF statistics:
  115 PDF objects out of 1000 (max. 8388607)
  69 compressed objects within 1 object stream
