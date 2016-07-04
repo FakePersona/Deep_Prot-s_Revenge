@@ -14,6 +14,6 @@ df = pd.DataFrame(np.array(stored))
 
 
 
-data = [go.Heatmap( z=df.corr().values.tolist(), colorscale='Viridis')]
+data = [go.Heatmap( z=df.corr().values.tolist())]
 
-py.iplot(data, filename='PairOneRecHeat')
+py.iplot(data, filename='PairOneRecHeatb')

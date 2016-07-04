@@ -187,7 +187,7 @@ for rec in record:
         break
     if not Valid[nameInd[rec.name]]:
         continue
-    if not (ind % 700 == 0):
+    if not (ind % 800 == 0):
         continue
     occurences[nameInd[rec.name]] = len(data)
     for k in range(len(rec.seq) // 3 - 4):
@@ -221,7 +221,7 @@ model.add(TimeDistributed(Dense(ACIDS)))
 
 model.add(Activation('softmax'))
 
-model.load_weights("RecOne.h5")
+model.load_weights("RecOneb.h5")
 
 model.compile(optimizer='rmsprop', loss='binary_crossentropy')
 
@@ -240,7 +240,7 @@ for i in range(len(X)):
 
 # Preparing data for correlating
 
-Properties = np.zeros(((len(data)**2  - len(data))//2, 5)) 
+Properties = np.zeros(((len(data)**2  - len(data))//2, 15)) 
 k = 0
 
 matrix = matlist.blosum62
@@ -251,10 +251,13 @@ for i in range(len(data)):
     for j in range(i+1, len(data)):
         # latent distance
         Properties[k][0] = np.linalg.norm(Embed[i] - Embed[j])
+        #Dimensional orientation
+        for k in range(encoding_dim):
+            Properties[i][k+1] = Embed[i][k] - Embed[j][k]
         # Alignment scores
-        Properties[k][1] = pairwise2.align.globalxx(data[i],data[j], score_only=1)
-        Properties[k][2] = pairwise2.align.localxx(data[i],data[j], score_only=1)
-        Properties[k][3] = pairwise2.align.globaldx(data[i],data[j], matrix, score_only=1) #BLOSUM!
+        Properties[k][11] = pairwise2.align.globalxx(data[i],data[j], score_only=1)
+        Properties[k][12] = pairwise2.align.localxx(data[i],data[j], score_only=1)
+        Properties[k][13] = pairwise2.align.globaldx(data[i],data[j], matrix, score_only=1) #BLOSUM!
         # Structural score
         off1 = i - occurences[nameInd[dataNames[i]]]
         off2 = j - occurences[nameInd[dataNames[j]]]
@@ -282,7 +285,7 @@ for i in range(len(data)):
                 alt_atoms.append(alt_res['CA'])
         super_imposer = Superimposer()
         super_imposer.set_atoms(ref_atoms, alt_atoms)
-        Properties[k][4] = super_imposer.rms
+        Properties[k][14] = super_imposer.rms
         k += 1
 
 f = open("pairs.txt", 'w')
