@@ -668,7 +668,19 @@ fragments considérés suggère plusieurs choses:
 L'étude de couples de fragments ne s'est par contre pas avérée mettre en lumière
 une quelconque corrélation, si ce n'est que l'alignement structural entre deux
 fragments est légèrement décorrélé de leur distance que leur score d'alignement
-séquentiel.
+séquentiel. Il est remarquable que ce ne soit pas le cas. Dans le processus \og
+d'embedding\fg en langage naturel, la représentation extraite garde des
+propriétés de translation relative à des relations sémantiques (comme une
+translation fixe entre féminin et masculin). 
+
+Si le procédé d'acquisition de cet
+\og embedding\fg (qui n'est ni plus ni moins qu'une représentation latente) ne
+se fait pas exactement par auto-encodage, l'embedding acquis demeure une
+représentation utile à l'apprentissage profond.  Il n'aurait donc pas été
+absurde d'éspérer voir une relation similaire apparaitre dans le cas de notre
+représentation intermédiaire sur les fragments de protéines. L'absence de telle
+relation pourrait indiquer que, du point de vue de l'auto-encodeur du moins, un
+telle information est d'importance secondaire pour l'encodage et décodage des protéines.
 
 \begin{figure}
   \centering
@@ -678,7 +690,31 @@ séquentiel.
 
 \section{Contribution}
 
+\subsection{Etude de représentations latentes}
 
+Les représentations latentes des auto-encodeurs sont typiquement utilisées pour
+obtenir une représentation caractérisant des éléments bas niveaux intéressant
+pour qu'un réseau profond puisse travailler. De nombreux travaux ont démontré
+leur efficacité dans ce contexte, ce qui explique leur utilisation pour
+initialiser un réseau quand il n'y a pas assez de données pour se contenter
+d'initialiser aléatoirement selon les techniques récentes qui en requierrent des
+quantités importantes.
+
+Si nous avons aussi utilisé cette approche pour initialiser un classificateur,
+ce qui étatit nécessaire de part la faible quantité d'exemples labélisés
+inhérents au domaine d'étude, cela n'a pas été notre seul exploitation des
+auto-encodeurs. Il est rare de voir des études sur cette représentation même,
+sans passer par un réseau neuronal capable d'apprendre à interpréter à partir de
+l'information contenue dans la représentation latente. Cela peut s'expliquer par
+la nature des domaines d'application usuels: Si on veut apprendre à un
+classificateur à reconnaître les images d'animaux, nous avons peu de choses à
+apprendre d'une étude sur les représentations latentes puisque nous comprenons
+déjà bien ce qui caractérise les images d'animaux. Par contre, ce qui régit le
+fonctionnement des protéines est moins clair. Notre étude a montré diverses
+approches permettant d'essayer d'étudier quelles caractéristiques connues et
+mesurables par un expérimentateur se rapprochent de celles reconnues par
+l'auto-encodeur. Une telle approche pourrait être ré-utilisée dans d'autres
+domaines où les mécanismes en jeu demeurent relativement obscurs.
 
 \section*{Conclusion}
 
