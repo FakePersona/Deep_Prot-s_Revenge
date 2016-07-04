@@ -120,7 +120,7 @@ ctable = CharacterTable(chars, 11)
 lookup = AcidEmbedding(11)
 
 ACIDS = 26
-encoding_dim = 20
+encoding_dim = 10
 
 # Data Generating
 
@@ -235,7 +235,7 @@ model.add(TimeDistributed(Dense(ACIDS)))
 
 model.add(Activation('softmax'))
 
-model.load_weights("RecOne.h5")
+model.load_weights("RecOneb.h5")
 
 model.compile(optimizer='rmsprop', loss='binary_crossentropy')
 
@@ -254,7 +254,7 @@ for i in range(len(X)):
 
 # Preparing data for correlating
 
-Properties = np.zeros((len(data), 31))
+Properties = np.zeros((len(data), 21))
 
 for i in range(len(Properties)):
     #Norm
@@ -263,28 +263,28 @@ for i in range(len(Properties)):
     for k in range(encoding_dim):
         Properties[i][k+1] = Embed[i][k]
     # Hydropathy and charge
-    Properties[i][21] = lookup.get_hydro(data[i])
-    Properties[i][22] = lookup.get_charge(data[i])
+    Properties[i][11] = lookup.get_hydro(data[i])
+    Properties[i][12] = lookup.get_charge(data[i])
     # Aliphatic
     for c in data[i]:
         if c in 'ailv':
-            Properties[i][23] += 1
+            Properties[i][13] += 1
     # Aromatic
     for c in data[i]:
         if c in 'fwy':
-            Properties[i][24] += 1
+            Properties[i][14] += 1
     # Neutral
     for c in data[i]:
         if c in 'ncqmst':
-            Properties[i][25] += 1
+            Properties[i][15] += 1
     # Acidic
     for c in data[i]:
         if c in 'de':
-            Properties[i][26] += 1
+            Properties[i][16] += 1
     # Acidic
     for c in data[i]:
         if c in 'rhk':
-            Properties[i][27] += 1
+            Properties[i][17] += 1
     # Secondary Structure
     s = 0
     for c in dataSecond[i]:
@@ -293,10 +293,10 @@ for i in range(len(Properties)):
         if c == 'B':
             s -= 1
     if s == 11:
-        Properties[i][28] = 1
+        Properties[i][18] = 1
     if s == -11:
-        Properties[i][29] = 1
-    Properties[i][30] = s
+        Properties[i][19] = 1
+    Properties[i][20] = s
         
 f = open("Single.txt", 'w')
 json.dump(Properties.tolist(), f)
