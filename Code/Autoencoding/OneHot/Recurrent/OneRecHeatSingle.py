@@ -254,7 +254,7 @@ for i in range(len(X)):
 
 # Preparing data for correlating
 
-Properties = np.zeros((len(data), 30))
+Properties = np.zeros((len(data), 31))
 
 for i in range(len(Properties)):
     #Norm
@@ -296,7 +296,8 @@ for i in range(len(Properties)):
         Properties[i][28] = 1
     if s == -11:
         Properties[i][29] = 1
-
+    Properties[i][30] = s
+        
 f = open("Single.txt", 'w')
 json.dump(Properties.tolist(), f)
 f.close()

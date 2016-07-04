@@ -187,7 +187,7 @@ for rec in record:
         break
     if not Valid[nameInd[rec.name]]:
         continue
-    if not (ind % 200 == 0):
+    if not (ind % 700 == 0):
         continue
     occurences[nameInd[rec.name]] = len(data)
     for k in range(len(rec.seq) // 3 - 4):
