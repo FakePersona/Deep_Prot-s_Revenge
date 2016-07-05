@@ -125,7 +125,7 @@ ctable = CharacterTable(chars, 11)
 lookup = AcidEmbedding(11)
 
 ACIDS = 26
-encoding_dim = 20
+encoding_dim = 10
 
 # Data Generating
 

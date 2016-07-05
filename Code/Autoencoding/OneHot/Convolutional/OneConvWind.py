@@ -56,7 +56,7 @@ for rec in record:
         break
     if ind > 25502:
         break
-    if ((len(data) + len(test)) % 6) == 5:
+    if ((len(data) + len(test)) % 10) == 5:
         for k in range(len(rec.seq)/3 - 10):
             test.append([rec.seq[3 * k + i] for i in range(11)])
     else:
@@ -105,11 +105,11 @@ model.add(recurrent.LSTM(ACIDS, return_sequences=True))
 
 model.load_weights("ConvOne.h5")
 
-model.compile(optimizer='rmsprop', loss='mse')
+model.compile(optimizer='rmsprop', loss='binary_crossentropy')
 
 print("Let's go!")
 # Train the model each generation and show predictions against the validation dataset
-for iteration in range(1, 40):
+for iteration in range(1, 100):
     print()
     print('-' * 50)
     print('Iteration', iteration)
