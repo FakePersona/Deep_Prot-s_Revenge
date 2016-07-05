@@ -51,26 +51,18 @@
 \subtitle
 {Include Only If Paper Has a Subtitle}
 
-\author[Author, Another] % (optional, use only with lots of authors)
-{F.~Author\inst{1} \and S.~Another\inst{2}}
-% - Give the names in the same order as the appear in the paper.
-% - Use the \inst{?} command only if the authors have different
-%   affiliation.
+\author{Rémy Sun} % (optional, use only with lots of authors)
 
-\institute[Universities of Somewhere and Elsewhere] % (optional, but mostly needed)
+\institute[ENS Rennes] % (optional, but mostly needed)
 {
-  \inst{1}%
-  Department of Computer Science\\
-  University of Somewhere
-  \and
-  \inst{2}%
-  Department of Theoretical Philosophy\\
-  University of Elsewhere}
+  Département d'informatique\\
+  ENS Rennes
+}
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 
-\date[CFP 2003] % (optional, should be abbreviation of conference name)
-{Conference on Fabulous Presentations, 2003}
+\date[XTRA 2016] % (optional, should be abbreviation of conference name)
+{XTRA 2016}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including
 %   yourself) who are reading the slides online
@@ -113,7 +105,7 @@
 \end{frame}
 
 \begin{frame}{Outline}
-  \tableofcontents
+  \tableofcontents[pausesections]
   % You might wish to add the option [pausesections]
 \end{frame}
 
@@ -147,7 +139,7 @@
     \column{0.38\linewidth}
     \begin{figure}
       \centering
-      \includegraphics[scale=0.10]{Figures/Neuron}
+      \includegraphics[scale=0.10]{../Figures/Neuron}
       \caption{Fonctionnement d'un neurone}
     \end{figure}
 
@@ -170,7 +162,7 @@
     \column{0.5\linewidth}
     \begin{figure}
       \centering
-      \includegraphics[scale=0.10]{Figures/Deep}
+      \includegraphics[scale=0.1750]{../Figures/Deep}
       \caption{Fonctionnement d'un neurone}
     \end{figure}
 
@@ -184,6 +176,130 @@
   \end{columns}
 
 \end{frame}
+
+\subsection{Entraînement non-supervisé}
+
+\begin{frame}{Fixer une cible  de manière autonome}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+
+  \begin{columns}
+    \column{0.45\linewidth}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.10]{../Figures/Autoencoder}
+      \caption{Fonctionnement d'un auto-encodeur}
+    \end{figure}
+
+    \column{0.5\linewidth}
+    \begin{itemize}
+    \item Non supervisé\pause
+    \item Encodage\pause
+    \item Représentation latente \pause
+    \item Décodage \pause
+    \item Eviter d'encoder l'identité\pause
+      \begin{itemize}
+      \item Compression\pause
+      \item Bruitage\pause
+      \item Régularisation
+      \end{itemize}
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\subsection{Architectures standards}
+
+\begin{frame}{Réseaux Convolutionnels: recherche de motif}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.50]{../Figures/mylenet}
+      \caption{Réseau LeNet5}
+    \end{figure}
+
+    \begin{itemize}
+    \item Filtres de caractéristiques\pause
+    \item Regroupement\pause
+    \item Permet d'isoler des motifs locaux \pause
+    \item Très utilisé en reconnaissance d'image
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Réseaux récurrents: tenir compte de l'ordre d'apparition}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+  \begin{columns}
+    \column{0.4\linewidth}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.15]{../Figures/Recurrent}
+      \caption{Couche récurrente}
+    \end{figure}
+
+    \column{0.5\linewidth}
+    \begin{itemize}
+    \item Dépendance temporelles\pause
+    \item Sortie + état caché\pause
+    \item Pas de dépendances hiérarchiques\pause
+    \item Réseau \og profond\fg à une couche \pause
+    \item Très utilisé en langages naturels\pause
+    \item Unité LSTM
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Eviter le sur-entraînement}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+
+  \begin{columns}
+    \column{0.5\linewidth}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.3]{../Figures/dropout}
+    \end{figure}
+
+    \column{0.45\linewidth}
+    \begin{itemize}
+    \item Désactiver aléatoirement des neurones\pause
+    \item Généraliser la représentation apprise\pause
+    \item Eliminer la concentration d'information\pause
+    \item Faire travailler tout le réseau\pause
+    \item Permet d'entraîner ad nauseam
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\subsection{Application: Protéines}
+
+\begin{frame}{Plus qu'une chaîne d'acides aminés}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+
+    \begin{itemize}
+    \item Acide aminés: molécules chimiques
+    \item Structure primaire: chaîne d'acides amminés\pause
+    \item Structure secondaire: structures locales formé par les acides\pause
+    \item Structure tertiaire forme tridimensionnelle \pause
+    \end{itemize}
+\end{frame}
+
+\subsection{Etat de l'art}
+
+\begin{frame}{Peu de travaux concernant les protéines}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+
+    \begin{itemize}
+    \item Acide aminés 
+    \item Structure primaire: chaîne d'acides amminés\pause
+    \item Structure secondaire: structures locales formé par les acides\pause
+    \item Structure tertiaire forme tridimensionnelle \pause
+    \end{itemize}
+\end{frame}
+
 
 \begin{frame}{Make Titles Informative.}
 

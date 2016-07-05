@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.4.26)  5 JUL 2016 11:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.4.26)  5 JUL 2016 14:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -956,29 +956,29 @@ Underfull \hbox (badness 1038) in paragraph at lines 597--612
 File: Figures/SingleOneRecHeat.png Graphic file (type png)
 
 <use Figures/SingleOneRecHeat.png>
-Package pdftex.def Info: Figures/SingleOneRecHeat.png used on input line 718.
+Package pdftex.def Info: Figures/SingleOneRecHeat.png used on input line 750.
 (pdftex.def)             Requested size: 351.23491pt x 151.11772pt.
- [12 <./Figures/SingleOneRecHeat.png>]
-<Figures/PairOneRecHeat.png, id=67, 1170.774pt x 503.7219pt>
+ [12]
+<Figures/PairOneRecHeat.png, id=66, 1170.774pt x 503.7219pt>
 File: Figures/PairOneRecHeat.png Graphic file (type png)
 
 <use Figures/PairOneRecHeat.png>
-Package pdftex.def Info: Figures/PairOneRecHeat.png used on input line 743.
+Package pdftex.def Info: Figures/PairOneRecHeat.png used on input line 775.
 (pdftex.def)             Requested size: 351.23491pt x 151.11772pt.
- [13 <./Figures/PairOneRecHeat.png>] [14]
-[15] (./Rapport.aux)
+ [13 <./Figures/SingleOneRecHeat.png> <./Figures/PairOneRecHeat.png>] [14] [15]
+ (./Rapport.aux)
 Package logreq Info: Writing requests to 'Rapport.run.xml'.
 \openout1 = `Rapport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12419 strings out of 493054
- 197924 string characters out of 6140586
- 633864 words of memory out of 5000000
- 15707 multiletter control sequences out of 15000+600000
+ 12423 strings out of 493054
+ 197990 string characters out of 6140586
+ 632898 words of memory out of 5000000
+ 15711 multiletter control sequences out of 15000+600000
  35349 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,8n,98p,1151b,1524s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,8n,98p,1151b,1527s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
 exmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
@@ -990,7 +990,7 @@ sx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></us
 r/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-d
 ist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/
 palatino/uplri8a.pfb>
-Output written on Rapport.pdf (15 pages, 897251 bytes).
+Output written on Rapport.pdf (15 pages, 900152 bytes).
 PDF statistics:
  118 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream

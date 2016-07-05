@@ -676,11 +676,43 @@ aux $carbones-\alpha$).
 
 \subsection{Autoencodeurs}
 
+\subsubsection{Capacité à reconstituer}
+
 L'entraînement de l'autoencodeur récurrent a rapidement donné des résultats très
 satisfaisant en termes de reconstitution des fragments  avec une représentation
 latente de dimensions raisonnablement faible (20 dimensions). L'entraînement des
 autres auto-encodeurs a par contre nécessité plus d'efforts, dont une
 initialisation aléatoire pertinente du réseau.
+
+\subsubsection{Pertinence de la reconstitution}
+
+Un gros problème dans notre approche est qu'il n'est pas suffisant de savoir que
+l'auto-encodeur apprend bien quelque chose, il faut aussi vérifier qu'il apprend
+bien quelque chose sur la structure de fragments issus de protéines et non par
+sur les chaînes de longueur 11 de manière générale. Si la représentation acquise
+concerne les chaînes de longueur 11 en général, cela ne voudra cependant pas dire que les
+données obtenues par la suite sont complétement inexploitables. En effet, il
+n'est pas impossible que l'agencement des acides aminés obéisse à des règles
+plus générales.
+
+Une façon de vérifier les
+choses et de tester une tâche de classification comme envisagé plus tôt. Si
+les résultats obtenus sont corrects, cela suggérerait que la représentation
+obtenue est au moins exploitable pour l'apprentissage sur des fragments de
+protéines. Une autre façon de procéder serait de vérifier le taux d'acides
+devinés correctement par l'autoencodeur et comparer ces taux entre les résultats
+obtenus sur des éléments de l'ensemble de validation et ceux obtenus sur des
+chaînes générées aléatoirement.
+
+Malheureusement, une telle approche n'est possible que dans le cas des
+auto-encodeurs récurrents sur une représentation \texttt{One-hot}. Dans les
+autres cas, la représentation obtenue n'est de toute façon pas assez proche de
+celle attendue pour avoir une réponse à notre interrogation. De plus, le
+problème soulevé est nettement moins préoccupant dans le cas de la
+représentation physico-chimique puisque l'apprentissage se fait sur un alphabet
+\og spécialisé\fg de toute façon. Les résultats obtenus sur un autoencodeur
+récurrent sur représentation \texttt{one-hot} montre une amélioration de
+performace de $50\%$ selon le critére avancé.
 
 \subsubsection{Clustering}
 
@@ -771,6 +803,23 @@ approches permettant d'essayer d'étudier quelles caractéristiques connues et
 mesurables par un expérimentateur se rapprochent de celles reconnues par
 l'auto-encodeur. Une telle approche pourrait être ré-utilisée dans d'autres
 domaines où les mécanismes en jeu demeurent relativement obscurs.
+
+\subsection{Pistes de recherche}
+
+Si plus de temps avait été disponible, il aurait avant tout été possible
+d'explorer d'autres architectures comme un auto-encodeur dense classique (mais
+d'après la littérature, un tel encodeur généralise mal après entraînement) ou
+le modèle exposé dans \cite{DBLP:journals/corr/ChoMGBSB14} ou même
+\cite{bahdanau2014neural}. De tels architectures, qui semblaient un peu complexe
+pour une première expérimentation (nécessiterait de faire une implémentation bas
+niveau puisque non supportée par keras) semble tout de même particuliérement
+proches des problématiques posées par l'étude de fragments de protéines.
+
+De plus, il n'a pas été possible, pour des raisons de temps et/ou de puissance
+de calcul de procéder à l'entraînement d'auto-encodeurs sur des chaînes longues,
+ou de tester de hyper-paramètres différents comme la taille des fragments
+considérés ou la dimension de l'espace de représentation latente. Il serait
+néanmoins très intéressant
 
 \section*{Conclusion}
 

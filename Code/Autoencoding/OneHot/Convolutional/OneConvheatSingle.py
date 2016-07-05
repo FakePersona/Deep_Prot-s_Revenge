@@ -78,13 +78,13 @@ class AcidEmbedding(object):
     def get_charge(self, C):
         charge = 0
         for c in C:
-            charge += self.embed[char_indices[c]][1]
+            charge += self.embed[self.char_indices[c]][1]
         return charge
 
     def get_hydro(self, C):
         hydro = 0
         for c in C:
-            hydro += self.embed[char_indices[c]][0]
+            hydro += self.embed[self.char_indices[c]][0]
         return hydro
 
     def decode(self, X):
@@ -198,7 +198,22 @@ print(len(PDBNames))
 PDBInd = dict((c, i) for i, c in enumerate(PDBNames))
 
 dataSecond = []
-    
+
+print("parsing sequences")
+
+ind = -1
+for rec in record:
+    ind +=1
+    if ind > 13000:
+        break
+    if not Valid[nameInd[rec.name]]:
+        continue
+    for k in range(len(rec.seq) // 3 - 4):
+        data.append([rec.seq[3 * k + i] for i in range(11)])
+        dataSecond.append([secondaryStruct[PDBInd[rec.name]][3 * k + i] for i in range(11)])
+        dataNames.append(rec.name)
+
+
 # Encoding data
 
 X = np.zeros((len(data), 11, len(chars)), dtype=np.bool)
@@ -297,9 +312,8 @@ for i in range(len(Properties)):
     if s == -11:
         Properties[i][19] = 1
     Properties[i][20] = s
-        
+
 f = open("Single.txt", 'w')
 json.dump(Properties.tolist(), f)
 f.close()
 
-                
