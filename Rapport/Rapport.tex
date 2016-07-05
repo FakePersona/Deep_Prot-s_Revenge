@@ -110,7 +110,7 @@ protéines dont la séquence peptidique est fortement liée au fonctionnement.
 
 Nous nous sommes donc interessés dans ce stage à l'applications de telles techniques
 aux familles de protéines. Notre intêret ne portait pas seulement sur la
-classification de telles familles ou la reconstitution d'une proteine à partir
+classification de telles familles ou la reconstitution d'une protéine à partir
 d'un séquençage bruité, mais aussi sur l'étude de la possibilité de comprendre
 des mécanismes des protéines à partir des représentations intermédiaires acquises par les
 algorithmes d'apprentissages profonds entraînés.
@@ -142,16 +142,44 @@ exemple un réseau de neurones pour faire un perceptron: il y a un couche entré
 une couche cachée et une couche sortie. Entre chaque couche une transformation
 paramétrée par des variables est effectuée et en sortie on évalue par une
 fonction de score le résultat renvoyé. Une optimisation sur les paramètres est
-ensuite effectuée, par descente de gradient par exemple.
+ensuite effectuée.
 
-Ce qui différencie le Deep Learning de ces techniques d'aprentissage dites \og
+\paragraph{Neurone?}
+
+Le terme de neurone (ou unité cachée aujourd'hui préféré pour se distancer du
+cerveau) désigne une unité de calcul (cf \textbf{FIGURE 1}). Cette unité prend
+une entrée, c'est à dire un vecteur $A$ dont la taille est celle de l'entrée et lui
+applique une transformation linéaire $WA + b$, où $W$ et $b$ sont des paramètres
+du neurone. Après cette transformation linéaire, on applique généralement une
+fonction dite \og d'activation\fg non-linéaire $f$ dont nous discuterons plus en
+détail plus tard. Ainsi la transformation effectuée sur l'entrée $A$ retourne la
+sortie $f(WA + b)$
+
+L'entraînement du neurone se fait par rétropropagation à partir de la sortie
+finale du réseau de neurone: un score est calculé sur l'objectif final, et il
+s'agit alors de minimiser la distance par rapport au score attendu. Pour ce
+faire, on peut par exemple procéder par descente de gradient. En effet, pour
+chaque paramètre, on calcul la dérivée partielle du score obtenu et on ajuste en
+conséquence les paramètres du réseau jusqu'à obtenir un résultat satisfaisant
+(typiquement un minimum local ou point de selle donnant des résultats acceptables).
+
+\paragraph{Pourquoi profond?}
+
+
+Ce qui différencie l'apprentissage profond de ces techniques d'aprentissage dites \og
 creuses\fg est d'utiliser plusieurs couches cachées (d'où la notion de
 profondeur). Cela augmente remarquablement l'abstraction du problème et permet
 de mieux traiter les problèmes dits compositionnels, c'est-à dire qui peuvent se
 décomposer en plusieurs composantes. Il est facile en première approximation de
 comprendre pourquoi cette façon de procéder est intéressantes: nous comprenons
 des choses simples avant de comprendre les choses plus complexes à partir de ce
-qui a déjà été appris
+qui a déjà été appris.
+
+Néanmoins, cela a longtemps posé des problémes d'évanouissement du gradient sur les
+réseaux profonds: la dérivée partielle sur les paramétres des couches les plus
+basses est très faible (puisque dépendante de celle de la couche
+supérieure, elle même dépendante d'une autre), et il est donc difficile d'ajuster ces couches
+bas-niveau, ce qui limite l'intérêt même de l'apprentissage profond.
 
 \subsection{Entraînement non supervisé}
 
@@ -166,14 +194,7 @@ d'éspérer avoir assez de données pour exploiter les techniques d'apprentissag
 purement supervisées. Comment faire pour demander à une machine de s'entrainer par elle même sans
 qu'on lui dise quelle conclusion tirer à partir de son résultat? Une façon de
 faire consiste à lui demander de retrouver son entrée. Ainsi, on ``encode''
-l'information dans un premier temps, puis on la décode: c'est l'auto-encodeur.
-
-Traditionellement, c'est à cela (ou aux réseaux basés sur les machines
-restreintes de Boltzmann) qu'on fait référence quand on parle d'entraînement
-non-supervisé. A strictement parlé, il s'agit plus d'un entraînement
-auto-supervisé que non-supervisé, mais aucune réelle méthode d'entrainement
-non-supervisée n'existe (il faudrait probablement revoir la structure même de
-l'entrainement).
+l'information dans un premier temps, puis on la \og décode\fg : c'est l'auto-encodeur.
 
 \paragraph{Donc on entraîne un réseau complexe à... retrouver l'identité?}
 
@@ -193,13 +214,13 @@ l'identité). Pour éviter cela on dispose de plusieurs moyens:
 \item Corrompre l'information donnée en entrée (comme proposé par \cite{Vincent:2008:ECR:1390156.1390294})pour forcer l'encodeur à
   ``deviner'' ce qu'il manque, ce qui permettrait par exemple de mettre en
   lumière des corrélations non évidentes à l'oeil nu.
-\item Poser des contraintes sur la représentation intermédiaire acquise
-
+\item Poser des contraintes sur la représentation intermédiaire acquise,
+  typiquement en forçant des objectifs de régularisation sur les paramètres.
 \end{itemize}
 
 Une partie de notre travail s'est focalisée sur l'étude de ces représentations
-intermédiaires et sur ce qu'elles nous apprennent sur les familles de protéines
-ayant servi à l'entraînement de l'auto-encodeur.
+intermédiaires et sur ce qu'elles nous apprennent sur les fragments de séquences
+peptidiques ayant servi à l'entraînement de l'auto-encodeur.
 
 \begin{wrapfigure}{R}{0.5\textwidth}
   \includegraphics[width=0.45\textwidth]{Autoencoder}
@@ -219,8 +240,13 @@ fonction de transformation!
 
 Nous venons de décrire une couche générant une image réduite dont chaque
 neurone/pixel donne la valeur de l'application d'une fonction à un carré
-$3\times 3$. Nous appellerons une telle représentation \texttt{feature map}:
-elle donne la représentation d'une \og feature\fg sur l'image.
+$3\times 3$. Nous appellerons une telle représentation \texttt{feature map}
+(littéralement, carte de caractéristiques):
+elle donne la représentation d'une \og feature\fg sur l'image. En un sens il
+s'agit là d'une convolution puisqu'on prend une fonction (l'image
+tridimensionnelles) et une autre \og pseudo-fonction\fg (le filtre de la
+caractéristique étudiée, à la différence près que ce filtre est constant sur
+l'espace étudié) et on effectue la convolution de ces deux fonctions vectorielles.
 
 \paragraph{Pourquoi s'arrêter à une \texttt{feature map}?}
 
@@ -298,8 +324,8 @@ Une architecture de couche dont le comportement naturel est de se rappeler de ce
 qui s'est passé avant est exposée dans \cite{hochreiter1997long}. L'idée est qu'on a un état de
 cellule, un état caché et une entrée. A chaque passage dans la couche, on calcule
 quel degré d'information il faut retenir de l'état de la cellule en fonction de
-l'état caché et de l'entrée. Ensuite on calcule s'il faut ajouter de
-l'information à l'état de la cellule. Enfin, on fait le calcul de la sortie et
+l'état caché et de l'entrée (porte d'oubli). Ensuite on calcule s'il faut ajouter de
+l'information à l'état de la cellule (porte de mise à jour). Enfin, on fait le calcul de la sortie et
 de l'état caché à partir des trois données précedentes.
 
 \paragraph{Pourquoi utiliser un réseau récurrent?}
@@ -338,7 +364,7 @@ particulières comme leur hydropathie, leur charge éléctrique ou leur solubili
 La séquence peptidique d'une protéine constitue ce qu'on appelle sa structure
 primaire, mais une protéine ne peut pas se résumer à sa séquence peptidique.
 D'un point de vue local, les acides s'arrangent en des structures locales de
-faibles dimensions telles que des hélices-$\alpha$ (constitué de 3, 4 ou 5 tours
+faibles dimensions telles que des hélices-$\alpha$ (constituées de 3, 4 ou 5 tours
 d'hélices), de feuilles-$\beta$ ou d'autres structures tels que retournements.
 On parle alors de structure secondaire de la protéine.
 
@@ -353,22 +379,21 @@ peptidique ne présenta pas nécessairement d'intéret. Typiquement, on peut
 définir des \texttt{domaines}, c'est-à-dire des sous-chaînes de quelques
 centaines d'acides aminés. La grande majorité de notre travail s'attache à
 étudier ces domaines, bien qu'il ait fallu trouver des moyens de contourner les
-problèmes posés par la longueur importante de tels domaines.
+problèmes posés par la longueur importante de tels domaines. 
 
 \subsection{Initialisation et optimisation des réseaux d'apprentissage profond}
 
 \paragraph{Entraînement non-supervisé?}
 
 Il a été montré dans de nombreux travaux qu'il est possible d'entrainer des
-auto-encodeurs les uns à la suite et d'aboutir à des situations permettant
+auto-encodeurs les uns à la suite des autres et d'aboutir à des situations permettant
 d'éviter de trop mauvais minima locaux. C'est d'ailleurs ce qui a motivé le
 second souffle du deep learning vers la fin des années 2000
 
 Néanmoins, des travaux plus récents ont montré qu'il suffit d'utiliser des
 initialisations aléatoires bien choisies pour largement passer outre les problème
 de minima locaux quand l'ensemble d'apprentissage est de taille élevée: nous n'avons jamais besoin que d'une instance d'entraînement
-évitant les minima locaux. Nous avons utilisé dans ce stage l'initialisation
-proposée dans . Cependant, nous avons aussi dû travailler avec des jeux de
+évitant les minima locaux. Cependant, nous avons aussi dû travailler avec des jeux de
 données de taille faible, ce qui a nécéssité le passage par de l'apprentissage
 non-supervisé pour les taches de classification où peu d'exemples labélisés existent.
 

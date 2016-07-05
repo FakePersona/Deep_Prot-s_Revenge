@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.7.4)  5 JUL 2016 00:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.4.26)  5 JUL 2016 11:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -879,70 +879,76 @@ File: Figures/Deep.png Graphic file (type png)
 Package pdftex.def Info: Figures/Deep.png used on input line 132.
 (pdftex.def)             Requested size: 271.7835pt x 192.28804pt.
  [2 <./Figures/Neuron.png> <./Figures/Deep.png>]
-<Figures/Autoencoder.png, id=19, 747.79375pt x 1056.94875pt>
+<Figures/Autoencoder.png, id=20, 747.79375pt x 1056.94875pt>
 File: Figures/Autoencoder.png Graphic file (type png)
 
 <use Figures/Autoencoder.png>
-Package pdftex.def Info: Figures/Autoencoder.png used on input line 205.
+Package pdftex.def Info: Figures/Autoencoder.png used on input line 226.
 (pdftex.def)             Requested size: 203.83417pt x 288.10556pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 222.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 243.
 
  (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
+[3]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 227.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 253.
 
-<Figures/mylenet.png, id=20, 544.1931pt x 127.1952pt>
+Underfull \hbox (badness 1735) in paragraph at lines 253--259
+[] \T1/cmss/bx/n/10.95 Pour-quoi s'ar-rê-ter à une \T1/cmtt/m/n/10.95 feature m
+ap \T1/cmss/bx/n/10.95 ?[]
+ []
+
+
+Underfull \hbox (badness 5147) in paragraph at lines 253--259
+\T1/ppl/m/n/10.95 Ty-pi-que-ment on crée plu-sieurs \T1/cmtt/m/n/10.95 feature
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 267--272
+ \T1/cmss/bx/n/10.95 Ré-duire la charge de cal-cul[] \T1/ppl/m/n/10.95 Pour aug
+-
+ []
+
+<Figures/mylenet.png, id=26, 544.1931pt x 127.1952pt>
 File: Figures/mylenet.png Graphic file (type png)
 
 <use Figures/mylenet.png>
-Package pdftex.def Info: Figures/mylenet.png used on input line 249.
+Package pdftex.def Info: Figures/mylenet.png used on input line 275.
 (pdftex.def)             Requested size: 435.35506pt x 101.75629pt.
- [3]
-Underfull \hbox (badness 2744) in paragraph at lines 253--257
-[][]\T1/ppl/m/n/10.95 Une ar-chi-tec-ture ty-pique se consti-tue
- []
-
-
-Underfull \hbox (badness 3098) in paragraph at lines 253--257
-\T1/ppl/m/n/10.95 donc d'un en-chaî-ne-ment de couches de
- []
-
-
-Underfull \hbox (badness 1533) in paragraph at lines 270--275
-\T1/ppl/m/n/10.95 on réa-lise que la sé-quence passe en fait
- []
-
-<Figures/Recurrent.png, id=26, 1092.08pt x 580.1675pt>
+ [4 <./Figures/mylenet.png> <./Figures/Autoencoder.png>] <Figures/Recurrent.png
+, id=33, 1092.08pt x 580.1675pt>
 File: Figures/Recurrent.png Graphic file (type png)
 
 <use Figures/Recurrent.png>
-Package pdftex.def Info: Figures/Recurrent.png used on input line 284.
+Package pdftex.def Info: Figures/Recurrent.png used on input line 310.
 (pdftex.def)             Requested size: 203.83417pt x 108.28539pt.
 
-<Figures/LSTM.png, id=27, 1056.94875pt x 747.79375pt>
+<Figures/LSTM.png, id=34, 1056.94875pt x 747.79375pt>
 File: Figures/LSTM.png Graphic file (type png)
  <use Figures/LSTM.png>
-Package pdftex.def Info: Figures/LSTM.png used on input line 289.
+Package pdftex.def Info: Figures/LSTM.png used on input line 315.
 (pdftex.def)             Requested size: 226.48395pt x 160.23622pt.
 
-[4 <./Figures/mylenet.png> <./Figures/Autoencoder.png>] [5 <./Figures/Recurrent
-.png> <./Figures/LSTM.png>] [6] [7] [8]
-<Figures/Class.png, id=51, 747.79375pt x 1056.94875pt>
+[5 <./Figures/Recurrent.png> <./Figures/LSTM.png>] [6] [7] [8] [9]
+<Figures/Class.png, id=54, 747.79375pt x 1056.94875pt>
 File: Figures/Class.png Graphic file (type png)
  <use Figures/Class.png>
-Package pdftex.def Info: Figures/Class.png used on input line 568.
+Package pdftex.def Info: Figures/Class.png used on input line 593.
 (pdftex.def)             Requested size: 203.83417pt x 288.10556pt.
 
-[9]
-Underfull \hbox (badness 1430) in paragraph at lines 588--594
-[][]\T1/ppl/m/n/10.95 Pour le clas-si-fi-ca-teur, nous avons uti-
+Underfull \hbox (badness 4595) in paragraph at lines 597--612
+[][]\T1/ppl/m/n/10.95 Les chaînes pro-téiques étu-diées sont
  []
 
 
-Underfull \hbox (badness 3291) in paragraph at lines 597--604
-\T1/ppl/m/n/10.95 sen-ta-tion in-ter-mé-diaire dans un pre-mier
+Underfull \hbox (badness 1117) in paragraph at lines 597--612
+\T1/ppl/m/n/10.95 per-met-tant d'ob-ser-ver quelques struc-tures
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 597--612
+\T1/ppl/m/n/10.95 ap-pren-tis-sage pro-fond. Les au-toen-co-deurs
  []
 
 [10 <./Figures/Class.png>] [11]
@@ -950,25 +956,25 @@ Underfull \hbox (badness 3291) in paragraph at lines 597--604
 File: Figures/SingleOneRecHeat.png Graphic file (type png)
 
 <use Figures/SingleOneRecHeat.png>
-Package pdftex.def Info: Figures/SingleOneRecHeat.png used on input line 693.
+Package pdftex.def Info: Figures/SingleOneRecHeat.png used on input line 718.
 (pdftex.def)             Requested size: 351.23491pt x 151.11772pt.
-
-<Figures/PairOneRecHeat.png, id=63, 1170.774pt x 503.7219pt>
+ [12 <./Figures/SingleOneRecHeat.png>]
+<Figures/PairOneRecHeat.png, id=67, 1170.774pt x 503.7219pt>
 File: Figures/PairOneRecHeat.png Graphic file (type png)
 
 <use Figures/PairOneRecHeat.png>
-Package pdftex.def Info: Figures/PairOneRecHeat.png used on input line 718.
+Package pdftex.def Info: Figures/PairOneRecHeat.png used on input line 743.
 (pdftex.def)             Requested size: 351.23491pt x 151.11772pt.
- [12 <./Figures/SingleOneRecHeat.png> <./Figures/PairOneRecHeat.png>] [13] [14]
- (./Rapport.aux)
+ [13 <./Figures/PairOneRecHeat.png>] [14]
+[15] (./Rapport.aux)
 Package logreq Info: Writing requests to 'Rapport.run.xml'.
 \openout1 = `Rapport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  12419 strings out of 493054
- 197924 string characters out of 6140587
- 630864 words of memory out of 5000000
+ 197924 string characters out of 6140586
+ 633864 words of memory out of 5000000
  15707 multiletter control sequences out of 15000+600000
  35349 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -984,10 +990,10 @@ sx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></us
 r/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-d
 ist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/
 palatino/uplri8a.pfb>
-Output written on Rapport.pdf (14 pages, 902314 bytes).
+Output written on Rapport.pdf (15 pages, 897251 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
