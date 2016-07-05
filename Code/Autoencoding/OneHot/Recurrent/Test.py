@@ -46,7 +46,35 @@ print("Generating data...")
 
 data = []
 test = []
-            
+
+record = SeqIO.parse("../../../data/smallData.fa", "fasta")
+
+ind = 0
+for rec in record:
+    ind +=1
+    if len(test) > 499999:
+        break
+    if ind > 25502:
+        break
+    if ((len(data) + len(test)) % 10) == 5:
+        for k in range(len(rec.seq)//3 - 10):
+            test.append([rec.seq[3 * k + i] for i in range(11)])
+    else:
+        for k in range(len(rec.seq)//3 - 4):
+            data.append([rec.seq[3 * k + i] for i in range(11)] )
+
+print(ind)
+
+X = np.zeros((len(data), 11, 26))
+
+for i, sentence in enumerate(data):
+    X[i] = ctable.encode(sentence, maxlen=11)
+
+X_val = np.zeros((len(test), 11, 26))
+
+for i, sentence in enumerate(test):
+    X_val[i] = ctable.encode(sentence, maxlen=11)
+
 X = np.zeros((len(data), 11, 26))
 
 for i, sentence in enumerate(data):
@@ -78,9 +106,26 @@ model.load_weights("RecOneb.h5")
 
 model.compile(optimizer='rmsprop', loss='binary_crossentropy')
 
+score = 0
+
 print("Let's go!")
 # Train the model each generation and show predictions against the validation dataset
-for i in range (10):
+
+for i in range(10000):
+    ind = np.random.randint(0, len(X_val))
+    row = X_val[np.array([ind])]
+    preds = model.predict_classes(row, verbose=0)
+    correct = ctable.decode(row[0])
+    guess = ctable.decode(preds[0], calc_argmax=False)
+    for i in range(11):
+        if guess[i] == correct[i]:
+            score += 1
+
+print(score / 10000)
+
+score = 0
+
+for i in range(10000):
 
     beep = [''.join(np.random.choice(list(chars))) for _ in range(11)]
     row = np.zeros((1,11,26))
@@ -88,7 +133,8 @@ for i in range (10):
     preds = model.predict_classes(row, verbose=0)
     correct = ctable.decode(row[0])
     guess = ctable.decode(preds[0], calc_argmax=False)
-    print('T', correct)
-    print('P', guess)
-    print('---')
+    for i in range(11):
+        if guess[i] == correct[i]:
+            score += 1
 
+print(score / 10000)

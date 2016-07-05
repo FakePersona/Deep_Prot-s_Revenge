@@ -12,6 +12,6 @@ f.close()
 
 df = pd.DataFrame(np.array(stored))
 
-data = [go.Heatmap( z=df.corr().values.tolist(), colorscale='Viridis')]
+data = [go.Heatmap( z=df.corr().values.tolist())]
 
-py.iplot(data, filename='SingleOneRecHeatb')
+py.plot(data, filename='SingleOneRecHeatb')
