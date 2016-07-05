@@ -329,7 +329,31 @@ entrée au temps $t+1$, mais ce n'est pas le cas dans notre étude.
 
 \subsection{Domaine d'étude: Protéines}
 
-Une protéine est un 
+Comme exposé plusieurs fois dans ce rapport, une protéine est une chaîne
+d'acides aminés de longueur variable. Un acide aminé est une molécule chimique,
+et de tels acides aminés interviennent typiquement dans les séquences
+peptidiques. Ces acides ont chacun leur propriétés physico-chimiques
+particulières comme leur hydropathie, leur charge éléctrique ou leur solubilité.
+
+La séquence peptidique d'une protéine constitue ce qu'on appelle sa structure
+primaire, mais une protéine ne peut pas se résumer à sa séquence peptidique.
+D'un point de vue local, les acides s'arrangent en des structures locales de
+faibles dimensions telles que des hélices-$\alpha$ (constitué de 3, 4 ou 5 tours
+d'hélices), de feuilles-$\beta$ ou d'autres structures tels que retournements.
+On parle alors de structure secondaire de la protéine.
+
+La façon dont l'ensemble de ces acides et structures locales s'organisent dans
+l'espace constituent la structure ternaire de la protéine. On peut décomposer la
+classe structurale de la protéine à partir de la structure secondaire:
+$all-\alpha$, $all-\beta$, $\alpha /\beta$, $\alpha + \beta$, petite protéine,
+$peptide$.
+
+Les chaînes peptidiques sont très longues et toute sous-chaîne de la chaîne
+peptidique ne présenta pas nécessairement d'intéret. Typiquement, on peut
+définir des \texttt{domaines}, c'est-à-dire des sous-chaînes de quelques
+centaines d'acides aminés. La grande majorité de notre travail s'attache à
+étudier ces domaines, bien qu'il ait fallu trouver des moyens de contourner les
+problèmes posés par la longueur importante de tels domaines.
 
 \subsection{Initialisation et optimisation des réseaux d'apprentissage profond}
 
