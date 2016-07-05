@@ -1,0 +1,294 @@
+from __future__ import print_function
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+import plotly.plotly as py
+
+from keras import backend as K
+
+from sklearn import cluster
+import glob
+import os
+from os.path import basename
+from Bio.PDB import *
+from Bio.PDB.Polypeptide import three_to_one
+from Bio import SeqIO
+
+import json
+
+from Bio import pairwise2
+
+from Bio.SubsMat import MatrixInfo as matlist
+
+from keras.models import Sequential
+from keras.layers import recurrent, RepeatVector, Activation, TimeDistributed, Dense, Dropout
+
+# Hash table
+
+def dist2(u,v):
+    return sum([(x-y)**2 for (x, y) in zip(u, v)])
+
+class AcidEmbedding(object):
+
+    def __init__(self, maxlen):
+        self.maxlen = maxlen
+
+        self.chars = list('rndeqkstchmavgilfpwybzuxXo')
+
+        self.embed = [[-4.5, 1, 9.09, 71.8],
+                      [-3.5, 0, 8.8, 2.4],
+                      [-3.5, -1, 9.6, 0.42],
+                      [-3.5, -1, 9.67, 0.72],
+                      [-3.5, 0, 9.13, 2.6],
+                      [-3.9, 1, 10.28, 200],
+                      [-0.8, 0, 9.15, 36.2],
+                      [-0.7, 0, 9.12, 200],
+                      [2.5, 0, 10.78, 200],
+                      [-3.2, 1, 8.97, 4.19],
+                      [1.9, 0, 9.21, 5.14],
+                      [1.8, 0, 9.87, 5.14],
+                      [4.2, 0, 9.72, 5.6],
+                      [-0.4, 0, 9.6, 22.5],
+                      [4.5, 0, 9.76, 3.36],
+                      [3.8, 0, 9.6, 2.37],
+                      [2.8, 0, 9.24, 2.7],
+                      [-1.6, 0, 10.6, 1.54],
+                      [-0.9, 0, 9.39, 1.06],
+                      [-1.3, 0, 9.11, 0.038],
+                      [1, 0.5, 8.95, 37.1],
+                      [1, -0.5, 9.40, 1.66],
+                      [250, -250, 250, -250],
+                      [0, 0, 0, 0],
+                      [500, 500, 500, 500],
+                      [-500, -500, -500, -500]]
+
+        self.embed = [[x for x in X] for X in self.embed]
+
+        self.char_indices = dict((c, i) for i, c in enumerate(self.chars))
+        self.indices_char = dict((i, c) for i, c in enumerate(self.chars))
+
+    def encode(self, C, maxlen=None):
+        maxlen = maxlen if maxlen else self.maxlen
+        X = np.zeros((maxlen, 4))
+        for i, c in enumerate(C):
+            X[i] = self.embed[self.char_indices[c]]
+        return X
+
+    def get_charge(self, C):
+        charge = 0
+        for c in C:
+            charge += self.embed[char_indices[c]][1]
+        return charge
+
+    def get_hydro(self, C):
+        hydro = 0
+        for c in C:
+            hydro += self.embed[char_indices[c]][0]
+        return hydro
+
+    def decode(self, X):
+        prob = [[-dist2(x, y) for y in self.embed] for x in X]
+        prob = (np.array(prob)).argmax(axis=-1)
+        return ''.join(self.indices_char[x] for x in prob)
+
+
+class CharacterTable(object):
+    '''
+    Given a set of characters:
+    + Encode them to a one hot integer representation
+    + Decode the one hot integer representation to their character output
+    + Decode a vector of probabilties to their character output
+    '''
+    def __init__(self, chars, maxlen):
+        self.chars = sorted(set(chars))
+        self.char_indices = dict((c, i) for i, c in enumerate(self.chars))
+        self.indices_char = dict((i, c) for i, c in enumerate(self.chars))
+        self.maxlen = maxlen
+
+    def encode(self, C, maxlen=None):
+        maxlen = maxlen if maxlen else self.maxlen
+        X = np.zeros((maxlen, len(self.chars)))
+        for i, c in enumerate(C):
+            X[i, self.char_indices[c]] = 1
+        return X
+
+    def decode(self, X, calc_argmax=True):
+        if calc_argmax:
+            X = X.argmax(axis=-1)
+        return ''.join(self.indices_char[x] for x in X)
+
+# Initial parameters
+    
+chars = 'rndeqkstchmavgilfpwybzuxXo'
+ctable = CharacterTable(chars, 11)
+lookup = AcidEmbedding(11)
+
+ACIDS = 26
+encoding_dim = 10
+
+# Data Generating
+
+print("Generating data...")
+
+data = []
+test = []
+
+dataNames = []
+
+# Parsing fasta file
+
+record = SeqIO.parse("../../../data/smallData.fa", "fasta")
+
+proteins = []
+UniqNames = []
+
+for rec in record:
+    proteins.append([a for a in rec.seq])
+    UniqNames.append(rec.name)
+
+nameInd = dict((c, i) for i, c in enumerate(UniqNames))
+
+print(len(UniqNames))
+
+record = SeqIO.parse("../../../data/smallData.fa", "fasta")
+
+# parsing PDB files
+
+PDB_list = glob.glob("../../../../PDBMining/*/*.ent")
+
+p = PDBParser()
+
+Valid = [False for _ in proteins]
+PDBNames = []
+for f in PDB_list:
+    name = os.path.splitext(basename(f))[0]
+    PDBNames.append(name)
+    struct = p.get_structure(name,f)
+    res_list = Selection.unfold_entities(struct, 'R')
+    try:
+        seq = [three_to_one(a.get_resname()).lower() for a in res_list]
+    except (KeyError):
+        seq = []
+    try:
+        if seq == proteins[nameInd[name]]:
+            Valid[nameInd[name]] = True
+    except KeyError:
+        pass
+
+PDBInd = dict((c, i) for i, c in enumerate(PDBNames))
+
+occurences = [-1 for _ in proteins]
+
+ind = -1
+for rec in record:
+    ind +=1
+    if ind > 13000:
+        break
+    if not Valid[nameInd[rec.name]]:
+        continue
+    if not (ind % 800 == 0):
+        continue
+    occurences[nameInd[rec.name]] = len(data)
+    for k in range(len(rec.seq) // 3 - 4):
+        data.append([rec.seq[3 * k + i] for i in range(11)])
+        dataNames.append(rec.name)
+
+print(len(data))
+    
+# Encoding data
+
+X = np.zeros((len(data), 11, len(chars)), dtype=np.bool)
+
+for i, sentence in enumerate(data):
+    X[i] = ctable.encode(sentence, maxlen=11)
+
+
+print("Creating model...")
+model = Sequential()
+
+#Recurrent encoder
+model.add(recurrent.LSTM(encoding_dim, input_shape=(11, ACIDS), return_sequences=True, dropout_W=0.1, dropout_U=0.1))
+model.add(recurrent.LSTM(encoding_dim, return_sequences=True, dropout_W=0.1, dropout_U=0.1))
+model.add(recurrent.LSTM(encoding_dim, dropout_W=0.1, dropout_U=0.1))
+
+model.add(RepeatVector(11))
+
+#And decoding
+model.add(recurrent.LSTM(ACIDS, return_sequences=True))
+
+model.add(TimeDistributed(Dense(ACIDS)))
+
+model.add(Activation('softmax'))
+
+model.load_weights("RecOneb.h5")
+
+model.compile(optimizer='rmsprop', loss='binary_crossentropy')
+
+get_summary = K.function([model.layers[0].input, K.learning_phase()], [model.layers[2].output])
+
+print("Let's go!")
+
+Embed = [[0 for _ in range(encoding_dim)] for _ in range(len(X))]
+
+for i in range(len(X)):
+    row = X[np.array([i])]
+    preds = model.predict_classes(row, verbose=0)
+    correct = ctable.decode(row[0])
+    intermediate = get_summary([row, 0])[0][0]
+    Embed[i] = intermediate
+
+# Preparing data for correlating
+
+Properties = np.zeros(((len(data)**2  - len(data))//2, 15)) 
+k = 0
+
+matrix = matlist.blosum62
+
+data = [[c.upper() for c in l] for l in data]   
+
+for i in range(len(data)):
+    for j in range(i+1, len(data)):
+        # latent distance
+        Properties[k][0] = np.linalg.norm(Embed[i] - Embed[j])
+        #Dimensional orientation
+        for k in range(encoding_dim):
+            Properties[i][k+1] = Embed[i][k] - Embed[j][k]
+        # Alignment scores
+        Properties[k][11] = pairwise2.align.globalxx(data[i],data[j], score_only=1)
+        Properties[k][12] = pairwise2.align.localxx(data[i],data[j], score_only=1)
+        Properties[k][13] = pairwise2.align.globaldx(data[i],data[j], matrix, score_only=1) #BLOSUM!
+        # Structural score
+        off1 = i - occurences[nameInd[dataNames[i]]]
+        off2 = j - occurences[nameInd[dataNames[j]]]
+        use1 = [False for _ in proteins[nameInd[dataNames[i]]]]
+        for l in range(11):
+            use1[3 * off1 + l] = True
+        use2 = [False for _ in proteins[nameInd[dataNames[j]]]]
+        for l in range(11):
+            use2[3 * off2 + l] = True
+        file1 = PDB_list[PDBInd[dataNames[i]]]
+        file2 = PDB_list[PDBInd[dataNames[j]]]
+        struct1 = PDBParser().get_structure("1", file1)[0]
+        struct2 = PDBParser().get_structure("2", file2)[0]
+        ref_atoms = []
+        alt_atoms = []
+        res_list1 = Selection.unfold_entities(struct1, 'R')
+        res_list2 = Selection.unfold_entities(struct2, 'R')
+        for ref_res, allow in zip(res_list1,  use1):
+            if allow:
+                #CA = alpha carbon
+                ref_atoms.append(ref_res['CA'])                
+        for alt_res, allow in zip(res_list2,  use2):
+            if allow:
+                #CA = alpha carbon
+                alt_atoms.append(alt_res['CA'])
+        super_imposer = Superimposer()
+        super_imposer.set_atoms(ref_atoms, alt_atoms)
+        Properties[k][14] = super_imposer.rms
+        k += 1
+
+f = open("pairs.txt", 'w')
+json.dump(Properties.tolist(), f)
+f.close()
+                
