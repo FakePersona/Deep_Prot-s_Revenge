@@ -300,73 +300,116 @@
     \end{itemize}
 \end{frame}
 
+\section{Etude réalisée}
 
-\begin{frame}{Make Titles Informative.}
+\subsection{Séquences peptidiques}
 
-  You can create overlays\dots
-  \begin{itemize}
-  \item using the \texttt{pause} command:
+\begin{frame}{Traiter les protéines à partir de la structure primaire}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+
     \begin{itemize}
-    \item
-      First item.
-      \pause
-    \item    
-      Second item.
+    \item Travaux usuels: représentation par pseudo-vecteur de fréquence\pause
+    \item Etude sur les séquences peptidiques\pause
+    \item Insuffisance d'une indexation\pause
+    \item Structure tertiaire forme tridimensionnelle \pause
     \end{itemize}
-  \item
-    using overlay specifications:
+\end{frame}
+
+\subsection{Architectures entrainées}
+
+\begin{frame}{Autoencodeurs}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+
+  \begin{columns}
+    \column{0.5\linewidth}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.1750]{../Figures/Class}
+      \caption{Fonctionnement d'un neurone}
+    \end{figure}
+
+    \column{0.4\linewidth}
     \begin{itemize}
-    \item<3->
-      First item.
-    \item<4->
-      Second item.
+    \item Plusieurs niveaux d'abstraction \pause
+    \item Evanouissement de gradient \pause
+    \item Grands ensembles d'entraînement \pause
+    \item Bons résultats en reconnaissance d'image, langages naturels, ...
     \end{itemize}
-  \item
-    using the general \texttt{uncover} command:
+  \end{columns}
+  
+\end{frame}
+
+\begin{frame}{Classificateur}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+
+  \begin{columns}
+    \column{0.5\linewidth}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.1750]{../Figures/Class}
+      \caption{Fonctionnement d'un neurone}
+    \end{figure}
+
+    \column{0.4\linewidth}
     \begin{itemize}
-      \uncover<5->{\item
-        First item.}
-      \uncover<6->{\item
-        Second item.}
+    \item Premières couches pré-entraînées \pause
+    \item Couches récurrentes appliquées à des chaînes courtes \pause
+    \item  \pause
+    \item Bons résultats en reconnaissance d'image, langages naturels, ...
     \end{itemize}
-  \end{itemize}
+  \end{columns}
+
+ \end{frame}
+
+\subsection{Résultats}
+
+\begin{frame}{Les représentation latentes présentent des corrélations remarquables}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+
+  \begin{columns}
+    \column{0.5\linewidth}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.1750]{../Figures/SingleOneRecHeat}
+      \caption{Fonctionnement d'un neurone}
+    \end{figure}
+
+    \column{0.4\linewidth}
+    \begin{itemize}
+    \item Dimensions liées dans l'espace latent\pause
+    \item Corrélation de coordonnées à l'hydropathie, à la charge ...\pause
+    \item Pas de corrélation à la structure spatiale\pause
+    \end{itemize}
+  \end{columns}
+
 \end{frame}
 
+\begin{frame}{Les représentations latentes sont exploitables par un
+    classificateur structural}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
 
-\subsection{Previous Work}
+  \begin{columns}
+    \column{0.5\linewidth}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.1750]{../Figures/SingleOneRecHeat}
+      \caption{Fonctionnement d'un neurone}
+    \end{figure}
 
-\begin{frame}{Make Titles Informative.}
-\end{frame}
+    \column{0.4\linewidth}
+    \begin{itemize}
+    \item Dimensions liées dans l'espace latent\pause
+    \item Corrélation de coordonnées à l'hydropathie, à la charge ...\pause
+    \item Pas de corrélation à la structure spatiale\pause
+    \end{itemize}
+  \end{columns}
 
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-
-
-\section{Our Results/Contribution}
-
-\subsection{Main Results}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-
-\subsection{Basic Ideas for Proofs/Implementation}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
+ \end{frame}
 
 
 

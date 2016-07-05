@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.4.26)  5 JUL 2016 16:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.7.4)  6 JUL 2016 01:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -459,12 +459,6 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/usr/share/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
-Package: sansmathaccent 2013/03/28
-
-(/usr/share/texmf-dist/tex/latex/filehook/filehook.sty
-Package: filehook 2011/10/12 v0.5d Hooks for input files
 )))
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
 Package: beamerbasetranslator 2010/06/11  (rcs-revision 85fd1cc7fc42)
@@ -1157,7 +1151,7 @@ LaTeX Info: Redefining \up on input line 101.
 ] (./Diapos.toc) [4
 
 ]
-<../Figures/Neuron.png, id=236, 747.79375pt x 1056.94875pt>
+<../Figures/Neuron.png, id=253, 747.79375pt x 1056.94875pt>
 File: ../Figures/Neuron.png Graphic file (type png)
 
 <use ../Figures/Neuron.png>
@@ -1204,7 +1198,7 @@ Package pdftex.def Info: ../Figures/Neuron.png used on input line 155.
  [8
 
 ]
-<../Figures/Deep.png, id=384, 1056.94875pt x 747.79375pt>
+<../Figures/Deep.png, id=405, 1056.94875pt x 747.79375pt>
 File: ../Figures/Deep.png Graphic file (type png)
 
 <use ../Figures/Deep.png>
@@ -1213,6 +1207,10 @@ Package pdftex.def Info: ../Figures/Deep.png used on input line 178.
 
 Overfull \hbox (31.32387pt too wide) in paragraph at lines 178--178
  [] 
+ []
+
+
+Overfull \vbox (6.8695pt too high) detected at line 178
  []
 
 [9
@@ -1227,6 +1225,10 @@ Overfull \hbox (31.32387pt too wide) in paragraph at lines 178--178
  [] 
  []
 
+
+Overfull \vbox (6.8695pt too high) detected at line 178
+ []
+
 [10
 
 ]
@@ -1237,6 +1239,10 @@ Package pdftex.def Info: ../Figures/Deep.png used on input line 178.
 
 Overfull \hbox (31.32387pt too wide) in paragraph at lines 178--178
  [] 
+ []
+
+
+Overfull \vbox (6.8695pt too high) detected at line 178
  []
 
 [11
@@ -1251,12 +1257,16 @@ Overfull \hbox (31.32387pt too wide) in paragraph at lines 178--178
  [] 
  []
 
+
+Overfull \vbox (6.8695pt too high) detected at line 178
+ []
+
 [12
 
 ] (./Diapos.toc) [13
 
 ]
-<../Figures/Autoencoder.png, id=570, 747.79375pt x 1056.94875pt>
+<../Figures/Autoencoder.png, id=599, 747.79375pt x 1056.94875pt>
 File: ../Figures/Autoencoder.png Graphic file (type png)
 
 <use ../Figures/Autoencoder.png>
@@ -1320,7 +1330,7 @@ Package pdftex.def Info: ../Figures/Autoencoder.png used on input line 208.
 ] (./Diapos.toc) [22
 
 ]
-<../Figures/mylenet.png, id=903, 544.1931pt x 127.1952pt>
+<../Figures/mylenet.png, id=942, 544.1931pt x 127.1952pt>
 File: ../Figures/mylenet.png Graphic file (type png)
 
 <use ../Figures/mylenet.png>
@@ -1352,7 +1362,7 @@ Package pdftex.def Info: ../Figures/mylenet.png used on input line 228.
  [26
 
 ]
-<../Figures/Recurrent.png, id=1047, 1092.08pt x 580.1675pt>
+<../Figures/Recurrent.png, id=1090, 1092.08pt x 580.1675pt>
 File: ../Figures/Recurrent.png Graphic file (type png)
 
 <use ../Figures/Recurrent.png>
@@ -1425,7 +1435,7 @@ Overfull \hbox (40.89087pt too wide) in paragraph at lines 251--251
 
 [32
 
-] <../Figures/dropout.png, id=1262, 616.3025pt x 329.23pt>
+] <../Figures/dropout.png, id=1311, 616.3025pt x 329.23pt>
 File: ../Figures/dropout.png Graphic file (type png)
 
 <use ../Figures/dropout.png>
@@ -1498,231 +1508,16 @@ Overfull \hbox (31.24724pt too wide) in paragraph at lines 273--273
 
 ] (./Diapos.toc) [43
 
-]
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
+] [44
 
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-
-./Diapos.tex:301: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.301 \end{frame}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[44
+] [45
 
 ]
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-
-./Diapos.tex:301: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.301 \end{frame}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[45
-
-]
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-
-./Diapos.tex:301: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.301 \end{frame}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [46
 
-]
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
+] [47
 
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-./Diapos.tex:301: Use of \beamer@parseitem doesn't match its definition.
-\beamer@defaultospec ->L
-                        angages naturels
-l.301 \end{frame}
-                 
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-
-./Diapos.tex:301: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.301 \end{frame}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[47
-
-]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 333.
- (/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [48
+] (./Diapos.toc) [48
 
 ] [49
 
@@ -1730,37 +1525,213 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 
 ] [51
 
-]
-[52
+] [52
 
 ] [53
 
 ] (./Diapos.toc) [54
 
-] [55
+]
+<../Figures/Class.png, id=2137, 747.79375pt x 1056.94875pt>
+File: ../Figures/Class.png Graphic file (type png)
 
-] [56
+<use ../Figures/Class.png>
+Package pdftex.def Info: ../Figures/Class.png used on input line 342.
+(pdftex.def)             Requested size: 130.86586pt x 184.9688pt.
 
-] (./Diapos.toc) [57
+Overfull \vbox (47.37244pt too high) detected at line 342
+ []
 
-] [58
+[55
 
-] [59
+ <../Figures/Class.png>]
+File: ../Figures/Class.png Graphic file (type png)
+ <use ../Figures/Class.png>
+Package pdftex.def Info: ../Figures/Class.png used on input line 342.
+(pdftex.def)             Requested size: 130.86586pt x 184.9688pt.
 
-] [60
+Overfull \vbox (47.37244pt too high) detected at line 342
+ []
+
+[56
 
 ]
-(./Diapos.toc) [61
+File: ../Figures/Class.png Graphic file (type png)
+ <use ../Figures/Class.png>
+Package pdftex.def Info: ../Figures/Class.png used on input line 342.
+(pdftex.def)             Requested size: 130.86586pt x 184.9688pt.
 
-] [62
+Overfull \vbox (47.37244pt too high) detected at line 342
+ []
 
-] [63
+[57
 
-] [64
+]
+File: ../Figures/Class.png Graphic file (type png)
+ <use ../Figures/Class.png>
+Package pdftex.def Info: ../Figures/Class.png used on input line 342.
+(pdftex.def)             Requested size: 130.86586pt x 184.9688pt.
 
-] [65
+Overfull \vbox (47.37244pt too high) detected at line 342
+ []
 
-] [66
+[58
+
+]
+File: ../Figures/Class.png Graphic file (type png)
+ <use ../Figures/Class.png>
+Package pdftex.def Info: ../Figures/Class.png used on input line 365.
+(pdftex.def)             Requested size: 130.86586pt x 184.9688pt.
+
+Overfull \vbox (47.37244pt too high) detected at line 365
+ []
+
+[59
+
+]
+File: ../Figures/Class.png Graphic file (type png)
+ <use ../Figures/Class.png>
+Package pdftex.def Info: ../Figures/Class.png used on input line 365.
+(pdftex.def)             Requested size: 130.86586pt x 184.9688pt.
+
+Overfull \vbox (47.37244pt too high) detected at line 365
+ []
+
+[60
+
+]
+File: ../Figures/Class.png Graphic file (type png)
+ <use ../Figures/Class.png>
+Package pdftex.def Info: ../Figures/Class.png used on input line 365.
+(pdftex.def)             Requested size: 130.86586pt x 184.9688pt.
+
+Overfull \vbox (47.37244pt too high) detected at line 365
+ []
+
+[61
+
+]
+File: ../Figures/Class.png Graphic file (type png)
+ <use ../Figures/Class.png>
+Package pdftex.def Info: ../Figures/Class.png used on input line 365.
+(pdftex.def)             Requested size: 130.86586pt x 184.9688pt.
+
+Overfull \vbox (47.37244pt too high) detected at line 365
+ []
+
+[62
+
+] (./Diapos.toc) [63
+
+]
+<../Figures/SingleOneRecHeat.png, id=2459, 1170.774pt x 503.7219pt>
+File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
+
+<use ../Figures/SingleOneRecHeat.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 389
+.
+(pdftex.def)             Requested size: 204.88852pt x 88.15265pt.
+
+Overfull \hbox (51.24359pt too wide) in paragraph at lines 389--389
+ [] 
+ []
+
+[64
+
+ <../Figures/SingleOneRecHeat.png>]
+File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
+ <use ../Figures/SingleOneRecHeat.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 389
+.
+(pdftex.def)             Requested size: 204.88852pt x 88.15265pt.
+
+Overfull \hbox (51.24359pt too wide) in paragraph at lines 389--389
+ [] 
+ []
+
+[65
+
+]
+File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
+ <use ../Figures/SingleOneRecHeat.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 389
+.
+(pdftex.def)             Requested size: 204.88852pt x 88.15265pt.
+
+Overfull \hbox (51.24359pt too wide) in paragraph at lines 389--389
+ [] 
+ []
+
+[66
+
+]
+File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
+ <use ../Figures/SingleOneRecHeat.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 389
+.
+(pdftex.def)             Requested size: 204.88852pt x 88.15265pt.
+
+Overfull \hbox (51.24359pt too wide) in paragraph at lines 389--389
+ [] 
+ []
+
+[67
+
+]
+File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
+ <use ../Figures/SingleOneRecHeat.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 412
+.
+(pdftex.def)             Requested size: 204.88852pt x 88.15265pt.
+
+Overfull \hbox (51.24359pt too wide) in paragraph at lines 412--412
+ [] 
+ []
+
+[68
+
+]
+File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
+ <use ../Figures/SingleOneRecHeat.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 412
+.
+(pdftex.def)             Requested size: 204.88852pt x 88.15265pt.
+
+Overfull \hbox (51.24359pt too wide) in paragraph at lines 412--412
+ [] 
+ []
+
+[69
+
+]
+File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
+ <use ../Figures/SingleOneRecHeat.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 412
+.
+(pdftex.def)             Requested size: 204.88852pt x 88.15265pt.
+
+Overfull \hbox (51.24359pt too wide) in paragraph at lines 412--412
+ [] 
+ []
+
+[70
+
+]
+File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
+ <use ../Figures/SingleOneRecHeat.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 412
+.
+(pdftex.def)             Requested size: 204.88852pt x 88.15265pt.
+
+Overfull \hbox (51.24359pt too wide) in paragraph at lines 412--412
+ [] 
+ []
+
+[71
+
+] [72
+
+] [73
 
  </usr/share/texmf-dist/tex/latex/beamer/art/beamericonbook.pdf> </usr/share/te
 xmf-dist/tex/latex/beamer/art/beamericonarticle.pdf>]
@@ -1773,47 +1744,32 @@ xmf-dist/tex/latex/beamer/art/beamericonarticle.pdf>]
 \tf@snm=\write8
 \openout8 = `Diapos.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 433.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 433.
- (./Diapos.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 433.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 433.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 476.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 476.
 
-
-Package rerunfilecheck Warning: File `Diapos.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Diapos.out':
-(rerunfilecheck)             Before: 4BF5B059FE2A4FFD0A36AD1D3605EBBC;565
-(rerunfilecheck)             After:  834009C0B4AC1046056AD98D4A7323EF;704.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 433.
+(./Diapos.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 476.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 476.
+Package rerunfilecheck Info: File `Diapos.out' has not changed.
+(rerunfilecheck)             Checksum: DB526E6780067167DBC1E7DDFAF859B3;701.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 476.
  ) 
 Here is how much of TeX's memory you used:
- 18729 strings out of 493054
- 349346 string characters out of 6140586
- 425381 words of memory out of 5000000
- 21624 multiletter control sequences out of 15000+600000
- 36801 words of font info for 52 fonts, out of 8000000 for 9000
+ 18608 strings out of 493054
+ 346874 string characters out of 6140587
+ 423428 words of memory out of 5000000
+ 21502 multiletter control sequences out of 15000+600000
+ 36180 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,19n,68p,393b,850s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Outline0.2.2.51} has been referenced but does not
- exist, replaced by a fixed one
+ 48i,19n,65p,393b,850s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/urw/h
+elvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
 
-pdfTeX warning (dest): name{Outline0.2.1.47} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.1.4.44} has been referenced but does not e
-xist, replaced by a fixed one
-
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/urw/cou
-rier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></us
-r/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Diapos.pdf (66 pages, 556770 bytes).
+Output written on Diapos.pdf (73 pages, 812310 bytes).
 PDF statistics:
- 2556 PDF objects out of 2984 (max. 8388607)
- 2419 compressed objects within 25 object streams
- 152 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2866 PDF objects out of 2984 (max. 8388607)
+ 2717 compressed objects within 28 object streams
+ 163 named destinations out of 1000 (max. 500000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 
