@@ -38,7 +38,7 @@ chars = 'rndeqkstchmavgilfpwybzuxXo'
 ctable = CharacterTable(chars, 11)
 
 ACIDS = 26
-encoding_dim = 30
+encoding_dim = 10
 
 np.set_printoptions(threshold=np.nan)
 
@@ -79,9 +79,7 @@ print("Creating model...")
 model = Sequential()
 
 #Recurrent encoder
-model.add(recurrent.LSTM(encoding_dim, input_shape=(11, ACIDS), return_sequences=True, dropout_W=0.1, dropout_U=0.1))
-model.add(recurrent.LSTM(encoding_dim, return_sequences=True, dropout_W=0.1, dropout_U=0.1))
-model.add(recurrent.LSTM(encoding_dim, dropout_W=0.1, dropout_U=0.1))
+model.add(recurrent.LSTM(encoding_dim, input_shape=(11, ACIDS), dropout_W = 0.1, dropout_U = 0.1))
 
 model.add(RepeatVector(11))
 
@@ -92,13 +90,13 @@ model.add(TimeDistributed(Dense(ACIDS)))
 
 model.add(Activation('softmax'))
 
-#model.load_weights("RecOneb.h5")
+model.load_weights("RecOne.h5")
 
 model.compile(optimizer='rmsprop', loss='binary_crossentropy')
 
 print("Let's go!")
 # Train the model each generation and show predictions against the validation dataset
-for iteration in range(1, 100):
+for iteration in range(1, 50):
     print()
     print('-' * 50)
     print('Iteration', iteration)
@@ -116,4 +114,4 @@ for iteration in range(1, 100):
         print('P', guess)
         print('---')
 
-model.save_weights("RecOnec.h5", overwrite=True)
+model.save_weights("RecOne.h5", overwrite=True)

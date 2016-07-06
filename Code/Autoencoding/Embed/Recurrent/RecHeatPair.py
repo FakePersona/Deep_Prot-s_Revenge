@@ -36,34 +36,34 @@ class AcidEmbedding(object):
 
         self.chars = list('rndeqkstchmavgilfpwybzuxXo')
 
-        self.embed = [[-4.5, 1, 9.09, 71.8],
-                      [-3.5, 0, 8.8, 2.4],
-                      [-3.5, -1, 9.6, 0.42],
-                      [-3.5, -1, 9.67, 0.72],
-                      [-3.5, 0, 9.13, 2.6],
-                      [-3.9, 1, 10.28, 200],
-                      [-0.8, 0, 9.15, 36.2],
-                      [-0.7, 0, 9.12, 200],
-                      [2.5, 0, 10.78, 200],
-                      [-3.2, 1, 8.97, 4.19],
-                      [1.9, 0, 9.21, 5.14],
-                      [1.8, 0, 9.87, 5.14],
-                      [4.2, 0, 9.72, 5.6],
-                      [-0.4, 0, 9.6, 22.5],
-                      [4.5, 0, 9.76, 3.36],
-                      [3.8, 0, 9.6, 2.37],
-                      [2.8, 0, 9.24, 2.7],
-                      [-1.6, 0, 10.6, 1.54],
-                      [-0.9, 0, 9.39, 1.06],
-                      [-1.3, 0, 9.11, 0.038],
+        self.embed = [[-1, 1, 9.09, 71.8],
+                      [-1, 0, 8.8, 2.4],
+                      [-1, -1, 9.6, 0.42],
+                      [-1, -1, 9.67, 0.72],
+                      [-1, 0, 9.13, 2.6],
+                      [-1, 1, 10.28, 200],
+                      [0, 0, 9.15, 36.2],
+                      [0, 0, 9.12, 200],
+                      [1, 0, 10.78, 200],
+                      [-1, 1, 8.97, 4.19],
+                      [1, 0, 9.21, 5.14],
+                      [1, 0, 9.87, 5.14],
+                      [1, 0, 9.72, 5.6],
+                      [0, 0, 9.6, 22.5],
+                      [1, 0, 9.76, 3.36],
+                      [1, 0, 9.6, 2.37],
+                      [1, 0, 9.24, 2.7],
+                      [-1, 0, 10.6, 1.54],
+                      [0, 0, 9.39, 1.06],
+                      [-1, 0, 9.11, 0.038],
                       [1, 0.5, 8.95, 37.1],
                       [1, -0.5, 9.40, 1.66],
                       [250, -250, 250, -250],
                       [0, 0, 0, 0],
                       [500, 500, 500, 500],
                       [-500, -500, -500, -500]]
-
-        self.embed = [[x for x in X] for X in self.embed]
+        
+        self.embed = [[x/500 for x in X] for X in self.embed]
 
         self.char_indices = dict((c, i) for i, c in enumerate(self.chars))
         self.indices_char = dict((i, c) for i, c in enumerate(self.chars))
@@ -92,36 +92,10 @@ class AcidEmbedding(object):
         prob = (np.array(prob)).argmax(axis=-1)
         return ''.join(self.indices_char[x] for x in prob)
 
-
-class CharacterTable(object):
-    '''
-    Given a set of characters:
-    + Encode them to a one hot integer representation
-    + Decode the one hot integer representation to their character output
-    + Decode a vector of probabilties to their character output
-    '''
-    def __init__(self, chars, maxlen):
-        self.chars = sorted(set(chars))
-        self.char_indices = dict((c, i) for i, c in enumerate(self.chars))
-        self.indices_char = dict((i, c) for i, c in enumerate(self.chars))
-        self.maxlen = maxlen
-
-    def encode(self, C, maxlen=None):
-        maxlen = maxlen if maxlen else self.maxlen
-        X = np.zeros((maxlen, len(self.chars)))
-        for i, c in enumerate(C):
-            X[i, self.char_indices[c]] = 1
-        return X
-
-    def decode(self, X, calc_argmax=True):
-        if calc_argmax:
-            X = X.argmax(axis=-1)
-        return ''.join(self.indices_char[x] for x in X)
-
 # Initial parameters
     
 chars = 'rndeqkstchmavgilfpwybzuxXo'
-ctable = CharacterTable(chars, 11)
+ctable = AcidEmbedding(11)
 lookup = AcidEmbedding(11)
 
 ACIDS = 26
@@ -198,7 +172,7 @@ print(len(data))
     
 # Encoding data
 
-X = np.zeros((len(data), 11, len(chars)), dtype=np.bool)
+X = np.zeros((len(data), 11, 4))
 
 for i, sentence in enumerate(data):
     X[i] = ctable.encode(sentence, maxlen=11)
@@ -208,7 +182,7 @@ print("Creating model...")
 model = Sequential()
 
 #Recurrent encoder
-model.add(recurrent.LSTM(encoding_dim, input_shape=(11, ACIDS), return_sequences=True, dropout_W=0.1, dropout_U=0.1))
+model.add(recurrent.LSTM(encoding_dim, input_shape=(11, 4), return_sequences=True, dropout_W=0.1, dropout_U=0.1))
 model.add(recurrent.LSTM(encoding_dim, return_sequences=True, dropout_W=0.1, dropout_U=0.1))
 model.add(recurrent.LSTM(encoding_dim, dropout_W=0.1, dropout_U=0.1))
 
@@ -217,13 +191,11 @@ model.add(RepeatVector(11))
 #And decoding
 model.add(recurrent.LSTM(ACIDS, return_sequences=True))
 
-model.add(TimeDistributed(Dense(ACIDS)))
+model.add(TimeDistributed(Dense(4)))
 
-model.add(Activation('softmax'))
+model.load_weights("RecWind.h5")
 
-model.load_weights("RecOneb.h5")
-
-model.compile(optimizer='rmsprop', loss='binary_crossentropy')
+model.compile(optimizer='rmsprop', loss='mse')
 
 get_summary = K.function([model.layers[0].input, K.learning_phase()], [model.layers[2].output])
 
@@ -233,8 +205,7 @@ Embed = [[0 for _ in range(encoding_dim)] for _ in range(len(X))]
 
 for i in range(len(X)):
     row = X[np.array([i])]
-    preds = model.predict_classes(row, verbose=0)
-    correct = ctable.decode(row[0])
+    preds = model.predict(row, verbose=0)
     intermediate = get_summary([row, 0])[0][0]
     Embed[i] = intermediate
 
