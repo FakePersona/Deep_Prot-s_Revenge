@@ -6,7 +6,7 @@
 \beamer@subsectionintoc {1}{3}{Architectures standards}{22}{0}{1}
 \beamer@subsectionintoc {1}{4}{Application: Prot\IeC {\'e}ines}{38}{0}{1}
 \beamer@subsectionintoc {1}{5}{Etat de l'art}{43}{0}{1}
-\beamer@sectionintoc {2}{Etude r\IeC {\'e}alis\IeC {\'e}e}{48}{0}{2}
-\beamer@subsectionintoc {2}{1}{S\IeC {\'e}quences peptidiques}{48}{0}{2}
-\beamer@subsectionintoc {2}{2}{Architectures entrain\IeC {\'e}es}{54}{0}{2}
-\beamer@subsectionintoc {2}{3}{R\IeC {\'e}sultats}{63}{0}{2}
+\beamer@sectionintoc {2}{Etude r\IeC {\'e}alis\IeC {\'e}e}{54}{0}{2}
+\beamer@subsectionintoc {2}{1}{S\IeC {\'e}quences peptidiques}{54}{0}{2}
+\beamer@subsectionintoc {2}{2}{Architectures entrain\IeC {\'e}es}{60}{0}{2}
+\beamer@subsectionintoc {2}{3}{R\IeC {\'e}sultats}{69}{0}{2}
