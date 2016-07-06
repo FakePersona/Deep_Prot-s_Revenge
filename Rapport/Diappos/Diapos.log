@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.4.26)  6 JUL 2016 18:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.7.4)  6 JUL 2016 23:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -459,12 +459,6 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/usr/share/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
-Package: sansmathaccent 2013/03/28
-
-(/usr/share/texmf-dist/tex/latex/filehook/filehook.sty
-Package: filehook 2011/10/12 v0.5d Hooks for input files
 )))
 (/usr/share/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
 Package: beamerbasetranslator 2010/06/11  (rcs-revision 85fd1cc7fc42)
@@ -1845,12 +1839,17 @@ Overfull \hbox (76.53432pt too wide) has occurred while \output is active
 
 [59
 
-] <../Figures/Class.png, id=1981, 747.79375pt x 1056.94875pt>
-File: ../Figures/Class.png Graphic file (type png)
+] <../Figures/EncoDeco.png, id=1981, 747.79375pt x 1056.94875pt>
+File: ../Figures/EncoDeco.png Graphic file (type png)
 
-<use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 370.
-(pdftex.def)             Requested size: 74.78375pt x 105.70107pt.
+<use ../Figures/EncoDeco.png>
+Package pdftex.def Info: ../Figures/EncoDeco.png used on input line 369.
+(pdftex.def)             Requested size: 127.12325pt x 179.67891pt.
+
+Overfull \hbox (7.31781pt too wide) in paragraph at lines 369--369
+ [] 
+ []
+
 
 Overfull \hbox (76.53432pt too wide) has occurred while \output is active
  [][][][]  
@@ -1858,11 +1857,16 @@ Overfull \hbox (76.53432pt too wide) has occurred while \output is active
 
 [60
 
- <../Figures/Class.png>]
-File: ../Figures/Class.png Graphic file (type png)
- <use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 370.
-(pdftex.def)             Requested size: 74.78375pt x 105.70107pt.
+ <../Figures/EncoDeco.png>]
+File: ../Figures/EncoDeco.png Graphic file (type png)
+ <use ../Figures/EncoDeco.png>
+Package pdftex.def Info: ../Figures/EncoDeco.png used on input line 369.
+(pdftex.def)             Requested size: 127.12325pt x 179.67891pt.
+
+Overfull \hbox (7.31781pt too wide) in paragraph at lines 369--369
+ [] 
+ []
+
 
 Overfull \hbox (76.53432pt too wide) has occurred while \output is active
  [][][][]  
@@ -1871,10 +1875,15 @@ Overfull \hbox (76.53432pt too wide) has occurred while \output is active
 [61
 
 ]
-File: ../Figures/Class.png Graphic file (type png)
- <use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 370.
-(pdftex.def)             Requested size: 74.78375pt x 105.70107pt.
+File: ../Figures/EncoDeco.png Graphic file (type png)
+ <use ../Figures/EncoDeco.png>
+Package pdftex.def Info: ../Figures/EncoDeco.png used on input line 369.
+(pdftex.def)             Requested size: 127.12325pt x 179.67891pt.
+
+Overfull \hbox (7.31781pt too wide) in paragraph at lines 369--369
+ [] 
+ []
+
 
 Overfull \hbox (76.53432pt too wide) has occurred while \output is active
  [][][][]  
@@ -1883,10 +1892,15 @@ Overfull \hbox (76.53432pt too wide) has occurred while \output is active
 [62
 
 ]
-File: ../Figures/Class.png Graphic file (type png)
- <use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 370.
-(pdftex.def)             Requested size: 74.78375pt x 105.70107pt.
+File: ../Figures/EncoDeco.png Graphic file (type png)
+ <use ../Figures/EncoDeco.png>
+Package pdftex.def Info: ../Figures/EncoDeco.png used on input line 369.
+(pdftex.def)             Requested size: 127.12325pt x 179.67891pt.
+
+Overfull \hbox (7.31781pt too wide) in paragraph at lines 369--369
+ [] 
+ []
+
 
 Overfull \hbox (76.53432pt too wide) has occurred while \output is active
  [][][][]  
@@ -1894,10 +1908,11 @@ Overfull \hbox (76.53432pt too wide) has occurred while \output is active
 
 [63
 
-]
+] <../Figures/Class.png, id=2105, 747.79375pt x 1056.94875pt>
 File: ../Figures/Class.png Graphic file (type png)
- <use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 392.
+
+<use ../Figures/Class.png>
+Package pdftex.def Info: ../Figures/Class.png used on input line 391.
 (pdftex.def)             Requested size: 100.9478pt x 142.68192pt.
 
 Overfull \hbox (76.53432pt too wide) has occurred while \output is active
@@ -1906,10 +1921,10 @@ Overfull \hbox (76.53432pt too wide) has occurred while \output is active
 
 [64
 
-]
+ <../Figures/Class.png>]
 File: ../Figures/Class.png Graphic file (type png)
  <use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 392.
+Package pdftex.def Info: ../Figures/Class.png used on input line 391.
 (pdftex.def)             Requested size: 100.9478pt x 142.68192pt.
 
 Overfull \hbox (76.53432pt too wide) has occurred while \output is active
@@ -1921,7 +1936,7 @@ Overfull \hbox (76.53432pt too wide) has occurred while \output is active
 ]
 File: ../Figures/Class.png Graphic file (type png)
  <use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 392.
+Package pdftex.def Info: ../Figures/Class.png used on input line 391.
 (pdftex.def)             Requested size: 100.9478pt x 142.68192pt.
 
 Overfull \hbox (76.53432pt too wide) has occurred while \output is active
@@ -1933,7 +1948,7 @@ Overfull \hbox (76.53432pt too wide) has occurred while \output is active
 ]
 File: ../Figures/Class.png Graphic file (type png)
  <use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 392.
+Package pdftex.def Info: ../Figures/Class.png used on input line 391.
 (pdftex.def)             Requested size: 100.9478pt x 142.68192pt.
 
 Overfull \hbox (76.53432pt too wide) has occurred while \output is active
@@ -1949,18 +1964,13 @@ Overfull \hbox (76.53432pt too wide) has occurred while \output is active
 
 [68
 
-] <../Figures/SingleOneRecHeat.png, id=2266, 1170.774pt x 503.7219pt>
-File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
+] <../Figures/SingleOneRecHeatf.png, id=2268, 292.6935pt x 125.9907pt>
+File: ../Figures/SingleOneRecHeatf.png Graphic file (type png)
 
-<use ../Figures/SingleOneRecHeat.png>
-Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 416
-.
-(pdftex.def)             Requested size: 193.16937pt x 83.11052pt.
-
-Overfull \hbox (22.02173pt too wide) in paragraph at lines 416--416
- [] 
- []
-
+<use ../Figures/SingleOneRecHeatf.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeatf.png used on input line 41
+2.
+(pdftex.def)             Requested size: 324.88916pt x 139.8494pt.
 
 Overfull \hbox (76.53432pt too wide) has occurred while \output is active
  [][][][]  
@@ -1968,17 +1978,12 @@ Overfull \hbox (76.53432pt too wide) has occurred while \output is active
 
 [69
 
- <../Figures/SingleOneRecHeat.png>]
-File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
- <use ../Figures/SingleOneRecHeat.png>
-Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 416
-.
-(pdftex.def)             Requested size: 193.16937pt x 83.11052pt.
-
-Overfull \hbox (22.02173pt too wide) in paragraph at lines 416--416
- [] 
- []
-
+ <../Figures/SingleOneRecHeatf.png>]
+File: ../Figures/SingleOneRecHeatf.png Graphic file (type png)
+ <use ../Figures/SingleOneRecHeatf.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeatf.png used on input line 41
+2.
+(pdftex.def)             Requested size: 324.88916pt x 139.8494pt.
 
 Overfull \hbox (76.53432pt too wide) has occurred while \output is active
  [][][][]  
@@ -1987,16 +1992,11 @@ Overfull \hbox (76.53432pt too wide) has occurred while \output is active
 [70
 
 ]
-File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
- <use ../Figures/SingleOneRecHeat.png>
-Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 416
-.
-(pdftex.def)             Requested size: 193.16937pt x 83.11052pt.
-
-Overfull \hbox (22.02173pt too wide) in paragraph at lines 416--416
- [] 
- []
-
+File: ../Figures/SingleOneRecHeatf.png Graphic file (type png)
+ <use ../Figures/SingleOneRecHeatf.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeatf.png used on input line 41
+2.
+(pdftex.def)             Requested size: 324.88916pt x 139.8494pt.
 
 Overfull \hbox (76.53432pt too wide) has occurred while \output is active
  [][][][]  
@@ -2005,16 +2005,11 @@ Overfull \hbox (76.53432pt too wide) has occurred while \output is active
 [71
 
 ]
-File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
- <use ../Figures/SingleOneRecHeat.png>
-Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 416
-.
-(pdftex.def)             Requested size: 193.16937pt x 83.11052pt.
-
-Overfull \hbox (22.02173pt too wide) in paragraph at lines 416--416
- [] 
- []
-
+File: ../Figures/SingleOneRecHeatf.png Graphic file (type png)
+ <use ../Figures/SingleOneRecHeatf.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeatf.png used on input line 41
+2.
+(pdftex.def)             Requested size: 324.88916pt x 139.8494pt.
 
 Overfull \hbox (76.53432pt too wide) has occurred while \output is active
  [][][][]  
@@ -2145,31 +2140,31 @@ xmf-dist/tex/latex/beamer/art/beamericonarticle.pdf>]
 \tf@snm=\write8
 \openout8 = `Diapos.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 511.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 511.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 507.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 507.
  (./Diapos.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 511.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 511.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 507.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 507.
 Package rerunfilecheck Info: File `Diapos.out' has not changed.
 (rerunfilecheck)             Checksum: D23FD45DF06F260842A9C55B9C2FA487;711.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 511.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 507.
  ) 
 Here is how much of TeX's memory you used:
- 18737 strings out of 493054
- 348802 string characters out of 6140586
- 424303 words of memory out of 5000000
- 21596 multiletter control sequences out of 15000+600000
- 40287 words of font info for 53 fonts, out of 8000000 for 9000
+ 18610 strings out of 493054
+ 346143 string characters out of 6140587
+ 422351 words of memory out of 5000000
+ 21476 multiletter control sequences out of 15000+600000
+ 36273 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,17n,65p,393b,851s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,17n,65p,393b,851s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a
 .pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Diapos.pdf (88 pages, 847290 bytes).
+Output written on Diapos.pdf (88 pages, 800518 bytes).
 PDF statistics:
- 2945 PDF objects out of 2984 (max. 8388607)
+ 2947 PDF objects out of 2984 (max. 8388607)
  2785 compressed objects within 28 object streams
  193 named destinations out of 1000 (max. 500000)
- 234 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 239 words of extra memory for PDF output out of 10000 (max. 10000000)
 
