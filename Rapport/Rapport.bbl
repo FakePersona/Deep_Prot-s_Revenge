@@ -121,6 +121,28 @@
       \verb http://bioinformatics.oxfordjournals.org/content/25/11/1422.abstract
       \endverb
     \endentry
+    \entry{duchi2011adaptive}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=b8fbef1897da5bf46822ced31bc865c6}{Duchi}{D\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=0b3d32703edd2b7248e8e8f33c5893db}{Hazan}{H\bibinitperiod}{Elad}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=300d4990e626d975e0c28630444f63c3}{Singer}{S\bibinitperiod}{Yoram}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{21039f1d6e97f13dbd40c187a8131cf0}
+      \strng{fullhash}{21039f1d6e97f13dbd40c187a8131cf0}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelyear}{2011}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{Jul}
+      \field{title}{Adaptive subgradient methods for online learning and stochastic optimization}
+      \field{volume}{12}
+      \field{year}{2011}
+      \field{pages}{2121\bibrangedash 2159}
+      \range{pages}{39}
+    \endentry
     \entry{fox2014scope}{article}{}
       \name{author}{3}{}{%
         {{uniquename=0,hash=1f20f2605518954320b0dad5aebf0312}{Fox}{F\bibinitperiod}{Naomi\bibnamedelima K}{N\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
@@ -216,6 +238,21 @@
       \field{year}{2003}
       \field{pages}{2308\bibrangedash 2310}
       \range{pages}{3}
+    \endentry
+    \entry{hintonlecture}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=9a8750ccdb2a4cf14d2655face1ce016}{Hinton}{H\bibinitperiod}{Geoffrey}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=2,hash=064954ec85e6baaf21c4aa75b38d429c}{Srivastava}{S\bibinitperiod}{NiRsh}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fe49ec9b6f902b79d166c1f25405c088}{Swersky}{S\bibinitperiod}{Kevin}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{e3b833e19717af5889c94b84c411a14d}
+      \strng{fullhash}{e3b833e19717af5889c94b84c411a14d}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelyear}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lecture 6a Overview of mini--batch gradient descent}
     \endentry
     \entry{hochreiter1997long}{article}{}
       \name{author}{2}{}{%
@@ -575,7 +612,7 @@
     \endentry
     \entry{srivastava2014dropout}{article}{}
       \name{author}{5}{}{%
-        {{uniquename=0,hash=6a147afa4569ce6cf23c0436e65d8486}{Srivastava}{S\bibinitperiod}{Nitish}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=2,hash=6a147afa4569ce6cf23c0436e65d8486}{Srivastava}{S\bibinitperiod}{Nitish}{N\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=5aeb1de9b6c6f00a078230c628e6f41c}{Hinton}{H\bibinitperiod}{Geoffrey\bibnamedelima E}{G\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=c5e3a676e2ac1164b3afcd539c131fc9}{Krizhevsky}{K\bibinitperiod}{Alex}{A\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=8d569d1d5b8b5a7836017a98b430f959}{Sutskever}{S\bibinitperiod}{Ilya}{I\bibinitperiod}{}{}{}{}}%

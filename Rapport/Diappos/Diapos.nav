@@ -6,79 +6,74 @@
 \headcommand {\sectionentry {1}{Apprentissage profond?}{4}{Apprentissage profond?}{0}}
 \headcommand {\beamer@sectionpages {1}{3}}
 \headcommand {\beamer@subsectionpages {1}{3}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{4}{Pourquoi l'apprentissage profond?}}\headcommand {\beamer@subsectionpages {4}{3}}
-\headcommand {\slideentry {1}{1}{1}{4/4}{Pourquoi l'apprentissage profond?}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{4}{Pourquoi l'apprentissage \FB@og profond\FB@fg ?}}\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\slideentry {1}{1}{1}{4/4}{Pourquoi l'apprentissage \FB@og profond\FB@fg ?}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\slideentry {1}{1}{2}{5/8}{Pourquoi l'apprentissage profond?}{0}}
-\headcommand {\beamer@framepages {5}{8}}
-\headcommand {\slideentry {1}{1}{3}{9/12}{Pourquoi l'apprentissage profond?}{0}}
-\headcommand {\beamer@framepages {9}{12}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{13}{Entra\IeC {\^\i }nement non-supervis\IeC {\'e}}}\headcommand {\beamer@subsectionpages {4}{12}}
-\headcommand {\slideentry {1}{2}{1}{13/13}{Entra\IeC {\^\i }nement non-supervis\IeC {\'e}}{0}}
-\headcommand {\beamer@framepages {13}{13}}
-\headcommand {\slideentry {1}{2}{2}{14/21}{Entra\IeC {\^\i }nement non-supervis\IeC {\'e}}{0}}
-\headcommand {\beamer@framepages {14}{21}}
-\headcommand {\beamer@subsectionentry {0}{1}{3}{22}{Architectures standards}}\headcommand {\beamer@subsectionpages {13}{21}}
-\headcommand {\slideentry {1}{3}{1}{22/22}{Architectures standards}{0}}
-\headcommand {\beamer@framepages {22}{22}}
-\headcommand {\slideentry {1}{3}{2}{23/26}{Architectures standards}{0}}
-\headcommand {\beamer@framepages {23}{26}}
-\headcommand {\slideentry {1}{3}{3}{27/32}{Architectures standards}{0}}
-\headcommand {\beamer@framepages {27}{32}}
-\headcommand {\slideentry {1}{3}{4}{33/37}{Architectures standards}{0}}
-\headcommand {\beamer@framepages {33}{37}}
-\headcommand {\beamer@subsectionentry {0}{1}{4}{38}{Application: Prot\IeC {\'e}ines}}\headcommand {\beamer@subsectionpages {22}{37}}
-\headcommand {\slideentry {1}{4}{1}{38/38}{Application: Prot\IeC {\'e}ines}{0}}
+\headcommand {\slideentry {1}{1}{2}{5/5}{Pourquoi l'apprentissage \FB@og profond\FB@fg ?}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\slideentry {1}{1}{3}{6/9}{Pourquoi l'apprentissage \FB@og profond\FB@fg ?}{0}}
+\headcommand {\beamer@framepages {6}{9}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{10}{Entra\IeC {\^\i }nement non-supervis\IeC {\'e}}}\headcommand {\beamer@subsectionpages {4}{9}}
+\headcommand {\slideentry {1}{2}{1}{10/10}{Entra\IeC {\^\i }nement non-supervis\IeC {\'e}}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\slideentry {1}{2}{2}{11/14}{Entra\IeC {\^\i }nement non-supervis\IeC {\'e}}{0}}
+\headcommand {\beamer@framepages {11}{14}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{15}{Architectures standards}}\headcommand {\beamer@subsectionpages {10}{14}}
+\headcommand {\slideentry {1}{3}{1}{15/15}{Architectures standards}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {1}{3}{2}{16/16}{Architectures standards}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\slideentry {1}{3}{3}{17/18}{Architectures standards}{0}}
+\headcommand {\beamer@framepages {17}{18}}
+\headcommand {\beamer@subsectionentry {0}{1}{4}{19}{Application: Prot\IeC {\'e}ines}}\headcommand {\beamer@subsectionpages {15}{18}}
+\headcommand {\slideentry {1}{4}{1}{19/19}{Application: Prot\IeC {\'e}ines}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {1}{4}{2}{20/20}{Application: Prot\IeC {\'e}ines}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@subsectionentry {0}{1}{5}{21}{Etat de l'art}}\headcommand {\beamer@subsectionpages {19}{20}}
+\headcommand {\slideentry {1}{5}{1}{21/21}{Etat de l'art}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {1}{5}{2}{22/30}{Etat de l'art}{0}}
+\headcommand {\beamer@framepages {22}{30}}
+\headcommand {\sectionentry {2}{Etude r\IeC {\'e}alis\IeC {\'e}e}{31}{Etude r\IeC {\'e}alis\IeC {\'e}e}{0}}
+\headcommand {\beamer@sectionpages {4}{30}}
+\headcommand {\beamer@subsectionpages {21}{30}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{31}{S\IeC {\'e}quences peptidiques}}\headcommand {\beamer@subsectionpages {31}{30}}
+\headcommand {\slideentry {2}{1}{1}{31/31}{S\IeC {\'e}quences peptidiques}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {2}{1}{2}{32/32}{S\IeC {\'e}quences peptidiques}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{33}{Architectures entrain\IeC {\'e}es \& r\IeC {\'e}sultats}}\headcommand {\beamer@subsectionpages {31}{32}}
+\headcommand {\slideentry {2}{2}{1}{33/33}{Architectures entrain\IeC {\'e}es \& r\IeC {\'e}sultats}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\slideentry {2}{2}{2}{34/34}{Architectures entrain\IeC {\'e}es \& r\IeC {\'e}sultats}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\slideentry {2}{2}{3}{35/37}{Architectures entrain\IeC {\'e}es \& r\IeC {\'e}sultats}{0}}
+\headcommand {\beamer@framepages {35}{37}}
+\headcommand {\slideentry {2}{2}{4}{38/38}{Architectures entrain\IeC {\'e}es \& r\IeC {\'e}sultats}{0}}
 \headcommand {\beamer@framepages {38}{38}}
-\headcommand {\slideentry {1}{4}{2}{39/42}{Application: Prot\IeC {\'e}ines}{0}}
-\headcommand {\beamer@framepages {39}{42}}
-\headcommand {\beamer@subsectionentry {0}{1}{5}{43}{Etat de l'art}}\headcommand {\beamer@subsectionpages {38}{42}}
-\headcommand {\slideentry {1}{5}{1}{43/43}{Etat de l'art}{0}}
-\headcommand {\beamer@framepages {43}{43}}
-\headcommand {\slideentry {1}{5}{2}{44/53}{Etat de l'art}{0}}
-\headcommand {\beamer@framepages {44}{53}}
-\headcommand {\sectionentry {2}{Etude r\IeC {\'e}alis\IeC {\'e}e}{54}{Etude r\IeC {\'e}alis\IeC {\'e}e}{0}}
-\headcommand {\beamer@sectionpages {4}{53}}
-\headcommand {\beamer@subsectionpages {43}{53}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{54}{S\IeC {\'e}quences peptidiques}}\headcommand {\beamer@subsectionpages {54}{53}}
-\headcommand {\slideentry {2}{1}{1}{54/54}{S\IeC {\'e}quences peptidiques}{0}}
-\headcommand {\beamer@framepages {54}{54}}
-\headcommand {\slideentry {2}{1}{2}{55/59}{S\IeC {\'e}quences peptidiques}{0}}
-\headcommand {\beamer@framepages {55}{59}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{60}{Architectures entrain\IeC {\'e}es}}\headcommand {\beamer@subsectionpages {54}{59}}
-\headcommand {\slideentry {2}{2}{1}{60/60}{Architectures entrain\IeC {\'e}es}{0}}
-\headcommand {\beamer@framepages {60}{60}}
-\headcommand {\slideentry {2}{2}{2}{61/64}{Architectures entrain\IeC {\'e}es}{0}}
-\headcommand {\beamer@framepages {61}{64}}
-\headcommand {\slideentry {2}{2}{3}{65/68}{Architectures entrain\IeC {\'e}es}{0}}
-\headcommand {\beamer@framepages {65}{68}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{69}{R\IeC {\'e}sultats}}\headcommand {\beamer@subsectionpages {60}{68}}
-\headcommand {\slideentry {2}{3}{1}{69/69}{R\IeC {\'e}sultats}{0}}
-\headcommand {\beamer@framepages {69}{69}}
-\headcommand {\slideentry {2}{3}{2}{70/73}{R\IeC {\'e}sultats}{0}}
-\headcommand {\beamer@framepages {70}{73}}
-\headcommand {\slideentry {2}{3}{3}{74/77}{R\IeC {\'e}sultats}{0}}
-\headcommand {\beamer@framepages {74}{77}}
-\headcommand {\slideentry {2}{3}{4}{78/82}{R\IeC {\'e}sultats}{0}}
-\headcommand {\beamer@framepages {78}{82}}
-\headcommand {\sectionentry {3}{Conclusion}{83}{Conclusion}{0}}
-\headcommand {\beamer@sectionpages {54}{82}}
-\headcommand {\beamer@subsectionpages {69}{82}}
-\headcommand {\slideentry {3}{0}{1}{83/88}{}{0}}
-\headcommand {\beamer@framepages {83}{88}}
+\headcommand {\slideentry {2}{2}{5}{39/41}{Architectures entrain\IeC {\'e}es \& r\IeC {\'e}sultats}{0}}
+\headcommand {\beamer@framepages {39}{41}}
+\headcommand {\sectionentry {3}{Conclusion}{42}{Conclusion}{0}}
+\headcommand {\beamer@sectionpages {31}{41}}
+\headcommand {\beamer@subsectionpages {33}{41}}
+\headcommand {\slideentry {3}{0}{1}{42/48}{}{0}}
+\headcommand {\beamer@framepages {42}{48}}
 \headcommand {\partentry {Annexe}{1}}
-\headcommand {\beamer@partpages {1}{88}}
-\headcommand {\beamer@sectionpages {83}{88}}
-\headcommand {\beamer@subsectionpages {83}{88}}
-\headcommand {\beamer@appendixpages {89}}
-\headcommand {\sectionentry {4}{Annexe}{89}{Annexe}{1}}
-\headcommand {\beamer@sectionpages {89}{88}}
-\headcommand {\beamer@subsectionpages {89}{88}}
-\headcommand {\beamer@subsectionentry {1}{4}{1}{89}{For Further Reading}}\headcommand {\beamer@subsectionpages {89}{88}}
-\headcommand {\slideentry {4}{1}{1}{89/89}{For Further Reading}{1}}
-\headcommand {\beamer@framepages {89}{89}}
-\headcommand {\beamer@partpages {89}{89}}
-\headcommand {\beamer@subsectionpages {89}{89}}
-\headcommand {\beamer@sectionpages {89}{89}}
-\headcommand {\beamer@documentpages {89}}
-\headcommand {\def \inserttotalframenumber {26}}
+\headcommand {\beamer@partpages {1}{48}}
+\headcommand {\beamer@sectionpages {42}{48}}
+\headcommand {\beamer@subsectionpages {42}{48}}
+\headcommand {\beamer@appendixpages {49}}
+\headcommand {\sectionentry {4}{Annexe}{49}{Annexe}{1}}
+\headcommand {\beamer@sectionpages {49}{48}}
+\headcommand {\beamer@subsectionpages {49}{48}}
+\headcommand {\beamer@subsectionentry {1}{4}{1}{49}{For Further Reading}}\headcommand {\beamer@subsectionpages {49}{48}}
+\headcommand {\slideentry {4}{1}{1}{49/49}{For Further Reading}{1}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\slideentry {4}{1}{2}{50/54}{For Further Reading}{1}}
+\headcommand {\beamer@framepages {50}{54}}
+\headcommand {\beamer@partpages {49}{54}}
+\headcommand {\beamer@subsectionpages {49}{54}}
+\headcommand {\beamer@sectionpages {49}{54}}
+\headcommand {\beamer@documentpages {54}}
+\headcommand {\def \inserttotalframenumber {24}}

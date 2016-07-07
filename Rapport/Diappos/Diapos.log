@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.4.26)  6 JUL 2016 14:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.4.26)  7 JUL 2016 17:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -673,23 +673,21 @@ Package: beamerinnerthemedefault 2014/06/30  (rcs-revision 580088513a67)
 (/usr/share/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemedefault.st
 y
 Package: beamerouterthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
-))) (/usr/share/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeWarsaw.sty
-Package: beamerthemeWarsaw 2010/06/17  (rcs-revision d02a7cf4d8ae)
+)))
+(/usr/share/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeAnnArbor.sty
+Package: beamerthemeAnnArbor 2010/06/17  (rcs-revision d02a7cf4d8ae)
 
 (/usr/share/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerthemerounded.st
 y
 Package: beamerinnerthemerounded 2010/06/17  (rcs-revision d02a7cf4d8ae)
 )
-(/usr/share/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemeshadow.sty
-Package: beamerouterthemeshadow 2010/06/17  (rcs-revision d02a7cf4d8ae)
-(/usr/share/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemesplit.sty
-Package: beamerouterthemesplit 2012/10/16  (rcs-revision 51a8c72084af)
-))
-(/usr/share/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemeorchid.sty
-Package: beamercolorthemeorchid 2010/06/17  (rcs-revision d02a7cf4d8ae)
+(/usr/share/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemeinfolines.
+sty
+Package: beamerouterthemeinfolines 2012/10/16  (rcs-revision 51a8c72084af)
 )
-(/usr/share/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemewhale.sty
-Package: beamercolorthemewhale 2010/06/17  (rcs-revision d02a7cf4d8ae)
+(/usr/share/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemewolverine.
+sty
+Package: beamercolorthemewolverine 2010/06/17  (rcs-revision d02a7cf4d8ae)
 )) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2015/08/03 3.9m The Babel package
 
@@ -976,21 +974,21 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )) (./Diapos.aux)
 \openout1 = `Diapos.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 98.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 113.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
@@ -1003,14 +1001,14 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(28.45274pt, 307.28987pt, 28.45274pt)
+* h-part:(L,W,R)=(10.95003pt, 342.2953pt, 10.95003pt)
 * v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
 * \paperwidth=364.19536pt
 * \paperheight=273.14662pt
-* \textwidth=307.28987pt
+* \textwidth=342.2953pt
 * \textheight=244.6939pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
+* \oddsidemargin=-61.31996pt
+* \evensidemargin=-61.31996pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -1059,7 +1057,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 98.
+Package hyperref Info: Link coloring OFF on input line 113.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1069,55 +1067,55 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count164
 )
-LaTeX Info: Redefining \ref on input line 98.
-LaTeX Info: Redefining \pageref on input line 98.
-LaTeX Info: Redefining \nameref on input line 98.
+LaTeX Info: Redefining \ref on input line 113.
+LaTeX Info: Redefining \pageref on input line 113.
+LaTeX Info: Redefining \nameref on input line 113.
  (./Diapos.out) (./Diapos.out)
 \@outlinefile=\write5
 \openout5 = `Diapos.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 98.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 113.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 98.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 113.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/ptm/m/n on input line 98.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 98.
+(Font)                  OT1/cmss/m/n --> T1/ptm/m/n on input line 113.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/phv/bx/n on input line 98.
+(Font)                  OT1/cmr/bx/n --> T1/phv/bx/n on input line 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/phv/bx/n on input line 98.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 98.
+(Font)                  OT1/cmr/bx/n --> T1/phv/bx/n on input line 113.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/phv/m/n on input line 98.
+(Font)                  OT1/cmss/m/n --> T1/phv/m/n on input line 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/phv/m/n on input line 98.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 98.
+(Font)                  OT1/cmss/bx/n --> T1/phv/m/n on input line 113.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/phv/m/it on input line 98.
+(Font)                  OT1/cmr/m/it --> T1/phv/m/it on input line 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/phv/m/it on input line 98.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 98.
+(Font)                  OT1/cmr/bx/it --> T1/phv/m/it on input line 113.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/pcr/m/n on input line 98.
+(Font)                  OT1/cmtt/m/n --> T1/pcr/m/n on input line 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/pcr/m/n on input line 98.
+(Font)                  OT1/cmtt/m/n --> T1/pcr/m/n on input line 113.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/phv/m/n --> T1/phv/bx/n on input line 98.
+(Font)                  T1/phv/m/n --> T1/phv/bx/n on input line 113.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/phv/m/it --> T1/phv/bx/it on input line 98.
+(Font)                  T1/phv/m/it --> T1/phv/bx/it on input line 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/ptm/bx/n on input line 98.
+(Font)                  OT1/cmss/bx/n --> T1/ptm/bx/n on input line 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/phv/bx/n --> T1/phv/bx/n on input line 98.
+(Font)                  T1/phv/bx/n --> T1/phv/bx/n on input line 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/phv/m/n --> T1/phv/bx/n on input line 98.
+(Font)                  T1/phv/m/n --> T1/phv/bx/n on input line 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/phv/m/it --> T1/phv/bx/it on input line 98.
+(Font)                  T1/phv/m/it --> T1/phv/bx/it on input line 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/pcr/m/n --> T1/pcr/bx/n on input line 98.
+(Font)                  T1/pcr/m/n --> T1/pcr/bx/n on input line 113.
 
 (/usr/share/texmf-dist/tex/latex/beamer/translator/dicts/translator-basic-dicti
 onary/translator-basic-dictionary-English.dict
@@ -1143,383 +1141,319 @@ Dictionary: translator-numbers-dictionary, Language: English
 tionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 98.
-LaTeX Info: Redefining \degres on input line 98.
-LaTeX Info: Redefining \dots on input line 98.
-LaTeX Info: Redefining \up on input line 98.
- (./Diapos.nav) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+LaTeX Info: Redefining \includegraphics on input line 113.
+LaTeX Info: Redefining \degres on input line 113.
+LaTeX Info: Redefining \dots on input line 113.
+LaTeX Info: Redefining \up on input line 113.
+ (./Diapos.nav)
+<../Figures/ENS.png, id=56, 481.8pt x 481.8pt>
+File: ../Figures/ENS.png Graphic file (type png)
+ <use ../Figures/ENS.png>
+Package pdftex.def Info: ../Figures/ENS.png used on input line 117.
+(pdftex.def)             Requested size: 72.26688pt x 72.26688pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 117.
 
-] (./Diapos.toc) [2
-
-] (./Diapos.toc)
-[3
-
-] (./Diapos.toc) [4
-
-]
-<../Figures/Neuron.png, id=254, 747.79375pt x 1056.94875pt>
-File: ../Figures/Neuron.png Graphic file (type png)
-
-<use ../Figures/Neuron.png>
-Package pdftex.def Info: ../Figures/Neuron.png used on input line 152.
-(pdftex.def)             Requested size: 74.78375pt x 105.70107pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 152.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 152.
+LaTeX Font Info:    Try loading font information for U+msb on input line 117.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 152.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 152.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 117.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 152.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 117.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 117.
+
+<../Figures/dyliss.png, id=58, 128.1588pt x 47.6982pt>
+File: ../Figures/dyliss.png Graphic file (type png)
+
+<use ../Figures/dyliss.png>
+Package pdftex.def Info: ../Figures/dyliss.png used on input line 117.
+(pdftex.def)             Requested size: 89.71054pt x 33.38849pt.
+
+Overfull \vbox (7.66875pt too high) detected at line 117
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../Figures/ENS.png> <../Fi
+gures/dyliss.png>] (./Diapos.toc) [2
+
+] (./Diapos.toc) [3
+
+] (./Diapos.toc)
+[4
+
+] <../Figures/Neuron.png, id=229, 747.79375pt x 1056.94875pt>
+File: ../Figures/Neuron.png Graphic file (type png)
+
+<use ../Figures/Neuron.png>
+Package pdftex.def Info: ../Figures/Neuron.png used on input line 169.
+(pdftex.def)             Requested size: 127.12325pt x 179.67891pt.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 169.
  [5
 
  <../Figures/Neuron.png>]
-File: ../Figures/Neuron.png Graphic file (type png)
+<../Figures/Shallow.png, id=265, 747.79375pt x 1056.94875pt>
+File: ../Figures/Shallow.png Graphic file (type png)
 
-<use ../Figures/Neuron.png>
-Package pdftex.def Info: ../Figures/Neuron.png used on input line 152.
-(pdftex.def)             Requested size: 74.78375pt x 105.70107pt.
+<use ../Figures/Shallow.png>
+Package pdftex.def Info: ../Figures/Shallow.png used on input line 200.
+(pdftex.def)             Requested size: 130.86586pt x 184.9688pt.
  [6
 
-]
-File: ../Figures/Neuron.png Graphic file (type png)
- <use ../Figures/Neuron.png>
-Package pdftex.def Info: ../Figures/Neuron.png used on input line 152.
-(pdftex.def)             Requested size: 74.78375pt x 105.70107pt.
- [7
-
-]
-File: ../Figures/Neuron.png Graphic file (type png)
-
-<use ../Figures/Neuron.png>
-Package pdftex.def Info: ../Figures/Neuron.png used on input line 152.
-(pdftex.def)             Requested size: 74.78375pt x 105.70107pt.
- [8
-
-]
-<../Figures/Deep.png, id=406, 1056.94875pt x 747.79375pt>
+ <../Figures/Shallow.png>]
+<../Figures/Deep.png, id=298, 747.79375pt x 1056.94875pt>
 File: ../Figures/Deep.png Graphic file (type png)
 
 <use ../Figures/Deep.png>
-Package pdftex.def Info: ../Figures/Deep.png used on input line 175.
-(pdftex.def)             Requested size: 184.9688pt x 130.86586pt.
-
-Overfull \hbox (31.32387pt too wide) in paragraph at lines 175--175
- [] 
- []
-
-
-Overfull \vbox (6.8695pt too high) detected at line 175
- []
-
-[9
+Package pdftex.def Info: ../Figures/Deep.png used on input line 200.
+(pdftex.def)             Requested size: 130.86586pt x 184.9688pt.
+ [7
 
  <../Figures/Deep.png>]
 File: ../Figures/Deep.png Graphic file (type png)
  <use ../Figures/Deep.png>
-Package pdftex.def Info: ../Figures/Deep.png used on input line 175.
-(pdftex.def)             Requested size: 184.9688pt x 130.86586pt.
+Package pdftex.def Info: ../Figures/Deep.png used on input line 200.
+(pdftex.def)             Requested size: 130.86586pt x 184.9688pt.
 
-Overfull \hbox (31.32387pt too wide) in paragraph at lines 175--175
- [] 
- []
-
-
-Overfull \vbox (6.8695pt too high) detected at line 175
- []
-
-[10
+[8
 
 ]
 File: ../Figures/Deep.png Graphic file (type png)
  <use ../Figures/Deep.png>
-Package pdftex.def Info: ../Figures/Deep.png used on input line 175.
-(pdftex.def)             Requested size: 184.9688pt x 130.86586pt.
+Package pdftex.def Info: ../Figures/Deep.png used on input line 200.
+(pdftex.def)             Requested size: 130.86586pt x 184.9688pt.
+ [9
 
-Overfull \hbox (31.32387pt too wide) in paragraph at lines 175--175
- [] 
- []
-
-
-Overfull \vbox (6.8695pt too high) detected at line 175
- []
-
-[11
+] (./Diapos.toc) [10
 
 ]
-File: ../Figures/Deep.png Graphic file (type png)
- <use ../Figures/Deep.png>
-Package pdftex.def Info: ../Figures/Deep.png used on input line 175.
-(pdftex.def)             Requested size: 184.9688pt x 130.86586pt.
+<../Figures/DenseAuto.png, id=430, 185.19188pt x 100.375pt>
+File: ../Figures/DenseAuto.png Graphic file (type png)
 
-Overfull \hbox (31.32387pt too wide) in paragraph at lines 175--175
- [] 
- []
+<use ../Figures/DenseAuto.png>
+Package pdftex.def Info: ../Figures/DenseAuto.png used on input line 228.
+(pdftex.def)             Requested size: 148.15369pt x 80.3001pt.
+ [11
 
+ <../Figures/DenseAuto.png (PNG copy)>]
+File: ../Figures/DenseAuto.png Graphic file (type png)
 
-Overfull \vbox (6.8695pt too high) detected at line 175
- []
-
-[12
-
-] (./Diapos.toc) [13
+<use ../Figures/DenseAuto.png>
+Package pdftex.def Info: ../Figures/DenseAuto.png used on input line 228.
+(pdftex.def)             Requested size: 148.15369pt x 80.3001pt.
+ [12
 
 ]
-<../Figures/Autoencoder.png, id=600, 747.79375pt x 1056.94875pt>
-File: ../Figures/Autoencoder.png Graphic file (type png)
+File: ../Figures/DenseAuto.png Graphic file (type png)
+ <use ../Figures/DenseAuto.png>
+Package pdftex.def Info: ../Figures/DenseAuto.png used on input line 228.
+(pdftex.def)             Requested size: 148.15369pt x 80.3001pt.
+ [13
 
-<use ../Figures/Autoencoder.png>
-Package pdftex.def Info: ../Figures/Autoencoder.png used on input line 205.
-(pdftex.def)             Requested size: 93.47398pt x 132.11827pt.
+]
+File: ../Figures/DenseAuto.png Graphic file (type png)
+
+<use ../Figures/DenseAuto.png>
+Package pdftex.def Info: ../Figures/DenseAuto.png used on input line 228.
+(pdftex.def)             Requested size: 148.15369pt x 80.3001pt.
  [14
 
- <../Figures/Autoencoder.png>]
-File: ../Figures/Autoencoder.png Graphic file (type png)
-
-<use ../Figures/Autoencoder.png>
-Package pdftex.def Info: ../Figures/Autoencoder.png used on input line 205.
-(pdftex.def)             Requested size: 93.47398pt x 132.11827pt.
- [15
+] (./Diapos.toc) [15
 
 ]
-File: ../Figures/Autoencoder.png Graphic file (type png)
- <use ../Figures/Autoencoder.png>
-Package pdftex.def Info: ../Figures/Autoencoder.png used on input line 205.
-(pdftex.def)             Requested size: 93.47398pt x 132.11827pt.
+<../Figures/conv.png, id=594, 241.90375pt x 87.32625pt>
+File: ../Figures/conv.png Graphic file (type png)
+
+<use ../Figures/conv.png>
+Package pdftex.def Info: ../Figures/conv.png used on input line 245.
+(pdftex.def)             Requested size: 169.33147pt x 61.12794pt.
  [16
 
-]
-File: ../Figures/Autoencoder.png Graphic file (type png)
-
-<use ../Figures/Autoencoder.png>
-Package pdftex.def Info: ../Figures/Autoencoder.png used on input line 205.
-(pdftex.def)             Requested size: 93.47398pt x 132.11827pt.
- [17
-
-]
-File: ../Figures/Autoencoder.png Graphic file (type png)
- <use ../Figures/Autoencoder.png>
-Package pdftex.def Info: ../Figures/Autoencoder.png used on input line 205.
-(pdftex.def)             Requested size: 93.47398pt x 132.11827pt.
- [18
-
-]
-File: ../Figures/Autoencoder.png Graphic file (type png)
-
-<use ../Figures/Autoencoder.png>
-Package pdftex.def Info: ../Figures/Autoencoder.png used on input line 205.
-(pdftex.def)             Requested size: 93.47398pt x 132.11827pt.
- [19
-
-]
-File: ../Figures/Autoencoder.png Graphic file (type png)
- <use ../Figures/Autoencoder.png>
-Package pdftex.def Info: ../Figures/Autoencoder.png used on input line 205.
-(pdftex.def)             Requested size: 93.47398pt x 132.11827pt.
- [20
-
-]
-File: ../Figures/Autoencoder.png Graphic file (type png)
-
-<use ../Figures/Autoencoder.png>
-Package pdftex.def Info: ../Figures/Autoencoder.png used on input line 205.
-(pdftex.def)             Requested size: 93.47398pt x 132.11827pt.
- [21
-
-] (./Diapos.toc) [22
-
-]
-<../Figures/mylenet.png, id=943, 544.1931pt x 127.1952pt>
-File: ../Figures/mylenet.png Graphic file (type png)
-
-<use ../Figures/mylenet.png>
-Package pdftex.def Info: ../Figures/mylenet.png used on input line 225.
-(pdftex.def)             Requested size: 272.09587pt x 63.59744pt.
- [23
-
- <../Figures/mylenet.png>]
-File: ../Figures/mylenet.png Graphic file (type png)
-
-<use ../Figures/mylenet.png>
-Package pdftex.def Info: ../Figures/mylenet.png used on input line 225.
-(pdftex.def)             Requested size: 272.09587pt x 63.59744pt.
- [24
-
-]
-File: ../Figures/mylenet.png Graphic file (type png)
- <use ../Figures/mylenet.png>
-Package pdftex.def Info: ../Figures/mylenet.png used on input line 225.
-(pdftex.def)             Requested size: 272.09587pt x 63.59744pt.
- [25
-
-]
-File: ../Figures/mylenet.png Graphic file (type png)
-
-<use ../Figures/mylenet.png>
-Package pdftex.def Info: ../Figures/mylenet.png used on input line 225.
-(pdftex.def)             Requested size: 272.09587pt x 63.59744pt.
- [26
-
-]
-<../Figures/Recurrent.png, id=1091, 1092.08pt x 580.1675pt>
+ <../Figures/conv.png>]
+<../Figures/Recurrent.png, id=626, 1092.08pt x 580.1675pt>
 File: ../Figures/Recurrent.png Graphic file (type png)
 
 <use ../Figures/Recurrent.png>
-Package pdftex.def Info: ../Figures/Recurrent.png used on input line 248.
+Package pdftex.def Info: ../Figures/Recurrent.png used on input line 276.
 (pdftex.def)             Requested size: 163.80493pt x 87.02136pt.
 
-Overfull \hbox (40.89087pt too wide) in paragraph at lines 248--248
+Overfull \hbox (26.8889pt too wide) in paragraph at lines 276--276
  [] 
  []
 
-[27
+[17
 
  <../Figures/Recurrent.png>]
-File: ../Figures/Recurrent.png Graphic file (type png)
- <use ../Figures/Recurrent.png>
-Package pdftex.def Info: ../Figures/Recurrent.png used on input line 248.
-(pdftex.def)             Requested size: 163.80493pt x 87.02136pt.
+<../Figures/LSTM.png, id=657, 1056.94875pt x 747.79375pt>
+File: ../Figures/LSTM.png Graphic file (type png)
 
-Overfull \hbox (40.89087pt too wide) in paragraph at lines 248--248
+<use ../Figures/LSTM.png>
+Package pdftex.def Info: ../Figures/LSTM.png used on input line 276.
+(pdftex.def)             Requested size: 158.53546pt x 112.16422pt.
+
+Overfull \hbox (21.61943pt too wide) in paragraph at lines 276--276
  [] 
  []
 
-[28
+[18
+
+ <../Figures/LSTM.png>] (./Diapos.toc) [19
 
 ]
-File: ../Figures/Recurrent.png Graphic file (type png)
- <use ../Figures/Recurrent.png>
-Package pdftex.def Info: ../Figures/Recurrent.png used on input line 248.
-(pdftex.def)             Requested size: 163.80493pt x 87.02136pt.
+<../Figures/prot.jpg, id=729, 342.27875pt x 148.555pt>
+File: ../Figures/prot.jpg Graphic file (type jpg)
 
-Overfull \hbox (40.89087pt too wide) in paragraph at lines 248--248
- [] 
- []
+<use ../Figures/prot.jpg>
+Package pdftex.def Info: ../Figures/prot.jpg used on input line 293.
+(pdftex.def)             Requested size: 102.6844pt x 44.56683pt.
+ [20
 
-[29
-
-]
-File: ../Figures/Recurrent.png Graphic file (type png)
- <use ../Figures/Recurrent.png>
-Package pdftex.def Info: ../Figures/Recurrent.png used on input line 248.
-(pdftex.def)             Requested size: 163.80493pt x 87.02136pt.
-
-Overfull \hbox (40.89087pt too wide) in paragraph at lines 248--248
- [] 
- []
-
-[30
+ <../Figures/prot.jpg>] (./Diapos.toc) [21
 
 ]
-File: ../Figures/Recurrent.png Graphic file (type png)
- <use ../Figures/Recurrent.png>
-Package pdftex.def Info: ../Figures/Recurrent.png used on input line 248.
-(pdftex.def)             Requested size: 163.80493pt x 87.02136pt.
+[22
 
-Overfull \hbox (40.89087pt too wide) in paragraph at lines 248--248
- [] 
- []
+] [23
 
-[31
+] [24
+
+] [25
+
+] [26
+
+] [27
+
+] [28
+
+] [29
+
+] [30
+
+] (./Diapos.toc) [31
+
+] [32
 
 ]
-File: ../Figures/Recurrent.png Graphic file (type png)
- <use ../Figures/Recurrent.png>
-Package pdftex.def Info: ../Figures/Recurrent.png used on input line 248.
-(pdftex.def)             Requested size: 163.80493pt x 87.02136pt.
+(./Diapos.toc) [33
 
-Overfull \hbox (40.89087pt too wide) in paragraph at lines 248--248
- [] 
- []
+]
+<../Figures/EncoDeco.png, id=1182, 747.79375pt x 1056.94875pt>
+File: ../Figures/EncoDeco.png Graphic file (type png)
 
-[32
+<use ../Figures/EncoDeco.png>
+Package pdftex.def Info: ../Figures/EncoDeco.png used on input line 381.
+(pdftex.def)             Requested size: 127.12325pt x 179.67891pt.
 
-] <../Figures/dropout.png, id=1312, 616.3025pt x 329.23pt>
-File: ../Figures/dropout.png Graphic file (type png)
-
-<use ../Figures/dropout.png>
-Package pdftex.def Info: ../Figures/dropout.png used on input line 270.
-(pdftex.def)             Requested size: 184.89217pt x 98.76976pt.
-
-Overfull \hbox (31.24724pt too wide) in paragraph at lines 270--270
- [] 
- []
-
-[33
-
- <../Figures/dropout.png>]
-File: ../Figures/dropout.png Graphic file (type png)
- <use ../Figures/dropout.png>
-Package pdftex.def Info: ../Figures/dropout.png used on input line 270.
-(pdftex.def)             Requested size: 184.89217pt x 98.76976pt.
-
-Overfull \hbox (31.24724pt too wide) in paragraph at lines 270--270
+Overfull \hbox (7.31781pt too wide) in paragraph at lines 381--381
  [] 
  []
 
 [34
 
-]
-File: ../Figures/dropout.png Graphic file (type png)
- <use ../Figures/dropout.png>
-Package pdftex.def Info: ../Figures/dropout.png used on input line 270.
-(pdftex.def)             Requested size: 184.89217pt x 98.76976pt.
+ <../Figures/EncoDeco.png>]
+<../Figures/SingleOneRecHeatf1.png, id=1215, 1219.55624pt x 524.96124pt>
+File: ../Figures/SingleOneRecHeatf1.png Graphic file (type png)
 
-Overfull \hbox (31.24724pt too wide) in paragraph at lines 270--270
- [] 
+<use ../Figures/SingleOneRecHeatf1.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeatf1.png used on input line 4
+19.
+(pdftex.def)             Requested size: 329.28459pt x 141.74142pt.
+
+Overfull \vbox (0.88873pt too high) detected at line 419
  []
 
 [35
 
-]
-File: ../Figures/dropout.png Graphic file (type png)
- <use ../Figures/dropout.png>
-Package pdftex.def Info: ../Figures/dropout.png used on input line 270.
-(pdftex.def)             Requested size: 184.89217pt x 98.76976pt.
+ <../Figures/SingleOneRecHeatf1.png>]
+<../Figures/SingleOneRecHeatf2.png, id=1248, 1219.55624pt x 524.96124pt>
+File: ../Figures/SingleOneRecHeatf2.png Graphic file (type png)
 
-Overfull \hbox (31.24724pt too wide) in paragraph at lines 270--270
- [] 
+<use ../Figures/SingleOneRecHeatf2.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeatf2.png used on input line 4
+19.
+(pdftex.def)             Requested size: 329.28459pt x 141.74142pt.
+
+Overfull \vbox (0.88873pt too high) detected at line 419
  []
 
 [36
 
-]
-File: ../Figures/dropout.png Graphic file (type png)
- <use ../Figures/dropout.png>
-Package pdftex.def Info: ../Figures/dropout.png used on input line 270.
-(pdftex.def)             Requested size: 184.89217pt x 98.76976pt.
+ <../Figures/SingleOneRecHeatf2.png>]
+<../Figures/SingleOneRecHeatf3.png, id=1278, 1219.55624pt x 524.96124pt>
+File: ../Figures/SingleOneRecHeatf3.png Graphic file (type png)
 
-Overfull \hbox (31.24724pt too wide) in paragraph at lines 270--270
- [] 
+<use ../Figures/SingleOneRecHeatf3.png>
+Package pdftex.def Info: ../Figures/SingleOneRecHeatf3.png used on input line 4
+19.
+(pdftex.def)             Requested size: 329.28459pt x 141.74142pt.
+
+Overfull \vbox (0.88873pt too high) detected at line 419
  []
 
 [37
 
-] (./Diapos.toc) [38
+ <../Figures/SingleOneRecHeatf3.png>]
+<../Figures/Classd.png, id=1309, 747.79375pt x 1056.94875pt>
+File: ../Figures/Classd.png Graphic file (type png)
 
-] [39
+<use ../Figures/Classd.png>
+Package pdftex.def Info: ../Figures/Classd.png used on input line 442.
+(pdftex.def)             Requested size: 119.64944pt x 169.11525pt.
+ [38
 
-] [40
+ <../Figures/Classd.png>]
+<../Figures/SupClass.png, id=1342, 586.8324pt x 442.2924pt>
+File: ../Figures/SupClass.png Graphic file (type png)
 
-] [41
+<use ../Figures/SupClass.png>
+Package pdftex.def Info: ../Figures/SupClass.png used on input line 475.
+(pdftex.def)             Requested size: 146.70773pt x 110.57283pt.
+File: ../Figures/SupClass.png Graphic file (type png)
+ <use ../Figures/SupClass.png>
+Package pdftex.def Info: ../Figures/SupClass.png used on input line 475.
+(pdftex.def)             Requested size: 146.70773pt x 110.57283pt.
+ [39
+
+ <../Figures/SupClass.png>]
+File: ../Figures/SupClass.png Graphic file (type png)
+ <use ../Figures/SupClass.png>
+Package pdftex.def Info: ../Figures/SupClass.png used on input line 475.
+(pdftex.def)             Requested size: 146.70773pt x 110.57283pt.
+File: ../Figures/SupClass.png Graphic file (type png)
+ <use ../Figures/SupClass.png>
+Package pdftex.def Info: ../Figures/SupClass.png used on input line 475.
+(pdftex.def)             Requested size: 146.70773pt x 110.57283pt.
+
+[40
+
+]
+File: ../Figures/SupClass.png Graphic file (type png)
+ <use ../Figures/SupClass.png>
+Package pdftex.def Info: ../Figures/SupClass.png used on input line 475.
+(pdftex.def)             Requested size: 146.70773pt x 110.57283pt.
+File: ../Figures/SupClass.png Graphic file (type png)
+ <use ../Figures/SupClass.png>
+Package pdftex.def Info: ../Figures/SupClass.png used on input line 475.
+(pdftex.def)             Requested size: 146.70773pt x 110.57283pt.
+ [41
 
 ] [42
 
-] (./Diapos.toc) [43
+]
+[43
 
 ] [44
 
 ] [45
 
-]
-[46
+] [46
 
 ] [47
 
@@ -1527,196 +1461,70 @@ Overfull \hbox (31.24724pt too wide) in paragraph at lines 270--270
 
 ] [49
 
-] [50
-
-] [51
-
-] [52
-
-] [53
-
-] (./Diapos.toc) [54
-
-] [55
-
-] [56
-
-] [57
-
-]
-[58
-
-] [59
-
-] (./Diapos.toc) [60
-
-]
-<../Figures/Class.png, id=2358, 747.79375pt x 1056.94875pt>
-File: ../Figures/Class.png Graphic file (type png)
-
-<use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 369.
-(pdftex.def)             Requested size: 74.78375pt x 105.70107pt.
- [61
-
- <../Figures/Class.png>]
-File: ../Figures/Class.png Graphic file (type png)
-
-<use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 369.
-(pdftex.def)             Requested size: 74.78375pt x 105.70107pt.
- [62
-
-]
-File: ../Figures/Class.png Graphic file (type png)
- <use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 369.
-(pdftex.def)             Requested size: 74.78375pt x 105.70107pt.
- [63
-
-]
-File: ../Figures/Class.png Graphic file (type png)
-
-<use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 369.
-(pdftex.def)             Requested size: 74.78375pt x 105.70107pt.
- [64
-
-]
-File: ../Figures/Class.png Graphic file (type png)
- <use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 392.
-(pdftex.def)             Requested size: 100.9478pt x 142.68192pt.
-
-Overfull \vbox (5.08556pt too high) detected at line 392
- []
-
-[65
-
-]
-File: ../Figures/Class.png Graphic file (type png)
- <use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 392.
-(pdftex.def)             Requested size: 100.9478pt x 142.68192pt.
-
-Overfull \vbox (5.08556pt too high) detected at line 392
- []
-
-[66
-
-]
-File: ../Figures/Class.png Graphic file (type png)
- <use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 392.
-(pdftex.def)             Requested size: 100.9478pt x 142.68192pt.
-
-Overfull \vbox (5.08556pt too high) detected at line 392
- []
-
-[67
-
-]
-File: ../Figures/Class.png Graphic file (type png)
- <use ../Figures/Class.png>
-Package pdftex.def Info: ../Figures/Class.png used on input line 392.
-(pdftex.def)             Requested size: 100.9478pt x 142.68192pt.
-
-Overfull \vbox (5.08556pt too high) detected at line 392
- []
-
-[68
-
-] (./Diapos.toc) [69
-
-]
-<../Figures/SingleOneRecHeat.png, id=2679, 1170.774pt x 503.7219pt>
-File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
-
-<use ../Figures/SingleOneRecHeat.png>
-Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 416
-.
-(pdftex.def)             Requested size: 193.16937pt x 83.11052pt.
-
-Overfull \hbox (39.52444pt too wide) in paragraph at lines 416--416
- [] 
- []
-
-[70
-
- <../Figures/SingleOneRecHeat.png>]
-File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
- <use ../Figures/SingleOneRecHeat.png>
-Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 416
-.
-(pdftex.def)             Requested size: 193.16937pt x 83.11052pt.
-
-Overfull \hbox (39.52444pt too wide) in paragraph at lines 416--416
- [] 
- []
-
-[71
-
-]
-File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
- <use ../Figures/SingleOneRecHeat.png>
-Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 416
-.
-(pdftex.def)             Requested size: 193.16937pt x 83.11052pt.
-
-Overfull \hbox (39.52444pt too wide) in paragraph at lines 416--416
- [] 
- []
-
-[72
-
-]
-File: ../Figures/SingleOneRecHeat.png Graphic file (type png)
- <use ../Figures/SingleOneRecHeat.png>
-Package pdftex.def Info: ../Figures/SingleOneRecHeat.png used on input line 416
-.
-(pdftex.def)             Requested size: 193.16937pt x 83.11052pt.
-
-Overfull \hbox (39.52444pt too wide) in paragraph at lines 416--416
- [] 
- []
-
-[73
-
-] [74
-
-] [75
-
-] [76
-
-] [77
-
-] [78
-
-] [79
-
-] [80
-
-] [81
-
-] [82
-
-] [83
-
-] [84
-
-] [85
-
-] [86
-
-] [87
-
-]
-[88
-
-] [89
-
  </usr/share/texmf-dist/tex/latex/beamer/art/beamericonbook.pdf> </usr/share/te
-xmf-dist/tex/latex/beamer/art/beamericonarticle.pdf>]
+xmf-dist/tex/latex/beamer/art/beamericonarticle.pdf>] <../Figures/dropout.png, 
+id=1686, 616.3025pt x 329.23pt>
+File: ../Figures/dropout.png Graphic file (type png)
+
+<use ../Figures/dropout.png>
+Package pdftex.def Info: ../Figures/dropout.png used on input line 574.
+(pdftex.def)             Requested size: 184.89217pt x 98.76976pt.
+
+Overfull \hbox (13.74452pt too wide) in paragraph at lines 574--574
+ [] 
+ []
+
+[50
+
+ <../Figures/dropout.png>]
+File: ../Figures/dropout.png Graphic file (type png)
+ <use ../Figures/dropout.png>
+Package pdftex.def Info: ../Figures/dropout.png used on input line 574.
+(pdftex.def)             Requested size: 184.89217pt x 98.76976pt.
+
+Overfull \hbox (13.74452pt too wide) in paragraph at lines 574--574
+ [] 
+ []
+
+[51
+
+]
+File: ../Figures/dropout.png Graphic file (type png)
+ <use ../Figures/dropout.png>
+Package pdftex.def Info: ../Figures/dropout.png used on input line 574.
+(pdftex.def)             Requested size: 184.89217pt x 98.76976pt.
+
+Overfull \hbox (13.74452pt too wide) in paragraph at lines 574--574
+ [] 
+ []
+
+[52
+
+]
+File: ../Figures/dropout.png Graphic file (type png)
+ <use ../Figures/dropout.png>
+Package pdftex.def Info: ../Figures/dropout.png used on input line 574.
+(pdftex.def)             Requested size: 184.89217pt x 98.76976pt.
+
+Overfull \hbox (13.74452pt too wide) in paragraph at lines 574--574
+ [] 
+ []
+
+[53
+
+]
+File: ../Figures/dropout.png Graphic file (type png)
+ <use ../Figures/dropout.png>
+Package pdftex.def Info: ../Figures/dropout.png used on input line 574.
+(pdftex.def)             Requested size: 184.89217pt x 98.76976pt.
+
+Overfull \hbox (13.74452pt too wide) in paragraph at lines 574--574
+ [] 
+ []
+
+[54
+
+]
 \tf@nav=\write6
 \openout6 = `Diapos.nav'.
 
@@ -1726,31 +1534,31 @@ xmf-dist/tex/latex/beamer/art/beamericonarticle.pdf>]
 \tf@snm=\write8
 \openout8 = `Diapos.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 512.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 512.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 577.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 577.
  (./Diapos.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 512.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 512.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 577.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 577.
 Package rerunfilecheck Info: File `Diapos.out' has not changed.
-(rerunfilecheck)             Checksum: CD9AA7420F1BED074E2D67C9FA3E8111;701.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 512.
+(rerunfilecheck)             Checksum: 2AFFB5C63EF1E53772BD862A70516BD9;666.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 577.
  ) 
 Here is how much of TeX's memory you used:
- 18745 strings out of 493054
- 349324 string characters out of 6140586
- 426277 words of memory out of 5000000
- 21600 multiletter control sequences out of 15000+600000
- 36180 words of font info for 50 fonts, out of 8000000 for 9000
+ 18689 strings out of 493054
+ 348750 string characters out of 6140586
+ 424551 words of memory out of 5000000
+ 21610 multiletter control sequences out of 15000+600000
+ 40753 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,19n,68p,393b,850s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,17n,65p,393b,833s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/urw/h
-elvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-
-Output written on Diapos.pdf (89 pages, 855395 bytes).
+ts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a
+.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Diapos.pdf (54 pages, 1084018 bytes).
 PDF statistics:
- 3420 PDF objects out of 3580 (max. 8388607)
- 3250 compressed objects within 33 object streams
- 195 named destinations out of 1000 (max. 500000)
- 241 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1883 PDF objects out of 2073 (max. 8388607)
+ 1754 compressed objects within 18 object streams
+ 124 named destinations out of 1000 (max. 500000)
+ 266 words of extra memory for PDF output out of 10000 (max. 10000000)
 

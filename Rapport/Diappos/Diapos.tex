@@ -25,7 +25,7 @@
 
 \mode<presentation>
 {
-  \usetheme{Warsaw}
+  \usetheme{AnnArbor}
   % or ...
 
   \setbeamercovered{transparent}
@@ -45,15 +45,30 @@
 % does not look nice, try deleting the line with the fontenc.
 
 
-\title[Short Paper Title] % (optional, use only with long paper titles)
-{Apprentissage profond et séquences peptidiques}
+\title[Représentation latente de protéines] % (optional, use only with long paper titles)
+{Apprentissage profond et représentation latente de séquences peptidiques} 
 
-\author{Rémy Sun} % (optional, use only with lots of authors)
+\author[Rémy Sun]{Rémy Sun \and sous la direction de François Coste} % (optional, use only with lots of authors)
 
 \institute[ENS Rennes] % (optional, but mostly needed)
 {
-  Département d'informatique\\
-  ENS Rennes
+  
+
+  \begin{columns}
+    \column{0.45\linewidth}
+    \center
+    \includegraphics[scale=0.15]{../Figures/ENS}\\
+    Département d'informatique\\
+    ENS Rennes
+    
+    \column{0.45\linewidth}
+    \center
+    \includegraphics[scale=0.7]{../Figures/dyliss}\\
+
+    Equipe Dyliss\\
+    IRISA
+  \end{columns}
+
 }
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
@@ -83,7 +98,7 @@
 % the beginning of each subsection:
 \AtBeginSubsection[]
 {
-  \begin{frame}<beamer>{Outline}
+  \begin{frame}<beamer>{Plan}
     \tableofcontents[currentsection,currentsubsection]
   \end{frame}
 }
@@ -101,7 +116,7 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{Outline}
+\begin{frame}{Plan}
   \tableofcontents[pausesections]
   % You might wish to add the option [pausesections]
 \end{frame}
@@ -126,9 +141,9 @@
 
 \section{Apprentissage profond?}
 
-\subsection{Pourquoi l'apprentissage profond?}
+\subsection{Pourquoi l'apprentissage \og profond\fg?}
 
-\begin{frame}{Réseaux neuronaux}
+\begin{frame}{Fonctionnement d'un neurone}
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
 
@@ -136,39 +151,49 @@
     \column{0.38\linewidth}
     \begin{figure}
       \centering
-      \includegraphics[scale=0.10]{../Figures/Neuron}
-      \caption{Fonctionnement d'un neurone}
+      \includegraphics[scale=0.17]{../Figures/Neuron}
     \end{figure}
 
     \column{0.5\linewidth}
     \begin{itemize}
-    \item Transformation linéaire $WA + b$\pause
-    \item Activation non-linéaire $f$ \pause
-    \item Score sur le résultat \pause
-    \item Apprentissage sur $W$ et $b$ par rétropropagation sur le score
+    \item Entrée $A$, poids $W$, biais $b$
+    \item Transformation linéaire $WA + b$
+    \item Activation non-linéaire $f$
+    \item Apprentissage de $W$ et $b$
+      \begin{itemize}
+      \item Par rétropropagation sur la distance à l'objectif
+      \end{itemize}
     \end{itemize}
   \end{columns}
 
 \end{frame}
 
-\begin{frame}{Réseaux profonds}
+\begin{frame}{Du réseau de neurones non profond au réseau de neurones profond}
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
 
   \begin{columns}
     \column{0.5\linewidth}
-    \begin{figure}
-      \centering
-      \includegraphics[scale=0.1750]{../Figures/Deep}
-      \caption{Fonctionnement d'un neurone}
-    \end{figure}
-
+    \only<1>
+    {
+      \begin{figure}
+        \centering
+        \includegraphics[scale=0.1750]{../Figures/Shallow}
+      \end{figure}
+    }
+    \only<2-4>
+    {
+      \begin{figure}
+        \centering
+        \includegraphics[scale=0.1750]{../Figures/Deep}
+      \end{figure}
+    }
     \column{0.4\linewidth}
     \begin{itemize}
-    \item Plusieurs niveaux d'abstraction \pause
-    \item Evanouissement de gradient \pause
-    \item Grands ensembles d'entraînement \pause
-    \item Bons résultats en reconnaissance d'image, langages naturels, ...
+    \item Plusieurs couches de neurones
+    \item Hiérarchie: plusieurs niveaux de représentations
+    \item Evanouissement de gradient
+    \item Grands ensembles d'entraînement
     \end{itemize}
   \end{columns}
 
@@ -184,16 +209,14 @@
     \column{0.45\linewidth}
     \begin{figure}
       \centering
-      \includegraphics[scale=0.125]{../Figures/Autoencoder}
-      \caption{Fonctionnement d'un auto-encodeur}
+      \includegraphics[scale=0.8]{../Figures/DenseAuto}
     \end{figure}
 
     \column{0.5\linewidth}
     \begin{itemize}
-    \item Non supervisé\pause
-    \item Encodage\pause
-    \item Représentation latente \pause
-    \item Décodage \pause
+    \item Non supervisé
+    \item Encodage/Décodage
+    \item Représentation latente
     \item Eviter d'encoder l'identité\pause
       \begin{itemize}
       \item Compression\pause
@@ -206,21 +229,18 @@
 
 \subsection{Architectures standards}
 
-\begin{frame}{Réseaux Convolutionnels: recherche de motif}
+\begin{frame}{Réseaux Convolutionnels: recherche de caractéristique}
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
 
     \begin{figure}
       \centering
-      \includegraphics[scale=0.50]{../Figures/mylenet}
-      \caption{Réseau LeNet5}
+      \includegraphics[scale=0.7]{../Figures/conv}
     \end{figure}
 
     \begin{itemize}
-    \item Filtres de caractéristiques\pause
-    \item Regroupement\pause
-    \item Permet d'isoler des motifs locaux \pause
-    \item Très utilisé en reconnaissance d'image
+    \item Filtres de caractéristiques
+    \item Permet d'isoler des caractéristiques locales
     \end{itemize}
 \end{frame}
 
@@ -229,42 +249,28 @@
   %   for anyone how does not follow everything on the slide itself.
   \begin{columns}
     \column{0.4\linewidth}
-    \begin{figure}
-      \centering
-      \includegraphics[scale=0.15]{../Figures/Recurrent}
-      \caption{Couche récurrente}
-    \end{figure}
+    \only<1>
+    {
+      \begin{figure}
+        \centering
+        \includegraphics[scale=0.15]{../Figures/Recurrent}
+      \end{figure}
+    }
+    \only<2>
+    {
+      \begin{figure}
+        \centering
+        \includegraphics[scale=0.15]{../Figures/LSTM}
+      \end{figure}
+    }
 
     \column{0.5\linewidth}
     \begin{itemize}
-    \item Dépendance temporelles\pause
-    \item Sortie + état caché\pause
+    \item Dépendance temporelles
+    \item Sortie + état caché persistant (boucle de rétroaction)
+    \item Réseau \og profond\fg à une couche
     \item Pas de dépendances hiérarchiques\pause
-    \item Réseau \og profond\fg à une couche \pause
-    \item Très utilisé en langages naturels\pause
-    \item Unité LSTM
-    \end{itemize}
-  \end{columns}
-\end{frame}
-
-\begin{frame}{Eviter le sur-entraînement}
-  % - A title should summarize the slide in an understandable fashion
-  %   for anyone how does not follow everything on the slide itself.
-
-  \begin{columns}
-    \column{0.5\linewidth}
-    \begin{figure}
-      \centering
-      \includegraphics[scale=0.3]{../Figures/dropout}
-    \end{figure}
-
-    \column{0.45\linewidth}
-    \begin{itemize}
-    \item Désactiver aléatoirement des neurones\pause
-    \item Généraliser la représentation apprise\pause
-    \item Eliminer la concentration d'information\pause
-    \item Faire travailler tout le réseau\pause
-    \item Permet d'entraîner ad nauseam
+    \item Unité LSTM (Long Short-Term Memory)
     \end{itemize}
   \end{columns}
 \end{frame}
@@ -274,12 +280,15 @@
 \begin{frame}{Plus qu'une chaîne d'acides aminés}
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
-
+  \begin{figure}
+    \centering
+    \includegraphics[scale=0.3]{../Figures/prot}
+  \end{figure}
     \begin{itemize}
     \item Acide aminés: molécules chimiques
-    \item Structure primaire: chaîne d'acides amminés\pause
-    \item Structure secondaire: structures locales formé par les acides\pause
-    \item Structure tertiaire forme tridimensionnelle \pause
+    \item Structure primaire: chaîne d'acides aminés
+    \item Structure secondaire: structures locales formé par les acides
+    \item Structure tertiaire: forme tridimensionnelle
     \end{itemize}
 \end{frame}
 
@@ -289,41 +298,37 @@
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
 
-    \begin{columns}
-      \column{0.45\linewidth}
       \begin{itemize}
-      \item Enormément de travaux dans d'autres domaines\pause
-       \begin{itemize}
-        \item Reconnaissance d'image\pause
-        \item Traduction de langages naturels\pause
-        \item Prédiction de sentiments\pause
-        \item Traitement de données bio-médicales\pause
-        \item Représentation distribuée de mots\pause
-        \item Etude de génome\pause
+      \item Succès en:\pause
+        \begin{itemize}
+        \item Reconnaissance d'image, langages naturels,
+          prédiction de sentiments, données bio-médicales,
+          représentation, ...\pause
         \end{itemize}
       \end{itemize}
 
-    \column{0.45\linewidth}
-    \begin{itemize}
-    \item Prédiction de structures secondaires\pause
-      % \begin{itemize}
-      % \item Heffernan R, Paliwal K, Lyons J et al. 2015 Improving prediction of secondary structure, local backbone
-      %   angles, and solvent accessible surface area of proteins by iterative deep
-      %   learning. 
-      % \item Spencer M, Eickholt J, Cheng J. 2015 A Deep Learning Network Approach to ab initio Protein
-      %   Secondary Structure Prediction
-      % \end{itemize}
-    \item Classification de protéines selon différents critéres\pause
-      % \begin{itemize}
-      % \item Hochreiter S, Heusel M, Obermayer K. Fast model-based protein homology detection without
-      %   alignment. 2007 \alert{1 seule couche récurrente}
-      % \end{itemize}
-    \item Prédiction de contacts
-      % \begin{itemize}
-      % \item Lena PD, Nagata K, Baldi P. 2012 Deep architectures for protein contact map prediction. 
-      % \end{itemize}
-    \end{itemize}
-  \end{columns}
+
+      \begin{itemize}
+      \item Protéines:
+        \begin{itemize}
+        \item Prédiction de structures secondaires et locales\pause
+          \begin{itemize}
+          \item Heffernan R. et al. 2015 Improving prediction of secondary
+            structure, local backbone angles, and solvent accessible surface
+            area of proteins by iterative deep learning. \pause
+          \item Spencer M et al. 2015 A Deep Learning Network Approach to ab
+            initio Protein Secondary Structure Prediction\pause
+          \item Lena PD et al. 2012 Deep architectures for protein contact
+            map prediction. \pause
+          \item ...\pause
+          \end{itemize}
+        \item Classification de protéines selon différents critéres\pause
+          \begin{itemize}
+          \item Jian-Wei L. et al. 2007 Predicting protein structural classes with autoencoder neural networks
+          \end{itemize}
+        \end{itemize}
+      \end{itemize}
+
 
 \end{frame}
 
@@ -336,14 +341,20 @@
   %   for anyone how does not follow everything on the slide itself.
 
     \begin{itemize}
-    \item Travaux usuels: représentation par pseudo-vecteur de fréquence\pause
-    \item Etude sur les séquences peptidiques\pause
-    \item Insuffisance d'une indexation\pause
-    \item Structure tertiaire forme tridimensionnelle \pause
+    \item Tâche sur une chaîne longue: prédiction de classe structurale (SCOPe
+      2.6, 40\%)
+      \begin{itemize}
+      \item Travaux usuels: représentation par vecteur de fréquence des
+        protéines augmenté
+      \item Découpage de la chaîne en fragments courts
+      \end{itemize}
+    \item Etude sur les séquences peptidiques
+    \item Représentation de l'acide $a_i$ par $V = (v_k)$ où $v_i = 1$ et $v_k =
+      0 (k\ne i)$
     \end{itemize}
 \end{frame}
 
-\subsection{Architectures entrainées}
+\subsection{Architectures entrainées \& résultats}
 
 \begin{frame}{Autoencodeurs}
   % - A title should summarize the slide in an understandable fashion
@@ -353,20 +364,60 @@
     \column{0.35\linewidth}
     \begin{figure}
       \centering
-      \includegraphics[scale=0.1]{../Figures/Class}
-      \caption{Carte de corrélation entre représentation latente et propriétés connues}
+      \includegraphics[scale=0.17]{../Figures/EncoDeco}
     \end{figure}
 
     \column{0.6\linewidth}
     \begin{itemize}
-    \item Entraînement sur des fragments de taille 11\pause
-    \item Augmentation de la taille de l'ensemble d'entraînement\pause
-    \item Encodeur \alert{Récurrent}\pause
+    \item Entraînement sur des fragments de taille 11
+    \item Augmentation de la taille de l'ensemble d'entraînement de 13500 à 700
+      000
+    \item Espace latent à 20 dimensions
+    \item Encodeur récurrent à 3 couches
     \item Décodeur récurrent
     \end{itemize}
   \end{columns}
   
 \end{frame}
+
+\begin{frame}{Les représentation latentes présentent des corrélations remarquables}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+
+  \only<1>
+  {
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.27]{../Figures/SingleOneRecHeatf1}
+      %\caption{Corrélations entre représentation latente et propriétés physico-chimiques}
+    \end{figure}
+  }
+  \only<2>
+  {
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.27]{../Figures/SingleOneRecHeatf2}
+      %\caption{Corrélations entre représentation latente et propriétés physico-chimiques}
+    \end{figure}
+  }
+  \only<3>
+  {
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.27]{../Figures/SingleOneRecHeatf3}
+      %\caption{Corrélations entre représentation latente et propriétés physico-chimiques}
+    \end{figure}
+  }
+
+    \begin{itemize}
+    \item Dimensions liées dans l'espace latent\pause
+    \item Corrélation de coordonnées à l'hydropathie, à la charge ...\pause
+    \item Pas de corrélation à la structure secondaire observées
+    \end{itemize}
+  
+
+\end{frame}
+
 
 \begin{frame}{Classificateur de classe structurales}
   % - A title should summarize the slide in an understandable fashion
@@ -376,75 +427,65 @@
     \column{0.45\linewidth}
     \begin{figure}
       \centering
-      \includegraphics[scale=0.135]{../Figures/Class}
-      \caption{Classificateur structural}
+      \includegraphics[scale=0.16]{../Figures/Classd}
     \end{figure}
 
     \column{0.5\linewidth}
     \begin{itemize}
-    \item Tâche: classifier les classes structurales des protéines\pause
-    \item Classificateur convolutionnel\pause
-    \item Premières couches pré-entraînées\pause
+    \item Tâche: classifier les classes structurales des protéines
+    \item Classificateur convolutionnel
+    \item Premières couches pré-entraînées
     \item Validation de la représentation latente acquise
     \end{itemize}
   \end{columns}
 
  \end{frame}
 
-\subsection{Résultats}
-
-\begin{frame}{Les représentation latentes présentent des corrélations remarquables}
-  % - A title should summarize the slide in an understandable fashion
-  %   for anyone how does not follow everything on the slide itself.
-
-  \begin{columns}
-    \column{0.5\linewidth}
-    \begin{figure}
-      \centering
-      \includegraphics[scale=0.1650]{../Figures/SingleOneRecHeat}
-      \caption{Carte de corrélation entre représentation latente et propriétés connues}
-    \end{figure}
-
-    \column{0.4\linewidth}
-    \begin{itemize}
-    \item Dimensions liées dans l'espace latent\pause
-    \item Corrélation de coordonnées à l'hydropathie, à la charge ...\pause
-    \item Pas de corrélation à la structure spatiale\pause
-    \end{itemize}
-  \end{columns}
-
-\end{frame}
 
 \begin{frame}{Les représentations latentes sont exploitables par un
     classificateur structural}
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
 
+  \begin{columns}
+    \column{0.45\linewidth}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.25]{../Figures/SupClass}
+    \end{figure}
+
+    \column{0.45\linewidth}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.25]{../Figures/SupClass}
+    \end{figure}
+
+  \end{columns}
+
     \begin{itemize}
      
     \item Comparaison favorable au même classificateur non pré-entrainé:
       \begin{itemize}
-      \item Atteinte plus rapide du la précision maximale\pause
+      \item Atteinte plus rapide de la précision maximale\pause
       \item Précision maximale plus élevée\pause
       \end{itemize}
-    \item Pertinence de la représentation latente\pause
+    \item Pertinence de la représentation latente
     \end{itemize}
 
  \end{frame}
 
-\begin{frame}{Pistes de recherche}
-  % - A title should summarize the slide in an understandable fashion
-  %   for anyone how does not follow everything on the slide itself.
+% \begin{frame}{Pistes de recherche}
+%   % - A title should summarize the slide in an understandable fashion
+%   %   for anyone how does not follow everything on the slide itself.
 
-
-    \begin{itemize}
-    \item Architectures d'auto-encodeurs à atttention\pause
-    \item Acquisition d'une représentation pertinente des acides aminés\pause
-    \item Hyper-paramètres peu étudiés\pause
-    \item Hiérarchiser les caractéristique à utiliser en apprentissage\pause
-    \item Initialisation couche par couche?
-    \end{itemize}
- \end{frame}
+%     \begin{itemize}
+%     \item Architectures d'auto-encodeurs à attention\pause
+%     \item Acquisition d'une représentation pertinente des acides aminés\pause
+%     \item Etude plus approfondie des hyper-paramètres\pause
+%     \item Hiérarchiser les caractéristiques à utiliser en apprentissage\pause
+%     \item Initialisation couche par couche?
+%     \end{itemize}
+%  \end{frame}
 
 
 \section*{Conclusion}
@@ -457,7 +498,7 @@
     L'apprentissage profond permet de \alert{détecter des structure
       hiérarchiques ou temporelles}.\pause
   \item
-    Problème particulier: Peu \alert{d'exemples labélisés} et \alert{chaînes très longues}.\pause
+    Problème particulier: Pas assez \alert{d'exemples labélisés} et \alert{chaînes très longues}.\pause
   \item
     Apparition de \alert{corrélations} entre la représentation latente et des
     caractéristiques des séquences peptidiques.\pause
@@ -472,7 +513,7 @@
     \item
       Utilisation d'autres architectures utilisée en langages naturels.\pause
     \item
-      Influence des hyper paramètres.
+      Influence des hyper paramètres.\pause
     \end{itemize}
   \end{itemize}
 \end{frame}
@@ -481,12 +522,13 @@
 
 % All of the following is optional and typically not needed. 
 \appendix
+
 \section<presentation>*{\appendixname}
 \subsection<presentation>*{For Further Reading}
 
 \begin{frame}[allowframebreaks]
   \frametitle<presentation>{For Further Reading}
-    
+    y
   \begin{thebibliography}{10}
     
   \beamertemplatebookbibitems
@@ -508,5 +550,28 @@
     2000.
   \end{thebibliography}
 \end{frame}
+
+\begin{frame}{Eviter le sur-entraînement}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+
+  \begin{columns}
+    \column{0.5\linewidth}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.3]{../Figures/dropout}
+    \end{figure}
+
+    \column{0.45\linewidth}
+    \begin{itemize}
+    \item Désactiver aléatoirement des neurones\pause
+    \item Eliminer la concentration d'information\pause
+    \item Faire travailler tout le réseau\pause
+    \item Généraliser la représentation apprise\pause
+    \item Permet d'entraîner ad nauseam
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
 
 \end{document}
