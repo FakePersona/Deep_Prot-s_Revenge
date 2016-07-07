@@ -148,7 +148,7 @@ model.add(Activation('softmax'))
 model.compile(optimizer='adagrad', loss='binary_crossentropy', metrics=['accuracy'])
 
 print("Let's go!")
-model.fit(F, lab_data, batch_size=128, nb_epoch=100, validation_data=(F_val, lab_test))
+history = model.fit(F, lab_data, batch_size=128, nb_epoch=100, validation_data=(F_val, lab_test))
     ###
     # Select 10 samples from the validation set at random so we can visualize errors
     # for i in range(10):

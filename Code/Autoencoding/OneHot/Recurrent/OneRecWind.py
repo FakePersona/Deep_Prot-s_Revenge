@@ -76,23 +76,46 @@ for i, sentence in enumerate(test):
     X_val[i] = ctable.encode(sentence, maxlen=11)
 
 print("Creating model...")
-model = Sequential()
+dum= Sequential()
 
 #Recurrent encoder
-model.add(recurrent.LSTM(encoding_dim, input_shape=(11, ACIDS), return_sequences=True, dropout_W=0.1, dropout_U=0.1))
-model.add(recurrent.LSTM(encoding_dim, return_sequences=True, dropout_W=0.1, dropout_U=0.1))
-model.add(recurrent.LSTM(encoding_dim, dropout_W=0.1, dropout_U=0.1))
+dum1=recurrent.LSTM(encoding_dim, input_shape=(11, ACIDS), return_sequences=True, dropout_W=0.1, dropout_U=0.1)
+dum.add(dum1)
+dum2=recurrent.LSTM(encoding_dim, return_sequences=True, dropout_W=0.1, dropout_U=0.1)
+dum.add(dum2)
+dum3=recurrent.LSTM(encoding_dim, dropout_W=0.1, dropout_U=0.1)
+dum.add(dum3)
+
+dum.add(RepeatVector(11))
+
+#And decoding
+dum4=recurrent.LSTM(ACIDS, return_sequences=True)
+dum.add(dum4)
+
+dum5=TimeDistributed(Dense(ACIDS))
+
+dum.add(dum5)
+
+dum.add(Activation('softmax'))
+
+dum.load_weights("RecOnec.h5")
+
+model= Sequential()
+
+#Recurrent encoder
+model.add(dum1)
+model.add(dum2)
+model.add(dum3)
 
 model.add(RepeatVector(11))
 
 #And decoding
-model.add(recurrent.LSTM(ACIDS, return_sequences=True))
 
-model.add(TimeDistributed(Dense(ACIDS)))
+model.add(dum4)
+
+model.add(dum5)
 
 model.add(Activation('softmax'))
-
-#model.load_weights("RecOneb.h5")
 
 model.compile(optimizer='rmsprop', loss='binary_crossentropy')
 
