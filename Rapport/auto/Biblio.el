@@ -2,6 +2,8 @@
  "Biblio"
  (lambda ()
    (LaTeX-add-bibitems
+    "hintonlecture"
+    "duchi2011adaptive"
     "bahdanau2014neural"
     "kabsch1983dictionary"
     "hamelryck2003pdb"

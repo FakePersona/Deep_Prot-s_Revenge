@@ -2246,21 +2246,25 @@
     <bcf:citekey order="5">Gupta031906</bcf:citekey>
     <bcf:citekey order="6">Vincent:2008:ECR:1390156.1390294</bcf:citekey>
     <bcf:citekey order="7">lecun1998gradient</bcf:citekey>
-    <bcf:citekey order="8">hochreiter1997long</bcf:citekey>
-    <bcf:citekey order="9">DBLP:journals/corr/ChoMGBSB14</bcf:citekey>
-    <bcf:citekey order="10">srivastava2014dropout</bcf:citekey>
-    <bcf:citekey order="11">gal2015theoretically</bcf:citekey>
-    <bcf:citekey order="12">chollet2015keras</bcf:citekey>
-    <bcf:citekey order="13">2016arXiv160502688full</bcf:citekey>
-    <bcf:citekey order="14">tensorflow2015-whitepaper</bcf:citekey>
-    <bcf:citekey order="15">fox2014scope</bcf:citekey>
-    <bcf:citekey order="16">Cock01062009</bcf:citekey>
-    <bcf:citekey order="17">hamelryck2003pdb</bcf:citekey>
-    <bcf:citekey order="18">kabsch1983dictionary</bcf:citekey>
-    <bcf:citekey order="19">vincent2010stacked</bcf:citekey>
-    <bcf:citekey order="20">jian2013predicting</bcf:citekey>
-    <bcf:citekey order="21">DBLP:journals/corr/ChoMGBSB14</bcf:citekey>
-    <bcf:citekey order="22">bahdanau2014neural</bcf:citekey>
+    <bcf:citekey order="8">lecun1998gradient</bcf:citekey>
+    <bcf:citekey order="9">lecun1998gradient</bcf:citekey>
+    <bcf:citekey order="10">hochreiter1997long</bcf:citekey>
+    <bcf:citekey order="11">DBLP:journals/corr/ChoMGBSB14</bcf:citekey>
+    <bcf:citekey order="12">duchi2011adaptive</bcf:citekey>
+    <bcf:citekey order="13">hintonlecture</bcf:citekey>
+    <bcf:citekey order="14">srivastava2014dropout</bcf:citekey>
+    <bcf:citekey order="15">gal2015theoretically</bcf:citekey>
+    <bcf:citekey order="16">chollet2015keras</bcf:citekey>
+    <bcf:citekey order="17">2016arXiv160502688full</bcf:citekey>
+    <bcf:citekey order="18">tensorflow2015-whitepaper</bcf:citekey>
+    <bcf:citekey order="19">fox2014scope</bcf:citekey>
+    <bcf:citekey order="20">Cock01062009</bcf:citekey>
+    <bcf:citekey order="21">hamelryck2003pdb</bcf:citekey>
+    <bcf:citekey order="22">kabsch1983dictionary</bcf:citekey>
+    <bcf:citekey order="23">vincent2010stacked</bcf:citekey>
+    <bcf:citekey order="24">jian2013predicting</bcf:citekey>
+    <bcf:citekey order="25">DBLP:journals/corr/ChoMGBSB14</bcf:citekey>
+    <bcf:citekey order="26">bahdanau2014neural</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
   <bcf:sorting>

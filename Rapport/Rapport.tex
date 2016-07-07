@@ -127,10 +127,15 @@ algorithmes d'apprentissages profonds entraînés.
     \includegraphics[width=0.9\textwidth]{Neuron}
     \caption{Exemple de neurone}
   \end{minipage}
-\hfill
-  \begin{minipage}[b]{0.6\textwidth}
+  \hfill
+  \begin{minipage}[b]{0.3\textwidth}
     \includegraphics[width=\textwidth]{Deep}
-    \caption{Réseau de neurones classique à gauche, Réseau profond à droite}
+    \caption{Réseau de neuronesnon simple}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{Shallow}
+    \caption{Réseau de neurones profond}
   \end{minipage}
 \end{figure}
 
@@ -140,8 +145,8 @@ paramètres nécessaires à la résolution du problème n'aient été calculés 
 l'implémentateur. Traditionellement, la façon de procéder serait d'utiliser par
 exemple un réseau de neurones pour faire un perceptron: il y a un couche entrée,
 une couche cachée et une couche sortie. Entre chaque couche une transformation
-paramétrée par des variables est effectuée et en sortie on évalue par une
-fonction de score le résultat renvoyé. Une optimisation sur les paramètres est
+paramétrée par des variables est effectuée et renvoit une sortie qui permet de
+prendre une décision sur la tâche à effectuer. Une optimisation sur les paramètres est
 ensuite effectuée.
 
 \paragraph{Neurone?}
@@ -156,15 +161,15 @@ détail plus tard. Ainsi la transformation effectuée sur l'entrée $A$ retourne
 sortie $f(WA + b)$
 
 L'entraînement du neurone se fait par rétropropagation à partir de la sortie
-finale du réseau de neurone: un score est calculé sur l'objectif final, et il
-s'agit alors de minimiser la distance par rapport au score attendu. Pour ce
+finale du réseau de neurone: une évaluation de la qualité de la décision finale
+par rapport à la décision attendue est effectué, et il
+s'agit alors de minimiser la distance entre les deux. Pour ce
 faire, on peut par exemple procéder par descente de gradient. En effet, pour
-chaque paramètre, on calcul la dérivée partielle du score obtenu et on ajuste en
+chaque paramètre, on calcule la dérivée partielle du score obtenu et on ajuste en
 conséquence les paramètres du réseau jusqu'à obtenir un résultat satisfaisant
 (typiquement un minimum local ou point de selle donnant des résultats acceptables).
 
 \paragraph{Pourquoi profond?}
-
 
 Ce qui différencie l'apprentissage profond de ces techniques d'aprentissage dites \og
 creuses\fg est d'utiliser plusieurs couches cachées (d'où la notion de
@@ -190,7 +195,7 @@ grandes bases de données pour pouvoir entraîner les réseaux. Si cette difficu
 n'est plus d'actualité dans nombreux domaines, elle est indissociable de notre
 étude des protéines. En effet, le nombre de protéines appartenant à une famille,
 une superfamille ou une catégorie est limité. De fait, il n'est pas réaliste
-d'éspérer avoir assez de données pour exploiter les techniques d'apprentissage
+d'espérer avoir assez de données pour exploiter les techniques d'apprentissage
 purement supervisées. Comment faire pour demander à une machine de s'entrainer par elle même sans
 qu'on lui dise quelle conclusion tirer à partir de son résultat? Une façon de
 faire consiste à lui demander de retrouver son entrée. Ainsi, on ``encode''
@@ -208,19 +213,13 @@ l'identité). Pour éviter cela on dispose de plusieurs moyens:
   de dimension inférieure. Ainsi, on s'assure de ne pas pouvoir juste propager
   l'identité. Mieux encore, la représentation intermédiaire, ``condensée'' peut
   permettre de découvrir des ``points robustes'' de ce qu'on est en train
-  d'apprendre. Ce qui caractérise une famille de protéines par exemple...
-  Néanmoins, le grand défaut de cette approche est que la perte d'information
-  est ici inévitable.
+  d'apprendre.
 \item Corrompre l'information donnée en entrée (comme proposé par \cite{Vincent:2008:ECR:1390156.1390294})pour forcer l'encodeur à
   ``deviner'' ce qu'il manque, ce qui permettrait par exemple de mettre en
   lumière des corrélations non évidentes à l'oeil nu.
 \item Poser des contraintes sur la représentation intermédiaire acquise,
   typiquement en forçant des objectifs de régularisation sur les paramètres.
 \end{itemize}
-
-Une partie de notre travail s'est focalisée sur l'étude de ces représentations
-intermédiaires et sur ce qu'elles nous apprennent sur les fragments de séquences
-peptidiques ayant servi à l'entraînement de l'auto-encodeur.
 
 \begin{wrapfigure}{R}{0.5\textwidth}
   \includegraphics[width=0.45\textwidth]{Autoencoder}
@@ -229,12 +228,14 @@ peptidiques ayant servi à l'entraînement de l'auto-encodeur.
 
 \subsection{Réseaux convolutifs}
 
-\paragraph{Il y a un motif caractéristique (feature) dans les images d'oiseaux}
+\paragraph{Il y a une marque caractéristique (feature) des images d'oiseaux}
 
-C'est probablement intéressant pour classifier des images d'animaux, mais de là
-à le repérer sur un pixel... Ce qu'on peut faire par contre, est \og
-scanner\fg des carrés $3\times 3$. En pratique, c'est créer une couche cachée
-dont chaque neurone applique une même transformation sur les 9 neurones d'un
+Cela est un élément utile à la reconnaissance d'images d'animaux, mais il semble
+difficile pour un réseau neuronal profond d'acquérir cette représentation par
+lui-même. Ce qu'on peut faire par contre, est \og
+scanner\fg des carrés $3\times 3$ de l'image en question à l'aide d'un filtre
+permettant de décider si la marque apparaît dans le carré examiné. En pratique, c'est créer une couche cachée
+dont chaque neurone applique une même fonction de transformation sur les 9 neurones d'un
 carré $3\times 3$. Il s'agit donc de faire une convolution sur l'image d'une
 fonction de transformation!
 
@@ -259,7 +260,7 @@ seront ensuite traités par une couche supérieure.
 
 Si on veut rajouter une couche convolutionnelle au dessus, elle opérera non
 seulement une opération sur un carré de chaque \texttt{feature map}, mais elle
-effectura une opération sur les résultats de cette opération sur chaque feature
+effectuera une opération sur les résultats de cette opération sur chaque feature
 map.
 
 \paragraph{Réduire la charge de calcul}
@@ -273,7 +274,7 @@ quoi que ce soit à l'image obtenue après transformation.
 \begin{figure}
   \centering
   \includegraphics[scale=0.8]{mylenet}
-  \caption{Réseau convolutionnel LeNet5}
+  \caption{Réseau convolutionnel LeNet5 \cite{lecun1998gradient}}
 \end{figure}
 
 Une architecture typique se constitue donc d'un enchaînement de couches de
@@ -283,15 +284,17 @@ architecture est proposée dans \cite{lecun1998gradient} sous la forme du résea
 
 \subsection{Réseaux récurrents}
 
-\paragraph{Il est utile de se rappeler des mots précédents à la lecture d'une phrase}
+Toutes les architectures proposées jusqu'à maintenant traitent l'entrée comme
+une \og image\fg: il n'y a pas de notion d'ordre entre les différents éléments
+de l'entrée. Une telle représentation est peu satisfaisante si on veut traiter
+des suites d'entrées comme une phrase.
 
-L'idée est que l'entrée est traitée comme une suite d'entrées:
-typiquement c'est le cas d'une phrase par exemple. Chaque mot est traité par la
-couche récurrente qui va calculer deux choses à partir de cette entrée: une
-sortie \og publique\fg et une sortie caché qui détermine un paramètre de la
-couche (une sorte d'état interne caché). Le second élément de la suite est
-ensuite traité par ce même neurone dont l'état caché a évolué suite au
-traitement du premier élément de la suite.
+\paragraph{Il faut une architecture capable de garder le passé en mémoire}
+
+On appelle réseau récurrent un neurone particulier qui prend en entrée une suite
+d'éléments, et à chaque étape de calcul renvoit une sortie et un état caché
+qu'il se renvoit dans une boucle de rétroaction. Ainsi, le traitement de
+l'élément suivant de l'entrée dépend de celui de l'élément courant.
 
 Si on \og déplie\fg l'exécution du problème, on réalise que la séquence passe en
 fait par un nombre de couches cachées égal au nombre d'éléments dans la suite!
@@ -302,7 +305,8 @@ question qui reste à traiter est le fonctionnement exact de la couche cachée.
 Il est possible de faire fonctionner cette couche cachée comme un réseau neuronal
 complétement relié classique avec une sortie et entrée supplémentaire
 représentant l'état caché, mais cela pose des problèmes d'évanouissement du
-gradient lors de la rétropropagation.
+gradient lors de la rétropropagation. Une unité caché qui résout ce problème et
+est largement utilisée dans la littérature est l'unité LSTM (ou ses dérivatifs) \cite{hochreiter1997long}.
 
 \begin{figure}[!tbp]
   \centering
@@ -320,8 +324,7 @@ gradient lors de la rétropropagation.
 
 \paragraph{Long Short-Term Memory (LSTM)}
 
-Une architecture de couche dont le comportement naturel est de se rappeler de ce
-qui s'est passé avant est exposée dans \cite{hochreiter1997long}. L'idée est qu'on a un état de
+L'idée est qu'on a un état de
 cellule, un état caché et une entrée. A chaque passage dans la couche, on calcule
 quel degré d'information il faut retenir de l'état de la cellule en fonction de
 l'état caché et de l'entrée (porte d'oubli). Ensuite on calcule s'il faut ajouter de
@@ -355,7 +358,7 @@ entrée au temps $t+1$, mais ce n'est pas le cas dans notre étude.
 
 \subsection{Domaine d'étude: Protéines}
 
-Comme exposé plusieurs fois dans ce rapport, une protéine est une chaîne
+A l'instar d'une phrase qui est chaîne de mots, une protéine est une chaîne
 d'acides aminés de longueur variable. Un acide aminé est une molécule chimique,
 et de tels acides aminés interviennent typiquement dans les séquences
 peptidiques. Ces acides ont chacun leur propriétés physico-chimiques
@@ -405,8 +408,8 @@ déterminent les transformations effectuées sur l'entrée.). Pour ce faire, on
 utilise typiquement le gradient de la fonction de coût. Cela peut se faire au
 travers de quelquechose d'aussi simple que la descente de gradient stochastique, mais cette
 dernière a de nombreux défauts. Dans cette article nous utiliserons les
-optimisations dites \texttt{adagrad} (très efficace dans les réseaux
-convolutifs) et \texttt{RMSProp} (très efficace dans les réseaux récurrents).
+optimisations dites \texttt{adagrad} (\cite{duchi2011adaptive})(très efficace dans les réseaux
+convolutifs) et \texttt{RMSProp} (\cite{hintonlecture}) (très efficace dans les réseaux récurrents).
 
 \paragraph{De la non linéarité}
 
@@ -747,7 +750,7 @@ fragments considérés suggère plusieurs choses:
 
 \begin{figure}
   \centering
-  \includegraphics[scale=0.3]{SingleOneRecHeat}
+  \includegraphics[scale=1.7]{SingleOneRecHeatf}
   \caption{Carte de corrélation sur les fragments individuels}
 \end{figure}
 
@@ -803,6 +806,10 @@ approches permettant d'essayer d'étudier quelles caractéristiques connues et
 mesurables par un expérimentateur se rapprochent de celles reconnues par
 l'auto-encodeur. Une telle approche pourrait être ré-utilisée dans d'autres
 domaines où les mécanismes en jeu demeurent relativement obscurs.
+
+\subsection{Méthodologie pour passer d'une représentation locale à globale}
+
+
 
 \subsection{Pistes de recherche}
 
