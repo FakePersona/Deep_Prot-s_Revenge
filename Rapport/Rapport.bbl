@@ -184,37 +184,6 @@
       \field{title}{A theoretically grounded application of dropout in recurrent neural networks}
       \field{year}{2015}
     \endentry
-    \entry{Gupta031906}{article}{}
-      \name{author}{3}{}{%
-        {{uniquename=0,hash=343602aabf9839aca0f134c63cb8a98a}{Gupta}{G\bibinitperiod}{Aman}{A\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=aef9f9a30b7bbf77d2bcb23de14493cb}{Wang}{W\bibinitperiod}{Haohan}{H\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=8331ae8ec683a3b33f57ea0c88dcf3af}{Ganapathiraju}{G\bibinitperiod}{Madhavi}{M\bibinitperiod}{}{}{}{}}%
-      }
-      \list{publisher}{1}{%
-        {Cold Spring Harbor Labs Journals}%
-      }
-      \strng{namehash}{caea11d77167b702e88e336254aa597c}
-      \strng{fullhash}{caea11d77167b702e88e336254aa597c}
-      \field{sortinit}{G}
-      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
-      \field{labelyear}{2015}
-      \field{datelabelsource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Genes play a central role in all biological processes. DNA microarray technology has made it possible to study the expression behavior of thousands of genes in one go. Often, gene expression data is used to generate features for supervised and unsupervised learning tasks. At the same time, advances in the field of deep learning have made available a plethora of architectures. In this paper, we use deep architectures pre-trained in an unsupervised manner using denoising autoencoders as a preprocessing step for a popular unsupervised learning task. Denoising autoencoders (DA) can be used to learn a compact representation of input, and have been used to generate features for further supervised learning tasks. We propose that our deep architectures can be treated as empirical versions of Deep Belief Networks (DBNs). We use our deep architectures to regenerate gene expression time series data for two different data sets. We test our hypothesis on two popular datasets for the unsupervised learning task of clustering and find promising improvements in performance.}
-      \field{journaltitle}{bioRxiv}
-      \field{title}{Learning structure in gene expression data using deep architectures, with an application to gene clustering}
-      \field{year}{2015}
-      \verb{doi}
-      \verb 10.1101/031906
-      \endverb
-      \verb{eprint}
-      \verb http://biorxiv.org/content/early/2015/11/16/031906.full.pdf
-      \endverb
-      \verb{url}
-      \verb http://biorxiv.org/content/early/2015/11/16/031906
-      \endverb
-    \endentry
     \entry{hamelryck2003pdb}{article}{}
       \name{author}{2}{}{%
         {{uniquename=0,hash=ff236dbcdc91c0630e8b9eadbf91c436}{Hamelryck}{H\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
@@ -239,9 +208,33 @@
       \field{pages}{2308\bibrangedash 2310}
       \range{pages}{3}
     \endentry
+    \entry{hinton2006reducing}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=1,hash=5aeb1de9b6c6f00a078230c628e6f41c}{Hinton}{H\bibinitperiod}{Geoffrey\bibnamedelima E}{G\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e5b17e5b7cb16c2e4abf9da0884e59b0}{Salakhutdinov}{S\bibinitperiod}{Ruslan\bibnamedelima R}{R\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{7d94a6305573df00594ff82172ebf3f9}
+      \strng{fullhash}{7d94a6305573df00594ff82172ebf3f9}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelyear}{2006}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{5786}
+      \field{title}{Reducing the dimensionality of data with neural networks}
+      \field{volume}{313}
+      \field{year}{2006}
+      \field{pages}{504\bibrangedash 507}
+      \range{pages}{4}
+    \endentry
     \entry{hintonlecture}{article}{}
       \name{author}{3}{}{%
-        {{uniquename=0,hash=9a8750ccdb2a4cf14d2655face1ce016}{Hinton}{H\bibinitperiod}{Geoffrey}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=1,hash=9a8750ccdb2a4cf14d2655face1ce016}{Hinton}{H\bibinitperiod}{Geoffrey}{G\bibinitperiod}{}{}{}{}}%
         {{uniquename=2,hash=064954ec85e6baaf21c4aa75b38d429c}{Srivastava}{S\bibinitperiod}{NiRsh}{N\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=fe49ec9b6f902b79d166c1f25405c088}{Swersky}{S\bibinitperiod}{Kevin}{K\bibinitperiod}{}{}{}{}}%
       }
@@ -328,8 +321,33 @@
       \field{pages}{2577\bibrangedash 2637}
       \range{pages}{61}
     \endentry
+    \entry{lecun2015deep}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=6a1aa6b7eab12b931ca7c7e3f927231d}{LeCun}{L\bibinitperiod}{Yann}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=40a8e4774982146adc2688546f54efb2}{Bengio}{B\bibinitperiod}{Yoshua}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=1,hash=9a8750ccdb2a4cf14d2655face1ce016}{Hinton}{H\bibinitperiod}{Geoffrey}{G\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{c6c75bd00ce5a488e91a749d8383b3df}
+      \strng{fullhash}{c6c75bd00ce5a488e91a749d8383b3df}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{7553}
+      \field{title}{Deep learning}
+      \field{volume}{521}
+      \field{year}{2015}
+      \field{pages}{436\bibrangedash 444}
+      \range{pages}{9}
+    \endentry
     \entry{lecun1998gradient}{article}{}
-      \name{author}{4}{}{%
+      \name{author}{4}{uniquelist=2}{%
         {{uniquename=0,hash=6a1aa6b7eab12b931ca7c7e3f927231d}{LeCun}{L\bibinitperiod}{Yann}{Y\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=ac762f2592005edf6bad58f566967c6c}{Bottou}{B\bibinitperiod}{Léon}{L\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=40a8e4774982146adc2688546f54efb2}{Bengio}{B\bibinitperiod}{Yoshua}{Y\bibinitperiod}{}{}{}{}}%
@@ -338,7 +356,7 @@
       \list{publisher}{1}{%
         {IEEE}%
       }
-      \strng{namehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{namehash}{c634f7170e29eef664835b861a39814a}
       \strng{fullhash}{c397b2e6efe8e5c6ca906410fc9e0ff9}
       \field{sortinit}{L}
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}

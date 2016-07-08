@@ -18,9 +18,6 @@
     "babel"
     "inputenc"
     "times"
-    "fontenc")
-   (LaTeX-add-bibitems
-    "Author1990"
-    "Someone2000"))
+    "fontenc"))
  :latex)
 

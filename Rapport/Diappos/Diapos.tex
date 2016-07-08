@@ -116,7 +116,8 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{Plan}
+\begin{frame}{Quelles applications pour les protéines? Que nous apprennent les
+    représentations latentes?}
   \tableofcontents[pausesections]
   % You might wish to add the option [pausesections]
 \end{frame}
@@ -143,7 +144,7 @@
 
 \subsection{Pourquoi l'apprentissage \og profond\fg?}
 
-\begin{frame}{Fonctionnement d'un neurone}
+\begin{frame}{Une unité de calcul à paramètres optimisables}
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
 
@@ -168,7 +169,7 @@
 
 \end{frame}
 
-\begin{frame}{Du réseau de neurones non profond au réseau de neurones profond}
+\begin{frame}{Représentation hiérarchiques par couches}
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
 
@@ -181,13 +182,14 @@
         \includegraphics[scale=0.1750]{../Figures/Shallow}
       \end{figure}
     }
-    \only<2-4>
+    \only<2>
     {
       \begin{figure}
         \centering
         \includegraphics[scale=0.1750]{../Figures/Deep}
       \end{figure}
     }
+
     \column{0.4\linewidth}
     \begin{itemize}
     \item Plusieurs couches de neurones
@@ -199,9 +201,9 @@
 
 \end{frame}
 
-\subsection{Entraînement non-supervisé}
+\subsection{Entraînement non-supervisé: Autoencodeurs et représentations latentes}
 
-\begin{frame}{Fixer une cible  de manière autonome}
+\begin{frame}{Acquérir des représentations latentes intéressantes}
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
 
@@ -216,7 +218,7 @@
     \begin{itemize}
     \item Non supervisé
     \item Encodage/Décodage
-    \item Représentation latente
+    \item \textbf{Représentation latente}
     \item Eviter d'encoder l'identité\pause
       \begin{itemize}
       \item Compression\pause
@@ -275,7 +277,10 @@
   \end{columns}
 \end{frame}
 
-\subsection{Application: Protéines}
+
+\section{Application aux protéines}
+
+\subsection{Qu'est-ce-qu'une protéine?}
 
 \begin{frame}{Plus qu'une chaîne d'acides aminés}
   % - A title should summarize the slide in an understandable fashion
@@ -288,6 +293,7 @@
     \item Acide aminés: molécules chimiques
     \item Structure primaire: chaîne d'acides aminés
     \item Structure secondaire: structures locales formé par les acides
+      (hélices-$\alpha$, brins-$\beta$, ...)
     \item Structure tertiaire: forme tridimensionnelle
     \end{itemize}
 \end{frame}
@@ -332,11 +338,9 @@
 
 \end{frame}
 
-\section{Etude réalisée}
+\subsection{Traiter des séquences peptidiques}
 
-\subsection{Séquences peptidiques}
-
-\begin{frame}{Traiter les protéines à partir de la structure primaire}
+\begin{frame}{Traiter des fragments courts pour étudier des chaînes longues}
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
 
@@ -510,7 +514,7 @@
     Perspectives\pause
     \begin{itemize}
     \item
-      Utilisation d'autres architectures utilisée en langages naturels.\pause
+      Utilisation d'autres architectures utilisées en langages naturels.\pause
     \item
       Influence des hyper paramètres.\pause
     \end{itemize}
@@ -524,31 +528,6 @@
 
 \section<presentation>*{\appendixname}
 \subsection<presentation>*{For Further Reading}
-
-\begin{frame}[allowframebreaks]
-  \frametitle<presentation>{For Further Reading}
-    y
-  \begin{thebibliography}{10}
-    
-  \beamertemplatebookbibitems
-  % Start with overview books.
-
-  \bibitem{Author1990}
-    A.~Author.
-    \newblock {\em Handbook of Everything}.
-    \newblock Some Press, 1990.
- 
-    
-  \beamertemplatearticlebibitems
-  % Followed by interesting articles. Keep the list short. 
-
-  \bibitem{Someone2000}
-    S.~Someone.
-    \newblock On this and that.
-    \newblock {\em Journal of This and That}, 2(1):50--100,
-    2000.
-  \end{thebibliography}
-\end{frame}
 
 \begin{frame}{Eviter le sur-entraînement}
   % - A title should summarize the slide in an understandable fashion

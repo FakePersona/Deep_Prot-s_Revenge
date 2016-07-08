@@ -2243,57 +2243,25 @@
     <bcf:citekey order="2">socher2011semi</bcf:citekey>
     <bcf:citekey order="3">NIPS2014_5346</bcf:citekey>
     <bcf:citekey order="4">Spencer:2015:DLN:2817095.2817106</bcf:citekey>
-    <bcf:citekey order="5">Gupta031906</bcf:citekey>
+    <bcf:citekey order="5">hinton2006reducing</bcf:citekey>
     <bcf:citekey order="6">Vincent:2008:ECR:1390156.1390294</bcf:citekey>
     <bcf:citekey order="7">lecun1998gradient</bcf:citekey>
     <bcf:citekey order="8">lecun1998gradient</bcf:citekey>
     <bcf:citekey order="9">lecun1998gradient</bcf:citekey>
     <bcf:citekey order="10">hochreiter1997long</bcf:citekey>
     <bcf:citekey order="11">DBLP:journals/corr/ChoMGBSB14</bcf:citekey>
-    <bcf:citekey order="12">duchi2011adaptive</bcf:citekey>
-    <bcf:citekey order="13">hintonlecture</bcf:citekey>
-    <bcf:citekey order="14">srivastava2014dropout</bcf:citekey>
-    <bcf:citekey order="15">gal2015theoretically</bcf:citekey>
-    <bcf:citekey order="16">chollet2015keras</bcf:citekey>
-    <bcf:citekey order="17">2016arXiv160502688full</bcf:citekey>
-    <bcf:citekey order="18">tensorflow2015-whitepaper</bcf:citekey>
-    <bcf:citekey order="19">fox2014scope</bcf:citekey>
-    <bcf:citekey order="20">Cock01062009</bcf:citekey>
-    <bcf:citekey order="21">hamelryck2003pdb</bcf:citekey>
-    <bcf:citekey order="22">kabsch1983dictionary</bcf:citekey>
-    <bcf:citekey order="23">vincent2010stacked</bcf:citekey>
-    <bcf:citekey order="24">jian2013predicting</bcf:citekey>
-    <bcf:citekey order="25">DBLP:journals/corr/ChoMGBSB14</bcf:citekey>
-    <bcf:citekey order="26">bahdanau2014neural</bcf:citekey>
-  </bcf:section>
-  <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
-  <bcf:sorting>
-    <bcf:sort order="1">
-      <bcf:sortitem order="1">presort</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="2" final="1">
-      <bcf:sortitem order="1">sortkey</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="3">
-      <bcf:sortitem order="1">sortname</bcf:sortitem>
-      <bcf:sortitem order="2">author</bcf:sortitem>
-      <bcf:sortitem order="3">editor</bcf:sortitem>
-      <bcf:sortitem order="4">translator</bcf:sortitem>
-      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="6">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="4">
-      <bcf:sortitem order="1">sortyear</bcf:sortitem>
-      <bcf:sortitem order="2">year</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="5">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="6">
-      <bcf:sortitem order="1" pad_side="left" pad_width="4" pad_char="0">volume</bcf:sortitem>
-      <bcf:sortitem order="2">0000</bcf:sortitem>
-    </bcf:sort>
-  </bcf:sorting>
-  </bcf:sortlist>
-</bcf:controlfile>
+    <bcf:citekey order="12">fox2014scope</bcf:citekey>
+    <bcf:citekey order="13">duchi2011adaptive</bcf:citekey>
+    <bcf:citekey order="14">hintonlecture</bcf:citekey>
+    <bcf:citekey order="15">lecun2015deep</bcf:citekey>
+    <bcf:citekey order="16">srivastava2014dropout</bcf:citekey>
+    <bcf:citekey order="17">gal2015theoretically</bcf:citekey>
+    <bcf:citekey order="18">chollet2015keras</bcf:citekey>
+    <bcf:citekey order="19">2016arXiv160502688full</bcf:citekey>
+    <bcf:citekey order="20">tensorflow2015-whitepaper</bcf:citekey>
+    <bcf:citekey order="21">fox2014scope</bcf:citekey>
+    <bcf:citekey order="22">Cock01062009</bcf:citekey>
+    <bcf:citekey order="23">hamelryck2003pdb</bcf:citekey>
+    <bcf:citekey order="24">kabsch1983dictionary</bcf:citekey>
+    <bcf:citekey order="25">jian2013predicting</bcf:citekey>
+    <bcf:citekey order="26">vincent2010stacked</bcf:citekey>

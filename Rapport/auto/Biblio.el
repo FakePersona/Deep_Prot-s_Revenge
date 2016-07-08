@@ -3,6 +3,8 @@
  (lambda ()
    (LaTeX-add-bibitems
     "hintonlecture"
+    "lecun2015deep"
+    "hinton2006reducing"
     "duchi2011adaptive"
     "bahdanau2014neural"
     "kabsch1983dictionary"

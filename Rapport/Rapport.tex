@@ -62,8 +62,7 @@
 \sloppy
 
 %opening
-\title{Application des techniques d'appentissage profonds à l'étude de la
-  classification de protéines}
+\title{Apprentissage profond et acquisition de représentations latentes de séquences peptidiques}
 \author{Rémy Sun}
 
 
@@ -84,38 +83,50 @@
 
 \section*{Introduction}
 
-La bonne compréhension des mécanismes régissant le fonctionnement des protéines existantes est un enjeu
-important dans de nombreux domaines. %Je peut avoir un exemple?
-Cependant il est peu réaliste au vu des moyens actuels de procéder à l'étude
-détaillée de tous les mécanismes en jeu pour chaque protéine en raison du coût
-élevé des manipulations nécessaires. Néanmoins, nous
-disposons d'un grand nombre de séquences peptidiques de protéines, qui influent
-directement sur les fonctions d'une protéine.
+% La bonne compréhension des mécanismes régissant le fonctionnement des protéines existantes est un enjeu
+% important dans de nombreux domaines. %Je peut avoir un exemple?
+% Cependant il est peu réaliste au vu des moyens actuels de procéder à l'étude
+% détaillée de tous les mécanismes en jeu pour chaque protéine en raison du coût
+% élevé des manipulations nécessaires. Néanmoins, nous
+% disposons d'un grand nombre de séquences peptidiques de protéines, qui influent
+% directement sur les fonctions d'une protéine.
+
+Les séquences peptidiques d'un grand nombre de protéines sont connues, le
+séquençage pouvant être effectué simplement. Néanmoins, l'étude de caractéristiques plus
+fines demande la mise en oeuvre de moyens plus conséquent ce qui rend peu
+réaliste leur mesure manuelle à la même échelle que pour les séquences
+peptidiques. Il est donc important de mettre en oeuvre des techniques
+d'inférence automatique pour ces caractéristiques qui ont une influence sur la
+fonction de la protéine. Un point de départ intéressant est l'utilisation des
+séquences peptidiques, connues, pour inférer les autres caractéristiques.
 
 Les techniques dites d'apprentissage profond ont permis de grand progrès dans de
 nombreux domaines qui vont de la reconnaissance d'image à l'étude de langages
 naturels (\cite{DBLP:journals/corr/ChoMGBSB14}, \cite{socher2011semi}, \cite{NIPS2014_5346}). Néanmoins, les
 protéines demeurent un domaine relativement inexploré par l'apprentissage
 profond à l'exception de quelques travaux
-(\cite{Spencer:2015:DLN:2817095.2817106}) malgré un certain nombre de travaux
-sur l'expression des gènes (\cite{Gupta031906}).
+(\cite{Spencer:2015:DLN:2817095.2817106}) qui se concentrent essentiellement sur
+des études locales de séquences peptidiques pour prédire des caractéristiques locales.
 
-L'applications de techniques dévelloppées en langage naturel ou dans d'autres
-branches de la bioinformatique permettent de faire des recoupements sémantiques,
-de la classification ou même de la prédiction sur des chaînes de \og mots\fg ou
-d'acides aminés. De fait, il semble raisonnable de penser qu'une étude des
-protéines avec des techniques similaires devraient permettre de similaires
-progrès dans la compréhension des mécanismes gouvernants le fonctionnement des
-protéines dont la séquence peptidique est fortement liée au fonctionnement.
-
+Les applications existantes d'apprentissage profond, en langages naturels par
+exemple, donnent des manières d'exploiter des suites d'éléments.
 Nous nous sommes donc interessés dans ce stage à l'applications de telles techniques
-aux familles de protéines. Notre intêret ne portait pas seulement sur la
+aux familles de protéines. Les séquences peptidiques ne se résument pas à un
+simple enchaînement d'acides aminés, mais à une forme d'information extrêment
+expressive puisque chaque acide aminé possède des propriétés physico-chimiques
+propres. Notre intêret ne portait pas sur la
 classification de telles familles ou la reconstitution d'une protéine à partir
-d'un séquençage bruité, mais aussi sur l'étude de la possibilité de comprendre
-des mécanismes des protéines à partir des représentations intermédiaires acquises par les
-algorithmes d'apprentissages profonds entraînés.
+d'un séquençage bruité en tant que tels, mais surtout sur l'acquisition de
+représentations de protéines, et la façon dont ces représentations exploitent
+ces caractéristiques physico-chimiques.
 
-\newpage
+Dans un premier temps, nous expliquerons notre domaine d'étude - à savoir,
+l'apprentissage profond et les séquences peptidiques - principal (\textbf{VOIR
+  SECTION 1}), avant d'expliciter les choix que nous avons fait pour traiter
+localement puis globalement les protéines (\textbf{VOIR SECTION 2}). Enfin, nous
+exposerons nos résultats et les conclusion préliminaires que nous pouvons en
+tirer (\textbf{VOIR SECTION 3}).
+
 
 \section{Apprentissage profond?}
 
@@ -125,7 +136,7 @@ algorithmes d'apprentissages profonds entraînés.
 \centering  
   \begin{minipage}[b]{0.3\textwidth}
     \includegraphics[width=0.9\textwidth]{Neuron}
-    \caption{Exemple de neurone}
+    \caption{Exemple de neurone formel}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.3\textwidth}
@@ -180,10 +191,11 @@ comprendre pourquoi cette façon de procéder est intéressantes: nous comprenon
 des choses simples avant de comprendre les choses plus complexes à partir de ce
 qui a déjà été appris.
 
-Néanmoins, cela a longtemps posé des problémes d'évanouissement du gradient sur les
+Néanmoins, cela a longtemps posé des problémes d'évanouissement ou explosion du gradient sur les
 réseaux profonds: la dérivée partielle sur les paramétres des couches les plus
-basses est très faible (puisque dépendante de celle de la couche
-supérieure, elle même dépendante d'une autre), et il est donc difficile d'ajuster ces couches
+basses est calculée multiplicativement à partir de celle sur des paramètres des
+couches supérieures (puisque dépendante de celle de la couche
+supérieure, elle même dépendante d'une autre...), et il est donc difficile d'ajuster ces couches
 bas-niveau, ce qui limite l'intérêt même de l'apprentissage profond.
 
 \subsection{Entraînement non supervisé}
@@ -210,7 +222,7 @@ l'identité). Pour éviter cela on dispose de plusieurs moyens:
 
 \begin{itemize}
 \item Forcer l'encodeur à encoder l'entrée en une représentation intermédiaire
-  de dimension inférieure. Ainsi, on s'assure de ne pas pouvoir juste propager
+  de dimension inférieure (\cite{hinton2006reducing}). Ainsi, on s'assure de ne pas pouvoir juste propager
   l'identité. Mieux encore, la représentation intermédiaire, ``condensée'' peut
   permettre de découvrir des ``points robustes'' de ce qu'on est en train
   d'apprendre.
@@ -358,6 +370,9 @@ entrée au temps $t+1$, mais ce n'est pas le cas dans notre étude.
 
 \subsection{Domaine d'étude: Protéines}
 
+Notre étude s'est porté sur la façon d'appliquer les diverses techniques
+précédemment mentionnées pour traiter les cas des protéines.
+
 A l'instar d'une phrase qui est chaîne de mots, une protéine est une chaîne
 d'acides aminés de longueur variable. Un acide aminé est une molécule chimique,
 et de tels acides aminés interviennent typiquement dans les séquences
@@ -372,17 +387,20 @@ d'hélices), de feuilles-$\beta$ ou d'autres structures tels que retournements.
 On parle alors de structure secondaire de la protéine.
 
 La façon dont l'ensemble de ces acides et structures locales s'organisent dans
-l'espace constituent la structure ternaire de la protéine. On peut décomposer la
-classe structurale de la protéine à partir de la structure secondaire:
+l'espace constituent la structure tertiaire de la protéine. On peut décomposer la
+classe structurale (repertoriée par \cite{fox2014scope} par exemple) de la protéine à partir de la structure secondaire:
 $all-\alpha$, $all-\beta$, $\alpha /\beta$, $\alpha + \beta$, petite protéine,
-$peptide$.
+$peptide$, ...
 
-Les chaînes peptidiques sont très longues et toute sous-chaîne de la chaîne
-peptidique ne présenta pas nécessairement d'intéret. Typiquement, on peut
-définir des \texttt{domaines}, c'est-à-dire des sous-chaînes de quelques
-centaines d'acides aminés. La grande majorité de notre travail s'attache à
+Nous n'avons cependant pas étudié les séquences peptidiques entières des
+protéines. Une façon de voir les choses est de dire que les protéines sont des
+assemblages de chaînes, généralement assez longues, d'acides aminés. En faisant
+des études d'alignement sur les séquences peptidiques, il est possible de
+remarquer que des même chaines longues apparaissent dans différentes protéines.
+On parle alors de domaine pour désigner cette chaîne.
+ La grande majorité de notre travail s'attache à
 étudier ces domaines, bien qu'il ait fallu trouver des moyens de contourner les
-problèmes posés par la longueur importante de tels domaines. 
+problèmes posés par la longueur malgré tout importante de tels domaines. 
 
 \subsection{Initialisation et optimisation des réseaux d'apprentissage profond}
 
@@ -423,8 +441,9 @@ notemment l'alignement ce qui peut se révéler être un grand problème). De fa
 il y a toujours \og à la fin\fg d'une couche une fonction dite \og
 d'activation\fg qui opére une transformation non-linéaire sur la sortie.
 Traditionnellement, on applique une sigmoïde ou une tangente hyperbolique, mais
-Hinton a montré qu'il est plus judicieux d'utiliser une fonction de seuillage
-\texttt{ReLU} (Rectified Linear Unit).
+Hinton a montré qu'il est plus judicieux pour des raisons d'écrasement ou
+explosion de gradient d'utiliser une fonction de seuillage
+\texttt{ReLU} (Rectified Linear Unit, \cite{lecun2015deep}).
 
 \paragraph{Eviter le sur-apprentissage}
   
@@ -453,7 +472,7 @@ Néanmoins, il y est proposé d'effectuer un oubli dans la dépendance temporell
 du réseau (c'est à dire au niveau de l'état caché) ce qui permet d'obtenir des
 résultats similaires à la technique précédente pour des réseaux classiques.
 
-\section{Travail réalisé}
+\section{Etude réalisée}
 
 \subsection{Matériel}
 
@@ -519,7 +538,11 @@ fait que deux acides sont proches du point de vue de leur représentation, ou du
 fait que trois acides sont equidistants. En effet, la représentation précédente
 posait le problème inverse de l'indexage: pourquoi tous les acides sont-ils équidistants?
 
-\subsection{Choix des architectures d'apprentissage profond}
+\subsection{Choix des types d'architectures d'apprentissage profond}
+
+Nous avons précédemment inventorié différentes architectures d'apprentissage
+profond, et nous allons maintenant expliquer pourquoi celles que nous avons
+choisis d'utiliser semblent adaptées au problème étudié.
 
 Dans le cadre du traitement de séquences peptidiques, il semble tout indiqué
 d'utiliser des réseaux récurrents puisqu'une structure temporelle semble
@@ -545,6 +568,11 @@ En outre, l'idée de pouvoir utiliser une \og fenêtre glissante\fg pour étudie
 des fragments d'une chaîne plus longue a été préservée.
 
 \subsection{Etude préliminaire sur séquences artificielles}
+
+Afin d'orienter notre recherque sur les séquences peptidiques et mieux comprendre le fonctionnement des réseaux neuronaux et leurs
+comportements face à différentes situations, nous avons procédé à quelques
+expérimentations préliminaires. sur deux types de tâches: Un entraînement
+d'autoencodeurs et un entraînement de classifcateurs.
 
 Nous avons généré aléatoirement plusieurs jeux de données pour comparer les
 capacités de diverses architectures d'auto-encodeurs et classificateurs. Nous
@@ -577,8 +605,10 @@ caractéres tirés aléatoirement.
 Nous avons étudié deux architectures de classificateurs, qui correspondent
 principalement à l'encodeur des autoencodeurs précédents auxquels un neurone
 final est ajouté pour prendre la décision finale de classification. Le jeu de
-donnée fourni correspondait à ue moitiée de chaîne suivant une règle spécifique
-premières lettres fixes ou copie), et d'une moitiée de chaînes purement aléatoires.
+donnée fourni correspondait à une moitiée de chaîne suivant une règle spécifique
+premières lettres fixes ou copie), et d'une moitiée de chaînes purement
+aléatoires. L'objectif était de savoir si le classificateur était à même de
+repérer des corrélations entre différentes positions.
 
 La classification fonctionne bien dans les deux cas. De manière assez
 intéressante, cela veut dire que les réseaux convolutionnels sont bien capables
@@ -587,40 +617,31 @@ décodeur récurrent n'est pas capable de reconstituer la chaîne à l'aide de
 l'information contenu dans la représentation latente. Il est à noter cependant
 que les minimums locaux ont présenté un problème avec une initialisation
 aléatoire uniforme simple, puisque le classificateur avait tendance à toujours
-répondre la même chose 'on constatait donc un point de selle de la fonction à
+répondre la même chose. On constatait donc un point de selle de la fonction à
 minimiser par le réseau.
 
-\subsection{Modèles entraînés sur les protéines}
+% \subsection{Clustering de protéines}
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-  \includegraphics[width=0.45\textwidth]{Class}
-  \caption{Classificateur employé}
-\end{wrapfigure}
 
-Les chaînes protéiques étudiées sont longues (jusqu'à 300 caractères). Les
-auto-encodeurs sont entraînés non pas sur les chaîne protéiques mais sur des
-fragments de chaîne peptidique de taille 11, ce qui facilite les calculs et
-correspond à une fenêtre permettant d'observer quelques structures secondaires.
-De plus, cela présente l'avantage significatif d'augmenter très
-significativement le nombre d'exemples d'entraînement disponibles, ce qui est
-très important en apprentissage profond. Les autoencodeurs décrits dans l'étude
-préliminaire sont ceux qui ont été employés à nouveau dans cette étude des
-fragments. Il peut paraître surprenant d'utiliser l'autoencodeur convolutionael
-ici alors qu'il n'avait pas réussit à accomplir sa tâche désigné. Néanmoins,
-cela ne veut pas dire qu'il n'a pas pu apprendre de représentation intermédiaire
-intéressante. Ainsi, nous avons tout de même entrainé un autoencodeur
-convolutionel dans l'espoir de pouvoir en faire une étude par la suite. Deux
-représentation ont été employées pour les acides aminés: celle basées sur les
-caractères physicochimiques décrite plus haut, et une représentation One-Hot
+% En première approximation, on pourrait penser retrouver un hyperplan ou une
+% nappe aparentable à une feature connue. Néanmoins une telle étude est difficile
+% à exploiter. Nous nous sommes penchés sur la piste du clustering
+% de protéines en fonction de leur représentation intermédiaire. En effet, si on
+% regroupe ensemble des protéines \og proches\fg du point de vue de leur
+% représentation intermédiaire, il est peut-être possible de remarquer
+% des points remarquables dans la structure de protéines qui pourront être
+% ré-utilisés de manière indépendante de l'apprentissage profond plus tard.
 
-Pour le classificateur, nous avons
-utilisé l'encodeur de l'autoencodeur précédent comme ``fenêtre glissante''
-avant de décider avec un neurone final. L'idée est que pour chaque facteur de
-taille 11 d'une chaîne peptidique, on applique l'encodeur de l'auto-encodeur
-entraîné de manière non supervisée. De cette manière, nous espérons éviter
-autant que possible une mauvaise initialisation du réseau comme décrit dans \cite{vincent2010stacked}
+% Un simple algorithme de K-means permet de faire le découpage en parties de
+% l'ensemble d'apprentissage. Pour étudier les différentes parties de l'espace
+% latent ainsi découpées, on procéde à une analyse de la fréquence d'apparition de
+% fragments d'un domaine donnée (c'est-à-dire le rapport entre le nombre
+% d'apparitions dans le groupe et le nombre de fragments totaux du domaine, afin
+% d'éviter d'introduire un biais favorisant les domaines longs) et à une étude du
+% nombre fragments comprenant uniquement des acides faisant partie d'une
+% hélice-$\alpha$ ou d'une feuille-$\beta$
 
-\subsection{Clustering de protéines}
+\subsection{Etude de la corrélation de paramètres}
 
 Les auto-encodeurs générent un représentation intermédiaire dans un premier
 temps. Nous avons voulu étudier cette représentation intermédiaire pour en
@@ -628,29 +649,13 @@ apprendre plus sur les choses auquelles l'auto-encodeur fait attention quand il
 encode la protéine et qui lui permettent de reconstruire par la suite la
 protéine. \cite{jian2013predicting} a déjà été effectuée sur la capacité de réseaux d'auto-encodeurs
 empilés à classifier la structure secondaire de protéines, mais cette étude ne
-s'est malheureusement pas attardé sur le problème de la représentation intermédiaire.
+s'est malheureusement pas attardé sur le problème de la représentation
+intermédiaire.
 
-En première approximation, on pourrait penser retrouver un hyperplan ou une
-nappe aparentable à une feature connue. Néanmoins une telle étude est difficile
-à exploiter. Nous nous sommes penchés sur la piste du clustering
-de protéines en fonction de leur représentation intermédiaire. En effet, si on
-regroupe ensemble des protéines \og proches\fg du point de vue de leur
-représentation intermédiaire, il est peut-être possible de remarquer
-des points remarquables dans la structure de protéines qui pourront être
-ré-utilisés de manière indépendante de l'apprentissage profond plus tard.
-
-Un simple algorithme de K-means permet de faire le découpage en parties de
-l'ensemble d'apprentissage. Pour étudier les différentes parties de l'espace
-latent ainsi découpées, on procéde à une analyse de la fréquence d'apparition de
-fragments d'un domaine donnée (c'est-à-dire le rapport entre le nombre
-d'apparitions dans le groupe et le nombre de fragments totaux du domaine, afin
-d'éviter d'introduire un biais favorisant les domaines longs) et à une étude du
-nombre fragments comprenant uniquement des acides faisant partie d'une
-hélice-$\alpha$ ou d'une feuille-$\beta$
-
-\subsection{Etude de la corrélation de paramètres}
-
-Une autre façon de relever des caractéristiques sur la représentation
+Une première étude sur la façon dont les représentations latentes se
+regroupaient dans l'espace avec des méthodes clustering ne s'est pas avérée
+révéler un quelconque critère d'ordonnancement des fragments. 
+Une façon de relever des caractéristiques sur la représentation
 intermédiaire acquises est d'en étudier les corrélations existant entre ses
 caractéristiques et des paramètres liés au fragment de protéine étudié. Nous
 avons décidé d'étudier les paramètres de la représentation intermédiaire
@@ -665,7 +670,7 @@ d'un couple de fragments.
 Pour ce qui est des caractéristiques propres à un fragment, nous avons étudié
 son hydropathie moyenne, sa charge moyenne, la présence d'acides aminés dans la
 chaîne peptidique (regroupés en 5 catégories: Aliphatic, Aromatic, Neutral,
-Acidic, ) et le fait que la chaîne est uniquement composée d'acides apprtenant à
+Acidic, Basic) et le fait que la chaîne est uniquement composée d'acides apprtenant à
 une hélice-$\alpha$ ou à une feuille-$\beta$. Ce dernier point a été fait à
 l'aide l'outil DSSP introduit au début de cette section.
 
@@ -679,10 +684,39 @@ aux $carbones-\alpha$).
 
 \subsection{Autoencodeurs}
 
+\subsubsection{Modèle entraînés}
+
+Les chaînes protéiques étudiées sont longues (jusqu'à 300 caractères). Les
+auto-encodeurs sont entraînés non pas sur les chaîne protéiques mais sur des
+fragments de chaîne peptidique de taille 11, ce qui facilite les calculs et
+correspond à une fenêtre permettant d'observer quelques structures secondaires.
+De plus, cela présente l'avantage significatif d'augmenter très
+significativement le nombre d'exemples d'entraînement disponibles, ce qui est
+très important en apprentissage profond. 
+
+Les autoencodeurs décrits dans l'étude
+préliminaire sont ceux qui ont été employés à nouveau dans cette étude des
+fragments. Il peut paraître surprenant d'utiliser l'autoencodeur convolutionel
+ici alors qu'il n'avait pas réussit à accomplir sa tâche désigné. Néanmoins,
+cela ne veut pas dire qu'il n'a pas pu apprendre de représentation intermédiaire
+intéressante. Ainsi, nous avons tout de même entrainé un autoencodeur
+convolutionel dans l'espoir de pouvoir en faire une étude par la suite. Deux
+représentation ont été employées pour les acides aminés: celle basées sur les
+caractères physico-chimiques décrite plus haut pour l'autoencodeur récurrent, et
+une représentation One-Hot pour les deux architecture proposées
+
+Les entraînements ont été effectués sur 100 \texttt{epochs} (cycle
+d'entraînement sur les exemples) avec des paramètres de \texttt{dropout} de 0.1
+à chaque fois. Les encodeurs récurrents sont constitué de 3 réseaux récurrents
+projetant l'entrée dans un espace latent de dimension 20,
+tandis que l'encodeur convolutionnel est constitué de 5 couches convolutionnelles
+de paramètres précisés en annexe. Le décodeur est à chaque fois constitué d'un
+réseau récurrent simple.
+
 \subsubsection{Capacité à reconstituer}
 
-L'entraînement de l'autoencodeur récurrent a rapidement donné des résultats très
-satisfaisant en termes de reconstitution des fragments  avec une représentation
+L'entraînement de l'autoencodeur récurrent à représentation One-hot a rapidement donné des résultats très
+satisfaisants en termes de reconstitution des fragments  avec une représentation
 latente de dimensions raisonnablement faible (20 dimensions). L'entraînement des
 autres auto-encodeurs a par contre nécessité plus d'efforts, dont une
 initialisation aléatoire pertinente du réseau.
@@ -717,12 +751,11 @@ représentation physico-chimique puisque l'apprentissage se fait sur un alphabet
 récurrent sur représentation \texttt{one-hot} montre une amélioration de
 performace de $50\%$ selon le critére avancé.
 
-\subsubsection{Clustering}
-
-Les résultats ne semblent pas montrer une quelconque corrélation entre le type
-de la protéine d'origine du fragment et sa représentation dans un groupe.
-
 \subsubsection{Corrélations}
+
+Les cartes de corrélations obtenues sont présentées dans ce rapport en annexe à
+l'exception de celle pous des fragments individuels dans le cas de
+l'autoencodeur récurrent à représentation one-hot.
 
 \paragraph{Etude de fragments individuels}
 
@@ -773,11 +806,47 @@ représentation intermédiaire sur les fragments de protéines. L'absence de tel
 relation pourrait indiquer que, du point de vue de l'auto-encodeur du moins, un
 telle information est d'importance secondaire pour l'encodage et décodage des protéines.
 
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.3]{PairOneRecHeat}
-  \caption{Carte de corrélation sur les fragments individuels}
+\subsection{Classificateur}
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+  \includegraphics[width=0.45\textwidth]{Class}
+  \caption{Classificateur employé}
+\end{wrapfigure}
+
+\subsubsection{Modèle entraîné}
+
+Pour le classificateur, nous avons
+utilisé l'encodeur de l'autoencodeur précédent comme ``fenêtre glissante''
+avant de décider avec un neurone final. L'idée est que pour chaque facteur de
+taille 11 d'une chaîne peptidique, on applique l'encodeur de l'auto-encodeur
+entraîné de manière non supervisée. De cette manière, nous espérons éviter
+autant que possible une mauvaise initialisation du réseau comme décrit dans \cite{vincent2010stacked}
+
+Le classificateur en lui-même dispose de 4 couches (dont le détail des
+paramètres est donné en annexe) et le \texttt{dropout est encore fixé à 0.1}
+
+\subsubsection{Améliorations de performances par pré-entraînement}
+
+\begin{figure}[!tbp]
+\centering  
+  \begin{minipage}[b]{0.3\textwidth}
+    \includegraphics[width=0.9\textwidth]{SupClass}
+    \caption{Performance pour le classificateur non pré-entraîné}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{SpeClass}
+    \caption{Performance pour le classificateur pré-entraîné avec encodeur
+      récurrent à représentation one-hot}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{ConvClass}
+    \caption{Performance pour le classificateur pré-entraîné avec encodeur
+      convolutionnel à représentation one-hot}
+  \end{minipage}
 \end{figure}
+
 
 \section{Contribution}
 
