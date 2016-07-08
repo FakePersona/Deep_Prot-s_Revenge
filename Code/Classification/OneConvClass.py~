@@ -97,33 +97,61 @@ print("Creating dummy model...")
 dum = Sequential()
 
 #Recurrent encoder
-dum1 = recurrent.LSTM(encoding_dim, input_shape=(11, ACIDS), return_sequences=True, dropout_W=0.1, dropout_U=0.1)
+dum1 = Convolution1D(10, 3, activation='relu', input_shape=(11, ACIDS))
 dum.add(dum1)
+dum.add(Dropout(0.2))
 
-dum2 = recurrent.LSTM(encoding_dim, return_sequences=True, dropout_W=0.1, dropout_U=0.1)
+dum2 = Convolution1D(10, 2, activation='relu')
 dum.add(dum2)
+dum.add(Dropout(0.1))
 
-dum3 = recurrent.LSTM(encoding_dim, dropout_W=0.1, dropout_U=0.1)
+dum3 = Convolution1D(13, 2, activation='relu')
 dum.add(dum3)
+dum.add(Dropout(0.1))
+
+dum4 = Convolution1D(3, 2, activation='relu')
+dum.add(dum4)
+dum.add(Dropout(0.1))
+
+dum5 = Convolution1D(6, 2, activation='relu')
+dum.add(dum5)
+dum.add(Dropout(0.2))
+
+dum.add(Flatten())
+
+dum6 = Dense(encoding_dim)
+dum.add(dum6)
 
 dum.add(RepeatVector(11))
 
 #And decoding
 dum.add(recurrent.LSTM(ACIDS, return_sequences=True))
 
-dum.add(TimeDistributed(Dense(ACIDS)))
-
-dum.add(Activation('softmax'))
-
-dum.load_weights("ConvRecOne.h5")
+dum.load_weights("ConvOne.h5")
 
 print("Creating actual model")
 
 model = Sequential()
 
-model.add(TimeDistributed(dum1, input_shape = (140, 11, ACIDS)))
+model.add(TimeDistributed(dum1), input_shape = (140, 11, 26))
+model.add(TimeDistributed(Dropout(0.2)))
+
 model.add(TimeDistributed(dum2))
+model.add(TimeDistributed(Dropout(0.1)))
+
 model.add(TimeDistributed(dum3))
+model.add(TimeDistributed(Dropout(0.1)))
+
+model.add(TimeDistributed(dum4))
+model.add(TimeDistributed(Dropout(0.1)))
+
+model.add(TimeDistributed(dum5))
+model.add(TimeDistributed(Dropout(0.2)))
+
+model.add(TimeDistributed(Flatten()))
+
+model.add(TimeDistributed(dum6))
+
 
 model.add(Convolution1D(30, 5, activation='relu'))
 model.add(Dropout(0.2))
