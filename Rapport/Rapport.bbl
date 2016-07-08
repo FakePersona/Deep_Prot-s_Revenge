@@ -19,6 +19,30 @@
 
 \refsection{0}
   \sortlist{nyt}{nyt}
+    \entry{asgari2015continuous}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=e4a8db5d5f58cc8365efaf61d072e362}{Asgari}{A\bibinitperiod}{Ehsaneddin}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8a87568c9ae3b29ae5a9b4b0efcd8d5b}{Mofrad}{M\bibinitperiod}{Mohammad\bibnamedelima RK}{M\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science}%
+      }
+      \strng{namehash}{51e9ad6043507c8a4809301b9689abba}
+      \strng{fullhash}{51e9ad6043507c8a4809301b9689abba}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PloS one}
+      \field{number}{11}
+      \field{title}{Continuous Distributed Representation of Biological Sequences for Deep Proteomics and Genomics}
+      \field{volume}{10}
+      \field{year}{2015}
+      \field{pages}{e0141287}
+      \range{pages}{-1}
+    \endentry
     \entry{bahdanau2014neural}{article}{}
       \name{author}{3}{}{%
         {{uniquename=0,hash=6d80adec79a13a33e73215c5f46f1605}{Bahdanau}{B\bibinitperiod}{Dzmitry}{D\bibinitperiod}{}{}{}{}}%

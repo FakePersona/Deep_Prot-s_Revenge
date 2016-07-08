@@ -63,7 +63,7 @@
 
 %opening
 \title{Apprentissage profond et acquisition de représentations latentes de séquences peptidiques}
-\author{Rémy Sun}
+\author{Rémy Sun \and sous la direction de François Coste}
 
 
 
@@ -72,10 +72,14 @@
 \maketitle
 
 \begin{abstract}
-  L'application des techniques d'apprentissage profond à des chaînes peptidiques
-  demeure un domaine peu exploré. Nous avons cherché à trouvé des
-  caractéristiques importante à l'aide d'auto-encodeurs et avons étudié la
-  possibilité d'utiliser des architecture profonde pour la classifictation
+  Les grands succès des techniques d'apprentissage profond rendent intéressant
+  l'étude de leur applicabilité à l'étude de séquences peptidiques où les
+  applications existantes sont surtout locales. Ceci a motivé une étude des représentations latentes de séquences
+  peptidiques acquise par des techniques d'apprentissage profond pour
+  pré-entraîner fragment par fragment un classificateur agissant sur une tâche
+  globale. Cette représentation latente s'est avérée être corrélé à des
+  caractéristiques physico-chimiques des fragments et amélioré grandement les
+  performances d'un classificateur convolutionnel.
   \begin{keywords}
     Deep Learning; Protéines; Séquence
   \end{keywords}
@@ -114,9 +118,8 @@ Nous nous sommes donc interessés dans ce stage à l'applications de telles tech
 aux familles de protéines. Les séquences peptidiques ne se résument pas à un
 simple enchaînement d'acides aminés, mais à une forme d'information extrêment
 expressive puisque chaque acide aminé possède des propriétés physico-chimiques
-propres. Notre intêret ne portait pas sur la
-classification de telles familles ou la reconstitution d'une protéine à partir
-d'un séquençage bruité en tant que tels, mais surtout sur l'acquisition de
+propres. Afind e pouvoir effectuer une étude globale sur la classification de
+telles familles, notre interêt s'est surtout porté sur l'acquisition de
 représentations de protéines, et la façon dont ces représentations exploitent
 ces caractéristiques physico-chimiques.
 
@@ -830,7 +833,7 @@ paramètres est donné en annexe) et le \texttt{dropout est encore fixé à 0.1}
 \begin{figure}[!tbp]
 \centering  
   \begin{minipage}[b]{0.3\textwidth}
-    \includegraphics[width=0.9\textwidth]{SupClass}
+    \includegraphics[width=1.1\textwidth]{SupClass}
     \caption{Performance pour le classificateur non pré-entraîné}
   \end{minipage}
   \hfill
@@ -847,10 +850,9 @@ paramètres est donné en annexe) et le \texttt{dropout est encore fixé à 0.1}
   \end{minipage}
 \end{figure}
 
+\subsection{Contribution principales}
 
-\section{Contribution}
-
-\subsection{Etude de représentations latentes}
+\paragraph{Etude de représentations latentes}
 
 Les représentations latentes des auto-encodeurs sont typiquement utilisées pour
 obtenir une représentation caractérisant des éléments bas niveaux intéressant
@@ -876,11 +878,27 @@ mesurables par un expérimentateur se rapprochent de celles reconnues par
 l'auto-encodeur. Une telle approche pourrait être ré-utilisée dans d'autres
 domaines où les mécanismes en jeu demeurent relativement obscurs.
 
-\subsection{Méthodologie pour passer d'une représentation locale à globale}
+\paragraph{Méthodologie pour passer d'une représentation locale à globale}
 
+La grande majorité des études réalisées sur les protéines dans le cadre de
+l'apprentissage profond sont des études sur des fragments locaux. Cela se
+justifie par le manque d'exemples labélisés pour faire de l'apprentissage
+profond, et la difficulté d'étudier des chaînes longues avec des encodeurs
+récurrents. Nous avons séparé le problème en étudiant d'abord des fragments de
+chaînes peptidiques de taille 11 avant de montrer qu'un apprentissage non
+supervisé sur ces fragments permet d'acquérir une représentation utile à des
+tâches sur des chaînes de grandes tailles.
 
+Ce type d'approche, assez proche de certains principes algorithmiques peut se
+comprendre de la manière suivante: un acide aminé n'est pas une molécule
+chimique dans un vide complet, mais une molécule chimique au contact d'autres
+molécules chimiques. Il y a en langage naturels une idée de représentation
+distribuée des mots à partir de leurs voisins. C'est en quelque sorte ce que
+nous avons fait avec des fragments de taille 11 même si ce n'était pas
+l'objectif premier et que les acides aminés sont manipulés comme des vecteurs
+\texttt{one-hot}. 
 
-\subsection{Pistes de recherche}
+\paragraph{Pistes de recherche}
 
 Si plus de temps avait été disponible, il aurait avant tout été possible
 d'explorer d'autres architectures comme un auto-encodeur dense classique (mais
@@ -897,7 +915,46 @@ ou de tester de hyper-paramètres différents comme la taille des fragments
 considérés ou la dimension de l'espace de représentation latente. Il serait
 néanmoins très intéressant
 
+Dans \cite{asgari2015continuous} une étude est menée sur la représentation distribuée
+des acides aminés en considérant des fenêtres de taille 3 avec des résultats
+remarquables sur la représentation obtenue des acides aminés. Il semble
+intéressant d'utiliser cette représentation pour nos acides aminés, ce qui
+créerait en supplément de notre étude sur des fragments de taille 11 une
+inférence hiérarchique sur les acides aminés.
+
 \section*{Conclusion}
+
+L'apprentissage profond offre des outils tels que les réseaux récurrents pour
+mener une étude des protéines. Néanmoins des problémes se posent, comme le
+manque d'exemple d'entraînement labélisés, ou la longueur des chaînes de
+caractères étudiées.  Pour surmonter ces difficultés nous nous
+sommes particuliérement interessés aux représentations latentes de fragments de
+protéines de tailles courtes. 
+
+Diverses architectures nous ont donné des
+résultats complémentaires, mais toutes ont montré une corrélation des paramètres
+de la représentation interne avec des caractéristiques physico-chimiques des
+fragments étudiés. Cette représentation suggère de plus une structure
+intrinsèque aux fragments de protéines de part le peu de dimension selon
+lesquelles la représentation latente évolue pour un fragment de protéines.
+
+Pour ajouter une validation supplémentaire, nous avons ré-utilisé cette
+validation interne pour pré-entraîner un classificateur convolutionnel à 4
+couches, et les résultats montrent une nette amélioration de performances pour
+le classificateur pré-entraîné, ce qui montre que le représentation latente
+acquise est au moins supérieure à une simple représentation \texttt{one-hot} des
+acides aminés.
+
+Cette étude demeure non moins une étude préliminaire qui ne fait que suggérer
+des pistes de recherches à explorer et vérifier plus en détail. Il faut de plus
+noter que des travaux sur des fragments plus courts existent, et pourraient
+permettre d'utiliser une représentation plus judicieuse des acides aminés.
+Enfin, dans notre étude très exploratoires, les hyper-paramètres, bien
+qu'aiguillés par des intuitions dûes à nos connaissances sur les protéines, ont
+été fixés de manière arbitraire et l'étude plus détaillée de leur influence semble toute indiquée.
+
+
+\newpage
 
 \printbibliography
 

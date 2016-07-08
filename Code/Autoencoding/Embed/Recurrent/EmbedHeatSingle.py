@@ -119,7 +119,7 @@ chars = 'rndeqkstchmavgilfpwybzuxXo'
 ctable = AcidEmbedding(11)
 lookup = AcidEmbedding(11)
 
-ACIDS = 26
+ACIDS = 4
 encoding_dim = 50
 
 # Data Generating
@@ -212,7 +212,7 @@ for rec in record:
 
 # Encoding data
 
-X = np.zeros((len(data), 11, len(chars)), dtype=np.bool)
+X = np.zeros((len(data), 11, 4))
 
 for i, sentence in enumerate(data):
     X[i] = ctable.encode(sentence, maxlen=11)
@@ -222,7 +222,7 @@ print("Creating model...")
 model = Sequential()
 
 #Recurrent encoder
-model.add(recurrent.LSTM(encoding_dim, input_shape=(11, ACIDS), return_sequences=True, dropout_W=0.1, dropout_U=0.1))
+model.add(recurrent.LSTM(encoding_dim, input_shape=(11, 4), return_sequences=True, dropout_W=0.1, dropout_U=0.1))
 model.add(recurrent.LSTM(encoding_dim, return_sequences=True, dropout_W=0.1, dropout_U=0.1))
 model.add(recurrent.LSTM(encoding_dim, dropout_W=0.1, dropout_U=0.1))
 
@@ -232,8 +232,6 @@ model.add(RepeatVector(11))
 model.add(recurrent.LSTM(ACIDS, return_sequences=True))
 
 model.add(TimeDistributed(Dense(ACIDS)))
-
-model.add(Activation('softmax'))
 
 model.load_weights("RecWind.h5")
 
