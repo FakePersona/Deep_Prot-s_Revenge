@@ -115,7 +115,7 @@ dum.add(TimeDistributed(Dense(ACIDS)))
 
 dum.add(Activation('softmax'))
 
-dum.load_weights("RecOne.h5")
+dum.load_weights("ConvRecOne.h5")
 
 print("Creating actual model")
 

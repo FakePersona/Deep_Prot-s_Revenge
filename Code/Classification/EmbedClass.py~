@@ -10,33 +10,60 @@ from keras.layers import recurrent, RepeatVector, Activation, TimeDistributed, D
 
 from Bio import SeqIO
 
-class CharacterTable(object):
-    '''
-    Given a set of characters:
-    + Encode them to a one hot integer representation
-    + Decode the one hot integer representation to their character output
-    + Decode a vector of probabilties to their character output
-    '''
-    def __init__(self, chars, maxlen):
-        self.chars = sorted(set(chars))
+class AcidEmbedding(object):
+
+    def __init__(self, maxlen):
+        self.maxlen = maxlen
+
+        self.chars = list('rndeqkstchmavgilfpwybzuxXo')
+
+        self.embed = [[-1, 1, 9.09, 71.8],
+                      [-1, 0, 8.8, 2.4],
+                      [-1, -1, 9.6, 0.42],
+                      [-1, -1, 9.67, 0.72],
+                      [-1, 0, 9.13, 2.6],
+                      [-1, 1, 10.28, 200],
+                      [0, 0, 9.15, 36.2],
+                      [0, 0, 9.12, 200],
+                      [1, 0, 10.78, 200],
+                      [-1, 1, 8.97, 4.19],
+                      [1, 0, 9.21, 5.14],
+                      [1, 0, 9.87, 5.14],
+                      [1, 0, 9.72, 5.6],
+                      [0, 0, 9.6, 22.5],
+                      [1, 0, 9.76, 3.36],
+                      [1, 0, 9.6, 2.37],
+                      [1, 0, 9.24, 2.7],
+                      [-1, 0, 10.6, 1.54],
+                      [0, 0, 9.39, 1.06],
+                      [-1, 0, 9.11, 0.038],
+                      [1, 0.5, 8.95, 37.1],
+                      [1, -0.5, 9.40, 1.66],
+                      [250, -250, 250, -250],
+                      [0, 0, 0, 0],
+                      [500, 500, 500, 500],
+                      [-500, -500, -500, -500]]
+        
+        self.embed = [[x/500 for x in X] for X in self.embed]
+
         self.char_indices = dict((c, i) for i, c in enumerate(self.chars))
         self.indices_char = dict((i, c) for i, c in enumerate(self.chars))
-        self.maxlen = maxlen
 
     def encode(self, C, maxlen=None):
         maxlen = maxlen if maxlen else self.maxlen
-        X = np.zeros((maxlen, len(self.chars)))
+        X = np.zeros((maxlen, 4))
         for i, c in enumerate(C):
-            X[i, self.char_indices[c]] = 1
+            X[i] = self.embed[self.char_indices[c]]
         return X
 
-    def decode(self, X, calc_argmax=True):
-        if calc_argmax:
-            X = X.argmax(axis=-1)
-        return ''.join(self.indices_char[x] for x in X)
+
+    def decode(self, X):
+        prob = [[-dist2(x, y) for y in self.embed] for x in X]
+        prob = (np.array(prob)).argmax(axis=-1)
+        return ''.join(self.indices_char[x] for x in prob)
 
 chars = 'rndeqkstchmavgilfpwybzuxXo'
-ctable = CharacterTable(chars, 150)
+ctable = AcidEmbedding(150)
 
 ACIDS = 26
 encoding_dim = 20
@@ -71,12 +98,12 @@ for rec in record:
 
 print(ind)
             
-X = np.zeros((len(data), 150, 26))
+X = np.zeros((len(data), 150, 4))
 
 for i, sentence in enumerate(data):
     X[i] = ctable.encode(sentence, maxlen=150)
 
-X_val = np.zeros((len(test), 150, 26))
+X_val = np.zeros((len(test), 150, 4))
 
 for i, sentence in enumerate(test):
     X_val[i] = ctable.encode(sentence, maxlen=150)
@@ -97,7 +124,7 @@ print("Creating dummy model...")
 dum = Sequential()
 
 #Recurrent encoder
-dum1 = recurrent.LSTM(encoding_dim, input_shape=(11, ACIDS), return_sequences=True, dropout_W=0.1, dropout_U=0.1)
+dum1 = recurrent.LSTM(encoding_dim, input_shape=(11, 4), return_sequences=True, dropout_W=0.1, dropout_U=0.1)
 dum.add(dum1)
 
 dum2 = recurrent.LSTM(encoding_dim, return_sequences=True, dropout_W=0.1, dropout_U=0.1)
@@ -109,19 +136,17 @@ dum.add(dum3)
 dum.add(RepeatVector(11))
 
 #And decoding
-dum.add(recurrent.LSTM(ACIDS, return_sequences=True))
+dum.add(recurrent.LSTM(4, return_sequences=True))
 
-dum.add(TimeDistributed(Dense(ACIDS)))
+dum.add(TimeDistributed(Dense(4)))
 
-dum.add(Activation('softmax'))
-
-dum.load_weights("RecOne.h5")
+dum.load_weights("RecWind.h5")
 
 print("Creating actual model")
 
 model = Sequential()
 
-model.add(TimeDistributed(dum1, input_shape = (140, 11, ACIDS)))
+model.add(TimeDistributed(dum1, input_shape = (140, 11, 4)))
 model.add(TimeDistributed(dum2))
 model.add(TimeDistributed(dum3))
 
@@ -173,4 +198,4 @@ plt.legend(['train', 'test'], loc='upper left')
 plt.show()
 
     
-model.save_weights("Class.h5", overwrite=True)
+model.save_weights("Classc.h5", overwrite=True)
