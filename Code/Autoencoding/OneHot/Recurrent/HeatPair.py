@@ -12,8 +12,6 @@ f.close()
 
 df = pd.DataFrame(np.array(stored))
 
-
-
 data = [go.Heatmap( z=df.corr().values.tolist())]
 
-py.iplot(data, filename='PairOneRecHeatb')
+py.iplot(data, filename='PairOneRecHeat')

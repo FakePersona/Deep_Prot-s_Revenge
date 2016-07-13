@@ -12,7 +12,7 @@ f.close()
 
 labels = ["Norme"]
 
-for i in range(10):
+for i in range(20):
     labels.append("x" + str(i))
 
 labels = labels + ["Hydropathie", "Charge", "Aliphatic", "Aromatic", "Neutre", "Acide", "Basique", "Only-alpha", "Only-beta", "alpha - beta"]

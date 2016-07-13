@@ -269,7 +269,7 @@ for i in range(len(X)):
 
 # Preparing data for correlating
 
-Properties = np.zeros((len(data), 21))
+Properties = np.zeros((len(data), 31))
 
 for i in range(len(Properties)):
     #Norm
@@ -278,28 +278,28 @@ for i in range(len(Properties)):
     for k in range(encoding_dim):
         Properties[i][k+1] = Embed[i][k]
     # Hydropathy and charge
-    Properties[i][11] = lookup.get_hydro(data[i])
-    Properties[i][12] = lookup.get_charge(data[i])
+    Properties[i][21] = lookup.get_hydro(data[i])
+    Properties[i][22] = lookup.get_charge(data[i])
     # Aliphatic
     for c in data[i]:
         if c in 'ailv':
-            Properties[i][13] += 1
+            Properties[i][23] += 1
     # Aromatic
     for c in data[i]:
         if c in 'fwy':
-            Properties[i][14] += 1
+            Properties[i][24] += 1
     # Neutral
     for c in data[i]:
         if c in 'ncqmst':
-            Properties[i][15] += 1
+            Properties[i][25] += 1
     # Acidic
     for c in data[i]:
         if c in 'de':
-            Properties[i][16] += 1
+            Properties[i][26] += 1
     # Acidic
     for c in data[i]:
         if c in 'rhk':
-            Properties[i][17] += 1
+            Properties[i][27] += 1
     # Secondary Structure
     s = 0
     for c in dataSecond[i]:
@@ -308,10 +308,10 @@ for i in range(len(Properties)):
         if c == 'B':
             s -= 1
     if s == 11:
-        Properties[i][18] = 1
+        Properties[i][28] = 1
     if s == -11:
-        Properties[i][19] = 1
-    Properties[i][20] = s
+        Properties[i][29] = 1
+    Properties[i][30] = s
 
 f = open("Single.txt", 'w')
 json.dump(Properties.tolist(), f)

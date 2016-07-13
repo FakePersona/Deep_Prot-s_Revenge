@@ -208,6 +208,28 @@
       \field{title}{A theoretically grounded application of dropout in recurrent neural networks}
       \field{year}{2015}
     \endentry
+    \entry{glorot2011deep}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=0b3943c3bfdbb5867b3760f7c7d488c2}{Glorot}{G\bibinitperiod}{Xavier}{X\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f1733e10bf044cbd7be63e10e5689d78}{Bordes}{B\bibinitperiod}{Antoine}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=40a8e4774982146adc2688546f54efb2}{Bengio}{B\bibinitperiod}{Yoshua}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{59e7b11c8612bb9c193b9bfa91e1c729}
+      \strng{fullhash}{59e7b11c8612bb9c193b9bfa91e1c729}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelyear}{2011}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Aistats}
+      \field{number}{106}
+      \field{title}{Deep Sparse Rectifier Neural Networks.}
+      \field{volume}{15}
+      \field{year}{2011}
+      \field{pages}{275}
+      \range{pages}{1}
+    \endentry
     \entry{hamelryck2003pdb}{article}{}
       \name{author}{2}{}{%
         {{uniquename=0,hash=ff236dbcdc91c0630e8b9eadbf91c436}{Hamelryck}{H\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
@@ -345,33 +367,8 @@
       \field{pages}{2577\bibrangedash 2637}
       \range{pages}{61}
     \endentry
-    \entry{lecun2015deep}{article}{}
-      \name{author}{3}{}{%
-        {{uniquename=0,hash=6a1aa6b7eab12b931ca7c7e3f927231d}{LeCun}{L\bibinitperiod}{Yann}{Y\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=40a8e4774982146adc2688546f54efb2}{Bengio}{B\bibinitperiod}{Yoshua}{Y\bibinitperiod}{}{}{}{}}%
-        {{uniquename=1,hash=9a8750ccdb2a4cf14d2655face1ce016}{Hinton}{H\bibinitperiod}{Geoffrey}{G\bibinitperiod}{}{}{}{}}%
-      }
-      \list{publisher}{1}{%
-        {Nature Publishing Group}%
-      }
-      \strng{namehash}{c6c75bd00ce5a488e91a749d8383b3df}
-      \strng{fullhash}{c6c75bd00ce5a488e91a749d8383b3df}
-      \field{sortinit}{L}
-      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
-      \field{labelyear}{2015}
-      \field{datelabelsource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Nature}
-      \field{number}{7553}
-      \field{title}{Deep learning}
-      \field{volume}{521}
-      \field{year}{2015}
-      \field{pages}{436\bibrangedash 444}
-      \range{pages}{9}
-    \endentry
     \entry{lecun1998gradient}{article}{}
-      \name{author}{4}{uniquelist=2}{%
+      \name{author}{4}{}{%
         {{uniquename=0,hash=6a1aa6b7eab12b931ca7c7e3f927231d}{LeCun}{L\bibinitperiod}{Yann}{Y\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=ac762f2592005edf6bad58f566967c6c}{Bottou}{B\bibinitperiod}{Léon}{L\bibinitperiod}{}{}{}{}}%
         {{uniquename=0,hash=40a8e4774982146adc2688546f54efb2}{Bengio}{B\bibinitperiod}{Yoshua}{Y\bibinitperiod}{}{}{}{}}%
@@ -380,7 +377,7 @@
       \list{publisher}{1}{%
         {IEEE}%
       }
-      \strng{namehash}{c634f7170e29eef664835b861a39814a}
+      \strng{namehash}{9e4c6012409dc8dd9b2aa198a2059804}
       \strng{fullhash}{c397b2e6efe8e5c6ca906410fc9e0ff9}
       \field{sortinit}{L}
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
@@ -453,6 +450,32 @@
       \verb{url}
       \verb http://tensorflow.org/
       \endverb
+    \endentry
+    \entry{qi2012unified}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=04b7a7c641a6bc5e81aba25f88ffec13}{Qi}{Q\bibinitperiod}{Yanjun}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=88f9b3baff1950b2123334eeadbb2b04}{Oja}{O\bibinitperiod}{Merja}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=417a25f3511d7c21e76d4a15e67dd679}{Weston}{W\bibinitperiod}{Jason}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=88012ada61d616a54c2adcadcfc05b8c}{Noble}{N\bibinitperiod}{William\bibnamedelima Stafford}{W\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science}%
+      }
+      \strng{namehash}{80e3f8645b0852457c60fbe92f7d07fc}
+      \strng{fullhash}{a99ed7448fac22c5ddcb947f5afc1bed}
+      \field{sortinit}{Q}
+      \field{sortinithash}{15867262911a166ca2270ec58a0e3fe9}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PloS one}
+      \field{number}{3}
+      \field{title}{A unified multitask architecture for predicting local protein properties}
+      \field{volume}{7}
+      \field{year}{2012}
+      \field{pages}{e32235}
+      \range{pages}{-1}
     \endentry
     \entry{2016arXiv160502688full}{article}{}
       \name{author}{112}{}{%
