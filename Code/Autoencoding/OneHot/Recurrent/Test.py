@@ -38,7 +38,7 @@ chars = 'rndeqkstchmavgilfpwybzuxXo'
 ctable = CharacterTable(chars, 11)
 
 ACIDS = 26
-encoding_dim = 10
+encoding_dim = 20
 
 np.set_printoptions(threshold=np.nan)
 
@@ -102,7 +102,7 @@ model.add(TimeDistributed(Dense(ACIDS)))
 
 model.add(Activation('softmax'))
 
-model.load_weights("RecOneb.h5")
+model.load_weights("RecOne.h5")
 
 model.compile(optimizer='rmsprop', loss='binary_crossentropy')
 
@@ -113,7 +113,7 @@ print("Let's go!")
 
 for i in range(10000):
     ind = np.random.randint(0, len(X_val))
-    row = X_val[np.array([ind])]
+    row = X[np.array([ind])]
     preds = model.predict_classes(row, verbose=0)
     correct = ctable.decode(row[0])
     guess = ctable.decode(preds[0], calc_argmax=False)
@@ -121,13 +121,13 @@ for i in range(10000):
         if guess[i] == correct[i]:
             score += 1
 
-print(score / 10000)
+print(score / 10000.)
 
 score = 0
 
 for i in range(10000):
 
-    beep = [''.join(np.random.choice(list(chars))) for _ in range(11)]
+    beep = [''.join(np.random.choice(list('rndeqkstchmavgilfpwy'))) for _ in range(11)]
     row = np.zeros((1,11,26))
     row[0] = np.array(ctable.encode(beep))
     preds = model.predict_classes(row, verbose=0)
@@ -137,4 +137,4 @@ for i in range(10000):
         if guess[i] == correct[i]:
             score += 1
 
-print(score / 10000)
+print(score / 10000.)
