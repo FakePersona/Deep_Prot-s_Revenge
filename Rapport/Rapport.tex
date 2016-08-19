@@ -24,7 +24,7 @@
 {\description\item[Mots-clés.]}%
 {\enddescription}
 
-\usepackage[backend=biber, style=authoryear-comp]{biblatex}
+\usepackage[backend=biber]{biblatex}
 \bibliography{Biblio}{}
 
 
@@ -56,7 +56,7 @@
 
 \lstMakeShortInline{|}
 
-\parskip=0.135
+\parskip=0.125
 \baselineskip
 
 \sloppy
@@ -88,7 +88,14 @@
     Apprentissage profond; Protéines; Représentation latente; Séquence
   \end{keywords}
 \end{abstract}
+
+\newpage
+
+\tableofcontents
+
 \end{titlingpage}
+
+
 \section*{Introduction}
 
 % La bonne compréhension des mécanismes régissant le fonctionnement des protéines existantes est un enjeu
@@ -111,7 +118,9 @@ naturels (\cite{DBLP:journals/corr/ChoMGBSB14}, \cite{socher2011semi}, \cite{NIP
 protéines demeurent un domaine relativement inexploré par l'apprentissage
 profond à l'exception de quelques travaux
 (\cite{Spencer:2015:DLN:2817095.2817106}) qui se concentrent essentiellement sur
-des études locales de séquences peptidiques pour prédire des caractéristiques locales.
+des études locales de séquences peptidiques pour prédire des caractéristiques
+locales. Comment appliquer les techniques d'apprentissage profond à des
+tâches d'échelle plus élevée  sur des séquences peptidiques?
 
 Les applications existantes d'apprentissage profond, en langages naturels par
 exemple, donnent des manières d'exploiter des suites d'éléments.
@@ -146,8 +155,7 @@ pour améliorer les décisions prises.
 
 \paragraph{Neurone?}
 
-Le terme de neurone (ou unité cachée aujourd'hui préféré pour se distancer du
-cerveau) désigne une unité de calcul (\textbf{Figure 1}). Cette unité prend
+Le terme de neurone (ou unité cachée) désigne une unité de calcul (\textbf{Figure 1}). Cette unité prend
 une entrée, c'est à dire un vecteur $A$ dont la taille est celle de l'entrée et lui
 applique une transformation linéaire $WA + b$, où $W$ et $b$ sont des paramètres
 du neurone. Après cette transformation linéaire, on applique généralement une
@@ -156,8 +164,8 @@ détail plus tard. Ainsi la transformation effectuée sur l'entrée $A$ retourne
 sortie $f(WA + b)$
 
 L'entraînement du neurone se fait par rétro-propagation à partir de la sortie
-finale du réseau de neurone: une évaluation de la qualité de la décision finale
-par rapport à la décision attendue est effectué, et il
+finale du réseau de neurones: une évaluation de la qualité de la décision finale
+par rapport à la décision attendue est effectuée, et il
 s'agit alors de minimiser la distance entre les deux. Pour ce
 faire, on peut par exemple procéder par descente de gradient. En effet, pour
 chaque paramètre, on calcule la dérivée partielle du score obtenu et on ajuste en
@@ -167,7 +175,7 @@ conséquence les paramètres du réseau jusqu'à obtenir un résultat satisfaisa
 \paragraph{Pourquoi profond?}
 
 Ce qui différencie l'apprentissage profond de ces techniques d'apprentissage dites \og
-creuses\fg (\textbf{figure 2})est d'utiliser plusieurs couches cachées
+creuses\fg (\textbf{figure 2}) est d'utiliser plusieurs couches cachées
 (\textbf{Figure 3}) (d'où la notion de
 profondeur). Cela augmente remarquablement l'abstraction du problème et permet
 de mieux traiter les problèmes dits compositionnels, c'est-à dire qui peuvent se
@@ -191,12 +199,12 @@ bas-niveau, ce qui limite l'intérêt même de l'apprentissage profond.
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{Deep}
-    \caption{Réseau de neurones non simple}
+    \includegraphics[width=\textwidth]{Shallow}
+    \caption{Réseau de neurones complètement relié non profond}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{Shallow}
+    \includegraphics[width=\textwidth]{Deep}
     \caption{Réseau de neurones profond}
   \end{minipage}
 \end{figure}
@@ -239,23 +247,32 @@ l'identité). Pour éviter cela on dispose de plusieurs moyens:
   typiquement en forçant des objectifs de régularisation sur les paramètres.
 \end{itemize}
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-  \includegraphics[width=0.45\textwidth]{Autoencoder}
-  \caption{Auto-encodeur classique}
-\end{wrapfigure}
+\begin{figure}\centering
+  \begin{minipage}{0.325\linewidth}
+    \includegraphics[width=\linewidth]{Autoencoder}
+    \caption{Auto-encodeur classique}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.65\linewidth}
+    \includegraphics[width=\linewidth]{Conv}
+    \caption{Exemple de couche convolutive avec des fenêtres de taille $1\times 3$}
+  \end{minipage}
+\end{figure}
 
 \subsection{Réseaux convolutifs}
 
-\paragraph{Il y a une marque caractéristique (feature) des images d'oiseaux}
+\paragraph{Il y a une marque caractéristique (feature) des images d'un certain type}
 
-Cela est un élément utile à la reconnaissance d'images d'animaux, mais il semble
+Cela est un élément utile à la reconnaissance d'images, mais il semble
 difficile pour un réseau neuronal profond d'acquérir cette représentation par
 lui-même. Ce qu'on peut faire par contre, est \og
-scanner\fg des carrés $3\times 3$ de l'image en question à l'aide d'un filtre
+scanner\fg sur une \og fenêtre\fg, par exemple des carrés $3\times 3$ de l'image en question à l'aide d'un filtre
 permettant de décider si la marque apparaît dans le carré examiné. En pratique, c'est créer une couche cachée
 dont chaque neurone applique une même fonction de transformation sur les 9 neurones d'un
 carré $3\times 3$. Il s'agit donc de faire une convolution sur l'image d'une
-fonction de transformation!
+fonction de transformation! Cette méthode reste applicable sur un chaîne de
+caractère de longueur $n$, puisqu'il s'agit d'une image de taille $1\times n$ en
+cherchant sur des fenêtres de taille $1\times 3$ par exemple.
 
 Nous venons de décrire une couche générant une image réduite dont chaque
 neurone/pixel donne la valeur de l'application d'une fonction à un carré
@@ -263,22 +280,26 @@ $3\times 3$. Nous appellerons une telle représentation \texttt{feature map}
 (littéralement, carte de caractéristiques):
 elle donne la représentation d'une \og feature\fg sur l'image. En un sens il
 s'agit là d'une convolution puisqu'on prend une fonction (l'image
-tridimensionnelles) et une autre \og pseudo-fonction\fg (le filtre de la
+tridimensionnelle) et une autre \og pseudo-fonction\fg (le filtre de la
 caractéristique étudiée, à la différence près que ce filtre est constant sur
-l'espace étudié) et on effectue la convolution de ces deux fonctions vectorielles.
+l'espace étudié) et on effectue la convolution de ces deux fonctions
+vectorielles.
 
 \paragraph{Pourquoi s'arrêter à une \texttt{feature map}?}
 
-Typiquement on crée plusieurs \texttt{feature maps} en parallèle dans un réseau
+Typiquement on crée plusieurs \texttt{feature maps} en parallèle (\textbf{Figure
+5}) dans un réseau
 convolutif (ou convolutionnel). Rappelons déjà que nous n'avons pas beaucoup de contrôle sur la
 caractéristique que le réseau va retrouver puisqu'il va apprendre la
 caractéristique qui donne le meilleur résultat par lui-même. Multiplier les
 \texttt{feature maps} permet de distinguer plus de points caractéristiques qui
 seront ensuite traités par une couche supérieure.
+
 Si on veut rajouter une couche convolutionnelle au dessus, elle opérera non
 seulement une opération sur un carré de chaque \texttt{feature map}, mais elle
-effectuera une opération sur les résultats de cette opération sur chaque \textbf{feature
-map} (\textbf{Figure 5}).
+effectuera une opération sur les résultats de cette opération sur chaque \texttt{feature
+map} et les couches convolutives constituent le coeur de certains réseaux de
+reconnaissance d'image (\cite{lecun1998gradient}).
 
 % \paragraph{Réduire la charge de calcul}
 
@@ -288,11 +309,6 @@ map} (\textbf{Figure 5}).
 % considérée, cela fait qu'une simple translation a moins de chance de changer
 % quoi que ce soit à l'image obtenue après transformation.
 
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.8]{mylenet}
-  \caption{Réseau convolutionnel LeNet5 \cite{lecun1998gradient}}
-\end{figure}
 
 % Une architecture typique se constitue donc d'un enchaînement de couches de
 % convolution et de pooling, avec une ou plusieurs couches \og classiques\fg
@@ -317,13 +333,12 @@ Si on \og déplie\fg l'exécution du problème, on réalise que la séquence pas
 fait par un nombre de couches cachées égal au nombre d'éléments dans la suite!
 (\textbf{Figure 6})
 Ainsi, nous avons établit un réseau qui est capable de traiter un élément d'une
-suite en se rappelant en quelque sortes de ce qui s'est passé avant. La seule
+suite en se rappelant en quelque sorte de ce qui s'est passé avant. La seule
 question qui reste à traiter est le fonctionnement exact de la couche cachée.
 
-Il est possible de faire fonctionner cette couche cachée comme un réseau neuronal
-complètement relié classique avec une sortie et entrée supplémentaire
+Il est possible de faire fonctionner cette unité cachée comme un neurone classique avec une sortie et entrée supplémentaire
 représentant l'état caché, mais cela pose des problèmes d'évanouissement du
-gradient lors de la rétro-propagation. Une unité caché qui résout ce problème et
+gradient lors de la rétro-propagation. Une unité cachée qui résout ce problème et
 est largement utilisée dans la littérature est l'unité LSTM (ou ses dérivatifs)
 introduite dans \cite{hochreiter1997long} (\textbf{Figure 7}).
 
@@ -364,14 +379,14 @@ de l'état caché à partir des trois données précédentes.
 \paragraph{Un auto-encodeur récurrent?}
 
 Les réseaux récurrents ont entre autres choses été grandement utilisés dans
-l'étude de langages naturels. Une architecture d'auto-encodeur profonde que nous avons particulièrement étudié
+l'étude de langages naturels. Une architecture d'encodeur-décodeur profonde que nous avons particulièrement étudié
 (et qui fournit de bons résultats pour la détection de structures comme la copie
 dans une chaîne) est celle proposée dans \cite{DBLP:journals/corr/ChoMGBSB14}.
 L'idée est d'utiliser un premier auto-encodeur pour servir d'encodeur: on ne
 récupère que sa sortie sur le dernier terme de la suite d'entrée. Cette sortie
 est de dimension finie et nous servira de résumé (qui compresse éventuellement
 l'information). Il suffit ensuite de passer ce résumé dans un autre
-auto-encodeur récurrent en récupérant cette fois chaque sortie. Dans
+réseau récurrent en récupérant cette fois chaque sortie. Dans
 l'article original, la sortie du décodeur au temps $t$ lui est aussi donné en
 entrée au temps $t+1$, mais ce n'est pas le cas dans notre étude.
 
@@ -390,7 +405,7 @@ particulières comme leur hydropathie, leur charge électrique ou leur solubilit
 
 La séquence peptidique d'une protéine constitue ce qu'on appelle sa structure
 primaire, mais une protéine ne peut pas se résumer à sa séquence peptidique.
-C'est cette structure primaire que nous utiliserons en entrée de nos réseaux profonds
+C'est cette structure primaire que nous utiliserons en entrée de nos réseaux profonds.
 
 \paragraph{Structure secondaire}
 
@@ -405,10 +420,10 @@ séquences peptidiques traitent de la prédiction de structures secondaires
 \paragraph{Structure tertiaire}
 
 La façon dont l'ensemble de ces acides et structures locales s'organisent dans
-l'espace constituent la structure tertiaire de la protéine. On peut décomposer la
+l'espace constitue la structure tertiaire de la protéine. On peut décomposer la
 classe structurale (répertoriée par \cite{fox2014scope} par exemple) de la protéine à partir de la structure secondaire:
-$all-\alpha$, $all-\beta$, $\alpha /\beta$, $\alpha + \beta$, $petite protéine$,
-$peptide$, ... Il n'existe à notre connaissance qu'un article tentant
+$all-\alpha$, $all-\beta$, $\alpha /\beta$, $\alpha + \beta$,
+$peptide$, ... Il n'existe à notre connaissance que peu de travaux tentant
 d'appliquer les techniques d'apprentissage  profond à la prédiction de classes
 structurales (\cite{jian2013predicting}) en effectuant un simple pré-entraînement par
 empilement d'auto-encodeurs.
@@ -435,11 +450,10 @@ d'éviter de trop mauvais minima locaux. C'est d'ailleurs ce qui a motivé le
 second souffle de l'apprentissage profond vers la fin des années 2000
 
 Néanmoins, des travaux plus récents ont montré qu'il suffit d'utiliser des
-initialisations aléatoires bien choisies pour largement passer outre les problème
-de minima locaux quand l'ensemble d'apprentissage est de taille élevée: nous n'avons jamais besoin que d'une instance d'entraînement
-évitant les minima locaux. Cependant, nous avons aussi dû travailler avec des jeux de
+initialisations aléatoires bien choisies pour largement passer outre les problèmes
+de minima locaux quand l'ensemble d'apprentissage est de taille élevée. Cependant, nous avons aussi dû travailler avec des jeux de
 données de taille faible, ce qui a nécessité le passage par de l'apprentissage
-non-supervisé pour les taches de classification où peu d'exemples labélisés existent.
+non-supervisé pour les tâches de classification où peu d'exemples labélisés existent.
 
 \paragraph{Rétropropagation}
 
@@ -449,7 +463,7 @@ déterminent les transformations effectuées sur l'entrée.). Pour ce faire, on
 utilise typiquement le gradient de la fonction de coût. Cela peut se faire au
 travers de quelque chose d'aussi simple que la descente de gradient stochastique, mais cette
 dernière a de nombreux défauts. Dans cette article nous utiliserons les
-optimisations dites \texttt{adagrad} (\cite{duchi2011adaptive})(très efficace dans les réseaux
+optimisations dites \texttt{adagrad} (\cite{duchi2011adaptive}) (très efficace dans les réseaux
 convolutifs) et \texttt{RMSProp} (\cite{hintonlecture}) (très efficace dans les réseaux récurrents).
 
 \paragraph{De la non linéarité}
@@ -503,24 +517,23 @@ résultats similaires à la technique précédente pour des réseaux classiques.
 \subsection{Matériel}
 
 Nous avons effectué l'ensemble de nos travaux à l'aide librairies du langage de
-programmation Python (http://www.python.org).
+programmation Python (\url{http://www.python.org}).
 
 Pour ce qui est de l'aspect apprentissage profond, nous avons principalement
 utilisé \texttt{keras} (\cite{chollet2015keras}) qui est une libraire haut niveau
 permettant de manipuler facilement des couches d'apprentissage. Ce choix vient
 d'une part de la nature des problèmes étudiés qui nous mènent à tenter
-l'utilisation de plusieurs architectures (ce qui invalide des librairies comme
-Caffee pour C++ spécialisé en réseaux convolutifs) et de l'autre de la grande
+l'utilisation de plusieurs architectures (ce qui invalide des librairies plus spécialisées) et de l'autre de la grande
 souplesse offerte par Keras. En effet, \texttt{keras} peut utiliser deux
 librairies bas niveau python (il est possible de choisir entre les deux): la
 librairie académique \texttt{Theano} (\cite{2016arXiv160502688full}) et le plus récent
 \texttt{Tensor Flow} (\cite{tensorflow2015-whitepaper}) de Google.
 
-Pour ce qui est de la manipulation de séquence peptidiques à proprement parlé,
+Pour ce qui est de la manipulation de séquences peptidiques à proprement parlé,
 nous avons utilisé des données de la base de donnée \texttt{SCOPe}
 (version 2.6, séquences à 40\% d'identité ou moins, \cite{fox2014scope}) et la librairie python Biopython (\cite{Cock01062009},
 \cite{hamelryck2003pdb}). L'outil DSSP (\cite{kabsch1983dictionary}) a aussi été
-utilisé pour établir la structure secondaire des protéines étudiées ?
+utilisé pour établir la structure secondaire des protéines étudiées.
 
 \subsection{Représentation des chaînes peptidiques}
 
@@ -557,13 +570,13 @@ représentation dans l'espace très lacunaire, ce qui crée des espaces inutilem
 grands. Ce problème est secondaire dans notre cas puisqu'il n'y a qu'une
 vingtaine d'acides à considérer.
 
-\paragraph{Représentation distribuée et repréentation experte}
+\paragraph{Représentation distribuée et représentation experte}
 
 Néanmoins, il est intéressant de remarquer que des outils ont été inventés en
-langages naturels pour passer outre ce problème. L'idée est d'apprendre un
-représentation de dimension inférieure distribuée prenant en compte les mots
+langages naturels pour passer outre ce problème. L'idée est d'apprendre une
+représentation distribuée de dimension inférieure prenant en compte les mots
 apparaissant généralement avec celui considéré. Cela se fait avec des techniques
-d'apprentissages qui cherchent à maximiser le score de phrases valides et
+d'apprentissage qui cherchent à maximiser le score de phrases valides et
 minimiser celui de phrases non valides. Ces techniques ne sont pas applicables à
 notre problème à cause de la façon dont les séquences peptidiques fonctionnent,
 mais nous avons voulu retenir l'idée qu'on peut placer les acides dans un espace
@@ -572,7 +585,7 @@ propriétés physico-chimiques, nous avons donc créé une telle représentation
 L'aspect important d'une telle représentation est qu'elle permet de justifier du
 fait que deux acides sont proches du point de vue de leur représentation, ou du
 fait que trois acides sont équidistants. En effet, la représentation précédente
-posait le problème inverse de l'indexage: pourquoi tous les acides sont-ils équidistants?
+posait le problème inverse de l'indexage: pourquoi tous les acides seraient-ils équidistants?
 
 \subsection{Choix des types d'architectures d'apprentissage profond}
 
@@ -607,7 +620,7 @@ des fragments d'une chaîne plus longue a été préservée.
 
 Afin d'orienter notre recherche sur les séquences peptidiques et mieux comprendre le fonctionnement des réseaux neuronaux et leurs
 comportements face à différentes situations, nous avons procédé à quelques
-expérimentations préliminaires. sur deux types de tâches: un entraînement
+expérimentations préliminaires sur deux types de tâches: un entraînement
 d'autoencodeurs et un entraînement de classificateur.
 
 Nous avons généré aléatoirement plusieurs jeux de données pour comparer les
@@ -639,10 +652,10 @@ caractères tirés aléatoirement.
 \subsubsection{Classificateurs}
 
 Nous avons étudié deux architectures de classificateurs, qui correspondent
-principalement à l'encodeur des auto-encodeurs précédents auxquels un neurone
+principalement à l'encodeur (non pré-entraîné) des auto-encodeurs précédents auxquels un neurone
 final est ajouté pour prendre la décision finale de classification. Le jeu de
-donnée fourni correspondait à une moitiés de chaîne suivant une règle spécifique
-premières lettres fixes ou copie), et d'une moitié de chaînes purement
+donnée fourni correspondait à une moitié de chaînes suivant une règle spécifique
+(premières lettres fixes ou copie), et d'une moitié de chaînes purement
 aléatoires. L'objectif était de savoir si le classificateur était à même de
 repérer des corrélations entre différentes positions.
 
@@ -651,7 +664,7 @@ intéressante, cela veut dire que les réseaux convolutionnels sont bien capable
 de reconnaître les ``points caractéristiques'' de chaînes de caractères, mais le
 décodeur récurrent n'est pas capable de reconstituer la chaîne à l'aide de
 l'information contenu dans la représentation latente. Il est à noter cependant
-que les minimums locaux ont présenté un problème avec une initialisation
+que les minima locaux ont présenté un problème avec une initialisation
 aléatoire uniforme simple, puisque le classificateur avait tendance à toujours
 répondre la même chose. On constatait donc un point de selle de la fonction à
 minimiser par le réseau.
@@ -679,7 +692,7 @@ minimiser par le réseau.
 
 \subsection{Étude de la corrélation de paramètres}
 
-Les auto-encodeurs génèrent une représentation intermédiaire dans un premier
+Les auto-encodeurs que nous avons entraîné génèrent une représentation intermédiaire dans un premier
 temps. Nous avons voulu étudier cette représentation intermédiaire pour en
 apprendre plus sur les choses auquelles l'auto-encodeur fait attention quand il
 encode la protéine et qui lui permettent de reconstruire par la suite la
@@ -714,14 +727,14 @@ l'aide l'outil DSSP introduit au début de cette section.
 
 Nous avons fait l'étude, en outre de la distance entre les représentation
 latentes, du score d'alignement entre les fragments (global et local) et du score de super-imposition structurale (relativement
-aux $carbones-\alpha$).
+aux $carbones-\alpha$, \cite{hamelryck2003pdb}).
 
 \section{Expériences et évaluation}
 \label{sec:exp}
 
 \subsection{Auto-encodeurs}
 
-\subsubsection{Modèle entraînés}
+\subsubsection{Modèles entraînés}
 
 Les chaînes protéiques étudiées sont longues (jusqu'à 300 caractères). Les
 auto-encodeurs sont entraînés non pas sur les chaînes protéiques mais sur des
@@ -740,10 +753,11 @@ intéressante. Ainsi, nous avons tout de même entraîné un auto-encodeur
 convolutionel dans l'espoir de pouvoir en faire une étude par la suite. Deux
 représentation ont été employées pour les acides aminés: celle basées sur les
 caractères physico-chimiques décrite plus haut pour l'auto-encodeur récurrent, et
-une représentation \texttt{one-hot} pour les deux architecture proposées
+une représentation \texttt{one-hot} pour les deux architectures proposées.
 
-Les entraînements ont été effectués sur 50 \texttt{epochs} (cycle
-d'entraînement sur les exemples) avec des paramètres de \texttt{dropout} de 0.1
+Les entraînements ont été effectués sur 100 \texttt{epochs} (cycle
+d'entraînement sur les exemples) pour les représentations \texttt{one-hot} et 30
+\texttt{epochs} pour la représentation experte avec des paramètres de \texttt{dropout} de 0.1
 à chaque fois. Les encodeurs récurrents sont constitué de 3 réseaux récurrents
 projetant l'entrée dans un espace latent de dimension 20 pour la représentation
 \texttt{one-hot} et 50 pour la représentations experte,
@@ -786,15 +800,15 @@ représentation physico-chimique puisque l'apprentissage se fait sur un alphabet
 \og spécialisé\fg de toute façon. Les résultats obtenus sur un auto-encodeur
 récurrent sur représentation \texttt{one-hot} montre une amélioration de
 performance de $50\%$ selon le critère avancé. Cette amélioration est cependant
- moins nette (de l'ordre de 6\% quand on élimine des situations
-problèmatiques - des caractères apparaissant rarement - pour l'autoencodeur),
+ moins nette (de l'ordre de 6\%) quand on élimine des situations
+problèmatiques - des caractères apparaissant rarement - pour l'autoencodeur,
 mais laisse tout de même penser qu'un mécanisme d'inférence apparaît durant l'entraînement.
 
 \subsubsection{Corrélations}
 
 Les cartes de corrélations obtenues sont présentées dans ce rapport en annexe à
 l'exception de celle pour des fragments individuels dans le cas de
-l'auto-encodeur récurrent à représentation one-hot (\textbf{Figure 8}) jugée représentative des
+l'auto-encodeur récurrent à représentation \texttt{one-hot} (\textbf{Figure 8}) jugée représentative des
 résultats obtenus.
 
 \paragraph{Etude de fragments individuels}
@@ -807,7 +821,7 @@ fragments considérés suggère plusieurs choses:
   principalement réparties dans un espace bi-dimensionnel. En effet, la norme ne
   semble corrélée qu'à 4 dimensions, et il y a parmi ces 4 dimensions 2 paires
   de dimensions fortement corrélées. Cela suggère donc la mise en évidence d'un
-  espace de plus faible dimensions repéré par l'auto-encodeur qui à partir d'un espace de dimensions
+  espace de plus faibles dimensions repéré par l'auto-encodeur qui à partir d'un espace de dimensions
   $26\times 11= 286$ injecté dans un espace de dimension 20 crée une
   représentation concentrée dans un espace presque bi-dimensionnel.
 \item On semble remarquer une certaine corrélation entre la norme, une dimension
@@ -816,7 +830,7 @@ fragments considérés suggère plusieurs choses:
   permettant de bien différencier les fragments (en tant que chaînes
   peptidiques) entre eux.
 \item On observe un phénomène similaire pour la charge moyenne du fragment, bien
-  que cette fois la corrélation ne se fait qu'avec un dimension de la
+  que cette fois la corrélation ne se fait qu'avec une dimension de la
   représentation latente, et non pas avec la norme elle-même.
 \item En revanche, les résultats sont moins clairs pour ce qui est des
   caractéristiques liées aux structures secondaires qui présentent peu, ou pas,
@@ -844,7 +858,7 @@ propriétés de translation relative à des relations sémantiques (comme une
 translation fixe entre féminin et masculin). 
 
 \begin{wrapfigure}{R}{0.5\textwidth}
-  \includegraphics[width=0.45\textwidth]{Class}
+  \includegraphics[width=0.45\textwidth]{Classd}
   \caption{Classificateur employé}
 \end{wrapfigure}
 
@@ -854,7 +868,7 @@ se fait pas exactement par auto-encodage, l'embedding acquis demeure une
 représentation utile à l'apprentissage profond.  Il n'aurait donc pas été
 absurde d'espérer voir une relation similaire apparaître dans le cas de notre
 représentation intermédiaire sur les fragments de protéines. L'absence de telle
-relation pourrait indiquer que, du point de vue de l'auto-encodeur du moins, un
+relation pourrait indiquer que, du point de vue de l'auto-encodeur du moins, une
 telle information est d'importance secondaire pour l'encodage et décodage des protéines.
 
 \subsection{Classificateur}
@@ -869,7 +883,7 @@ entraîné de manière non supervisée (\textbf{Figure 9}). De cette manière, n
 autant que possible une mauvaise initialisation du réseau comme décrit dans \cite{vincent2010stacked}
 
 Le classificateur en lui-même dispose de 4 couches (dont le détail des
-paramètres est donné en annexe) et le \texttt{dropout est encore fixé à 0.1}
+paramètres est donné en annexe) et le \texttt{dropout} est encore fixé à 0.1.
 
 \subsubsection{Améliorations de performances par pré-entraînement}
 
@@ -888,8 +902,8 @@ paramètres est donné en annexe) et le \texttt{dropout est encore fixé à 0.1}
 \end{figure}
 
 On constate dans tous les cas une amélioration nette de la performance du
-classificateur pré-entraîné (\textbf{Figure 10 et 11}, voir annexe pour les deux
-autres architectures). Non seulement la précision de la classification
+classificateur pré-entraîné (\textbf{Figure 10 et 11}, voir annexe pour
+l'encodeur convolutionnel). Non seulement la précision de la classification
 s'améliore plus rapidement, mais la précision limite atteinte est
 significativement meilleure (une amélioration de l'ordre de 25\% est détectée
 pour l'encodeur récurrent à représentation \texttt{one-hot}). De plus, il est
@@ -915,7 +929,7 @@ quantités importantes.
 
 Si nous avons aussi utilisé cette approche pour initialiser un classificateur,
 ce qui était nécessaire de part la faible quantité d'exemples labélisés
-inhérents au domaine d'étude, cela n'a pas été notre seul exploitation des
+inhérente au domaine d'étude, cela n'a pas été notre seul exploitation des
 auto-encodeurs. Il est plus rare de voir des études sur cette représentation même,
 sans passer par un réseau neuronal capable d'apprendre à interpréter à partir de
 l'information contenue dans la représentation latente. Cela peut s'expliquer par
@@ -925,7 +939,7 @@ apprendre d'une étude sur les représentations latentes puisque nous comprenons
 déjà bien ce qui caractérise les images d'animaux. Par contre, ce qui régit le
 fonctionnement des protéines est moins clair. Néanmoins, le problème de la bonne compréhension des représentations intermédiaires
 acquises n'est pas unique à notre domaine d'étude. Elle se pose aussi en bio-médical où rendre les raisonnements logiques de potentiels outils
-de diagnostics. Notre étude a montré diverses
+de diagnostics clairs est important. Notre étude a montré diverses
 approches permettant d'essayer d'étudier quelles caractéristiques connues et
 mesurables par un expérimentateur se rapprochent de celles reconnues par
 l'auto-encodeur. Une telle approche pourrait être ré-utilisée dans d'autres
@@ -966,7 +980,7 @@ proches des problématiques posées par l'étude de fragments de protéines.
 De plus, il n'a pas été possible, pour des raisons de temps et/ou de puissance
 de calcul de procéder à l'entraînement d'auto-encodeurs sur des chaînes longues
 (non mené à termes car les premiers essais étaient très décourageants),
-ou de tester de hyper-paramètres différents comme la taille des fragments
+ou de tester des hyper-paramètres différents comme la taille des fragments
 considérés ou la dimension de l'espace de représentation latente.
 
 Dans \cite{asgari2015continuous} une étude est menée sur la représentation distribuée

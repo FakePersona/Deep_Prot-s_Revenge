@@ -128,7 +128,8 @@ for iteration in range(1, 100):
     model.fit(X, X, batch_size=128, nb_epoch=1,
               validation_data=(X_val, X_val))
     ###
-    # Select 10 samples from the validation set at random so we can visualize errors
+    # Select 10 sampl
+    es from the validation set at random so we can visualize errors
     for i in range(10):
         ind = np.random.randint(0, len(X_val))
         row = X_val[np.array([ind])]

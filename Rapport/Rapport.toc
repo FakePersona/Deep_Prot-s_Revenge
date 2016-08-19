@@ -1,0 +1,111 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {french}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Apprentissage profond?}{1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Une technique d'apprentissage machine}{1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Neurone?}{1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Pourquoi profond?}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}Entra\IeC {\^\i }nement non supervis\IeC {\'e}}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Quel objectif poursuivre?}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Donc on entra\IeC {\^\i }ne un r\IeC {\'e}seau complexe \IeC {\`a}... retrouver l'identit\IeC {\'e}?}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}R\IeC {\'e}seaux convolutifs}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Il y a une marque caract\IeC {\'e}ristique (feature) des images d'un certain type}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Pourquoi s'arr\IeC {\^e}ter \IeC {\`a} une \texttt {feature map}?}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3}R\IeC {\'e}seaux r\IeC {\'e}currents}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Il faut une architecture capable de tenir compte des entr\IeC {\'e}es d\IeC {\'e}j\IeC {\`a} lues}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Long Short-Term Memory (LSTM)}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Un auto-encodeur r\IeC {\'e}current?}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4}Domaine d'\IeC {\'e}tude: Prot\IeC {\'e}ines}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Structure primaire}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Structure secondaire}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Structure tertiaire}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Domaines}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5}Initialisation et optimisation des r\IeC {\'e}seaux d'apprentissage profond}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Entra\IeC {\^\i }nement non-supervis\IeC {\'e}?}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{R\IeC {\'e}tropropagation}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{De la non lin\IeC {\'e}arit\IeC {\'e}}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\IeC {\'E}viter le sur-apprentissage}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Etude r\IeC {\'e}alis\IeC {\'e}e}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Mat\IeC {\'e}riel}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Repr\IeC {\'e}sentation des cha\IeC {\^\i }nes peptidiques}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Repr\IeC {\'e}sentation one-hot}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Repr\IeC {\'e}sentation distribu\IeC {\'e}e et repr\IeC {\'e}sentation experte}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}Choix des types d'architectures d'apprentissage profond}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}Etude pr\IeC {\'e}liminaire sur s\IeC {\'e}quences artificielles}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.1}Auto-encodeurs}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.2}Classificateurs}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5}\IeC {\'E}tude de la corr\IeC {\'e}lation de param\IeC {\`e}tres}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Param\IeC {\`e}tres d'un unique fragment}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Param\IeC {\`e}tres d'un couple de fragments}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Exp\IeC {\'e}riences et \IeC {\'e}valuation}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Auto-encodeurs}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1}Mod\IeC {\`e}les entra\IeC {\^\i }n\IeC {\'e}s}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.2}Pertinence de la reconstitution}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.3}Corr\IeC {\'e}lations}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Etude de fragments individuels}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\IeC {\'E}tude sur des paires de fragments}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Classificateur}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.1}Mod\IeC {\`e}le entra\IeC {\^\i }n\IeC {\'e}}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.2}Am\IeC {\'e}liorations de performances par pr\IeC {\'e}-entra\IeC {\^\i }nement}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Contributions principales}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Etude de repr\IeC {\'e}sentations latentes}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{M\IeC {\'e}thodologie pour passer d'une repr\IeC {\'e}sentation locale \IeC {\`a} globale}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Pistes de recherche}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A}D\IeC {\'e}tails sur les architectures utilis\IeC {\'e}es}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Encodeur convolutif}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Encodeur convolutif}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B}R\IeC {\'e}sultats annexes}{18}

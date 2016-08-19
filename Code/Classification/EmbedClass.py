@@ -65,7 +65,7 @@ class AcidEmbedding(object):
 chars = 'rndeqkstchmavgilfpwybzuxXo'
 ctable = AcidEmbedding(150)
 
-ACIDS = 26
+vACIDS = 26
 encoding_dim = 50
 
 np.set_printoptions(threshold=np.nan)
