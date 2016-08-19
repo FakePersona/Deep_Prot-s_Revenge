@@ -338,7 +338,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -346,6 +346,24 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#aa5b76;stroke-width:1.08200002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.32800017, 1.08200004;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 67.896941,47.619979 13.497591,127.37841"
+       id="path4355-3-6-7-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#8890d6;stroke-width:1.08200002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.32800013, 1.08200002999999989;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 80.371979,35.962966 13.702097,127.58293"
+       id="path4355-3-6-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#88d6a6;stroke-width:1.08200002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.32800005, 1.08200001;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 52.763286,59.481483 13.906603,127.78744"
+       id="path4355-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
     <rect
        style="opacity:1;fill:#6056cd;fill-opacity:1;stroke:#ffffff;stroke-width:1.19152319;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect5249"
@@ -551,19 +569,19 @@
        d="m 232.31717,89.68325 a 12.432085,15.264793 0 0 1 -12.36987,15.2646 12.432085,15.264793 0 0 1 -12.49368,-15.11181 12.432085,15.264793 0 0 1 12.24482,-15.415862 12.432085,15.264793 0 0 1 12.61624,14.957508" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.19152319;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
-       d="M 69.277865,105.01468 C 43.203989,134.91663 36.792382,135.39126 36.792382,135.39126"
+       d="m 62.733582,105.4237 c -26.073876,29.90195 -25.9412,29.96756 -25.9412,29.96756"
        id="path5397"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.19152319;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5715)"
-       d="m 68.850427,105.96395 c -1.709762,29.90194 -1.709762,29.90194 -1.709762,29.90194"
+       d="m 64.351232,105.55493 2.789433,30.31096"
        id="path5707"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.19152319;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker6057)"
-       d="m 69.705306,105.96395 28.63853,30.85121"
+       d="m 65.615129,105.55493 32.728707,31.26023"
        id="path6049"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -678,7 +696,7 @@
            height="75.36232"
            x="678.26086"
            y="84.674202" /></flowRegion><flowPara
-         id="flowPara9098"></flowPara></flowRoot>    <flowRoot
+         id="flowPara9098" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot9100"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -689,5 +707,33 @@
            height="88.4058"
            x="140.57971"
            y="562.93506" /></flowRegion><flowPara
-         id="flowPara9106">Couche d'entrée</flowPara></flowRoot>  </g>
+         id="flowPara9106">Couche d'entrée</flowPara></flowRoot>    <path
+       style="fill:none;fill-rule:evenodd;stroke:#e39007;stroke-width:1.082;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:4.32800001, 1.08200000000000007;stroke-dashoffset:0"
+       d="M 36.811593,70.11594 C 13.088567,126.56038 13.088567,126.56038 13.088567,126.56038"
+       id="path4355"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#e18c13;stroke-width:1.082;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:4.32800001,1.082;stroke-dashoffset:0"
+       d="M 241.72947,69.706924 C 269.13365,126.9694 269.13365,126.9694 269.13365,126.9694"
+       id="path4357"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#88d6a6;stroke-width:1.08200002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.32800009, 1.08200002;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 256.2496,58.049924 13.49759,69.942016"
+       id="path4355-3-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#aa5b76;stroke-width:1.08200002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.32800013, 1.08200002999999989;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 271.79227,47.41547 -2.4541,80.16745"
+       id="path4355-3-6-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#6d79d6;stroke-width:1.08200002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.32800013, 1.08200002999999989;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 284.0628,35.962971 268.92915,129.62801"
+       id="path4355-3-6-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+  </g>
 </svg>
