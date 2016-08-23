@@ -1,11 +1,11 @@
 \beamer@endinputifotherversion {3.36pt}
 \select@language {french}
 \beamer@sectionintoc {1}{Apprentissage profond?}{4}{0}{1}
-\beamer@subsectionintoc {1}{1}{Pourquoi l'apprentissage \FB@og profond\FB@fg ?}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{Pourquoi l'apprentissage \FB@og profond\FB@fg \relax ?}{4}{0}{1}
 \beamer@subsectionintoc {1}{2}{Entra\IeC {\^\i }nement non-supervis\IeC {\'e}: Autoencodeurs et repr\IeC {\'e}sentations latentes}{8}{0}{1}
 \beamer@subsectionintoc {1}{3}{Architectures standards}{13}{0}{1}
 \beamer@sectionintoc {2}{Application aux prot\IeC {\'e}ines}{17}{0}{2}
 \beamer@subsectionintoc {2}{1}{Qu'est-ce-qu'une prot\IeC {\'e}ine?}{17}{0}{2}
 \beamer@subsectionintoc {2}{2}{Etat de l'art}{19}{0}{2}
-\beamer@subsectionintoc {2}{3}{Traiter des s\IeC {\'e}quences peptidiques}{29}{0}{2}
-\beamer@subsectionintoc {2}{4}{Architectures entrain\IeC {\'e}es \& r\IeC {\'e}sultats}{31}{0}{2}
+\beamer@subsectionintoc {2}{3}{Traiter des s\IeC {\'e}quences peptidiques}{28}{0}{2}
+\beamer@subsectionintoc {2}{4}{Architectures entrain\IeC {\'e}es \& r\IeC {\'e}sultats}{30}{0}{2}
